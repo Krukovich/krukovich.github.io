@@ -1,0 +1,16 @@
+.content-title_move {
+  animation-name: move;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+}
+@keyframes move {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
