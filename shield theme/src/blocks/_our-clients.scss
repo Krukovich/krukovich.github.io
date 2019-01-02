@@ -1,0 +1,26 @@
+.our-clients {
+  margin-top: 100px;
+  margin-left: -30px;
+  margin-right: -30px;
+  height: 100vh;
+  background-image: url("../../public/images/corporate-home-brand1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  .our-clients__title {
+    padding-top: 90px;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+  }
+
+  .our-clients__images{
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+  }
+}

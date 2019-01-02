@@ -48,7 +48,6 @@
           top: 75px;
           left: 60px;
           width: 93%;
-          height: 200px;
           background-color: #333;
           transform: translateY(30px);
           transition: 0.5s;
@@ -58,6 +57,7 @@
 
           .hidden-menu__block {
             width: 300px;
+            height: 100%;
             border-right: 1px solid #999;
 
             &:last-child {
@@ -76,8 +76,7 @@
               font-style: italic;
               list-style: none;
               line-height: 35px;
-              font-weight: 100;
-              font-size: 13px;
+              font-size: 10px;
               color: #999;
               &:hover{
                 color: #cc9900;
@@ -95,7 +94,6 @@
             top: 70px;
             left: 60px;
             width: 93%;
-            height: 200px;
             background-color: #333;
             transform: translateY(0);
             transition: 0.5s;
@@ -112,7 +110,7 @@
       margin-left: 15px;
 
       .menu__item {
-        margin-left: 25px;
+        margin-left: 15px;
         font-size: 15px;
         color: #fff;
       }
@@ -121,7 +119,7 @@
   .header-slider{
     display: flex;
     justify-content: space-between;
-    margin-top: 200px;
+    margin-top: 300px;
 
     .slider__button{
       color: #fff;
@@ -141,7 +139,8 @@
     .slider__text{
       display: inline-block;
       color: #fff;
-      font-size: 30px;
+      font-size: italic;
+      font-size: 20px;
       text-align: center;
       font-style: italic;
     }

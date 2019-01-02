@@ -1,11 +1,39 @@
-.counter{
+.counter {
   display: flex;
   justify-content: space-around;
   background-color: #ededed;
   margin-top: 50px;
 
-  .content__item{
+  .content__item {
     display: flex;
-    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid #999;
+    height: 100px;
+    padding-right: 50px;
+    padding-left: 20px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+    &:last-child {
+      border-right: none;
+    }
+
+    .item-number {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 24px;
+      font-weight: bold;
+      color: #252525;
+      padding-right: 5px;
+    }
+
+    .item-text {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 14px;
+      font-weight: bold;
+      color: #999999;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
   }
 }
