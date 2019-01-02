@@ -1,0 +1,32 @@
+.latest-project {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+
+  .latest-project__title {
+    padding-left: 60px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+  }
+
+  .latest-project__menu {
+    display: flex;
+    padding-right: 60px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+
+    .project-menu__item {
+      margin-left: 40px;
+
+      &:hover {
+        color: #cc9900;
+        cursor: pointer;
+      }
+    }
+  }
+}

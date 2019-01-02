@@ -43,6 +43,19 @@
         font-weight: bold;
         border: 1px solid rgba(#ffffff, 0);
 
+        .menu__item_hidden-small{
+          position: absolute;
+          top: 75px;
+          right: 250px;
+          width: 10%;
+          background-color: #333;
+          transform: translateY(30px);
+          transition: 0.5s;
+          visibility: hidden;
+          opacity: 0;
+          display: flex;
+        }
+
         .menu__item_hidden {
           position: absolute;
           top: 75px;
@@ -96,6 +109,18 @@
             width: 93%;
             background-color: #333;
             transform: translateY(0);
+            transition: 0.5s;
+            visibility: visible;
+            opacity: 1;
+          }
+
+          .menu__item_hidden-small{
+            position: absolute;
+            top: 75px;
+            right: 250px;
+            width: 10%;
+            background-color: #333;
+            transform: translateY(0px);
             transition: 0.5s;
             visibility: visible;
             opacity: 1;
