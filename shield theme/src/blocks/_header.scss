@@ -153,6 +153,10 @@
           background-color: #333;
         }
 
+        & input[type="checkbox"]{
+          display: none;
+        }
+
         & input:checked ~ .second-menu_show {
           transform: scale(1);
           transform-origin: top;

@@ -20,6 +20,22 @@ body {
     opacity: 1;
   }
 }
+.content_move {
+  animation-name: move;
+  animation-duration: 10s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes move {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 .header {
   background-image: url("../images/slider-01.jpg");
   background-size: cover;
@@ -158,6 +174,9 @@ body {
   left: -100px;
   right: 0;
   background-color: #333;
+}
+.header .header-top .header-menu__right .menu__item input[type=checkbox] {
+  display: none;
 }
 .header .header-top .header-menu__right .menu__item input:checked ~ .second-menu_show {
   transform: scale(1);
@@ -669,6 +688,7 @@ body {
 .thank-you-block {
   background-color: #ededed;
   height: 100vh;
+  overflow: visible;
 }
 .thank-you-block .thank-you-container {
   width: 800px;
