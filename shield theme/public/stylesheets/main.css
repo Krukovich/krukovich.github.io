@@ -21,14 +21,14 @@ body {
   }
 }
 .content_move {
-  animation-name: move;
-  animation-duration: 10s;
+  animation-name: show;
+  animation-duration: 5s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
 
-@keyframes move {
+@keyframes show {
   0% {
     opacity: 1;
   }
@@ -179,13 +179,14 @@ body {
   display: none;
 }
 .header .header-top .header-menu__right .menu__item input:checked ~ .second-menu_show {
-  transform: scale(1);
+  transform: scaleX(1);
+  transform: scaleY(2);
   transform-origin: top;
   transition: 0.5s;
   position: absolute;
   top: 60px;
-  left: -100px;
-  right: 0;
+  left: -200px;
+  right: -50px;
   background-color: #333;
 }
 .header .header-slider {
