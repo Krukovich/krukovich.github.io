@@ -1,5 +1,4 @@
 body {
-  margin: 30px;
   padding: 0;
   box-sizing: border-box;
 }
@@ -280,7 +279,7 @@ body {
 }
 .header-mobile .mobile-btn input:checked ~ .mobile-menu_show {
   position: absolute;
-  top: 70px;
+  top: 100px;
   left: 0;
   right: 0;
   display: block;
@@ -289,6 +288,9 @@ body {
 }
 .header-mobile .mobile-menu__item {
   text-transform: uppercase;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
 }
 .header-mobile .mobile-menu__item i {
   position: relative;
@@ -333,6 +335,7 @@ body {
 .header-contactpage .header-top {
   position: fixed;
   top: 0;
+  right: 0;
   z-index: 30;
   display: flex;
   flex-direction: row;
@@ -1445,7 +1448,11 @@ body {
   padding: 10px;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1200px) {
+  .header-menu {
+    display: none !important;
+  }
+
   .header-mobile {
     display: block !important;
   }
@@ -1458,6 +1465,7 @@ body {
   .contact-form {
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
 
   .footer-content {

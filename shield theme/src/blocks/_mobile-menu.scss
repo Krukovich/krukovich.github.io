@@ -26,7 +26,7 @@
 
     & input:checked ~ .mobile-menu_show {
       position: absolute;
-      top: 70px;
+      top: 100px;
       left: 0;
       right: 0;
       display: block;
@@ -34,15 +34,19 @@
       color: #fff;
     }
   }
-  .mobile-menu__item{
-    text-transform: uppercase;
 
-    & i{
+  .mobile-menu__item {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+
+    & i {
       position: relative;
       font-size: 15px;
       margin-left: 140px;
 
-      &:after{
+      &:after {
         position: absolute;
         opacity: 0.6;
         left: 0;
@@ -53,15 +57,15 @@
       }
     }
 
-    & input[type="radio"]{
+    & input[type="radio"] {
       display: none;
     }
 
-    .item-mob-menu{
+    .item-mob-menu {
       display: none;
     }
 
-    & input:checked + .item-mob-menu_show{
+    & input:checked + .item-mob-menu_show {
       display: block;
     }
   }

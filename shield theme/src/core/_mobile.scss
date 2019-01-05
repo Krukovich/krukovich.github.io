@@ -1,4 +1,8 @@
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1200px) {
+
+  .header-menu{
+    display: none !important;
+  }
   .header-mobile {
     display: block !important;
   }
@@ -11,6 +15,7 @@
   .contact-form{
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
 
   .footer-content{
