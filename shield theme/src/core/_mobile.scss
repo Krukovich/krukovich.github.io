@@ -1,18 +1,33 @@
-@media screen and (max-width: 1320px) {
-  body{
-    margin: 0;
-    padding: 0;
+@media screen and (max-width: 1000px) {
+  .header-mobile {
+    display: block !important;
   }
 
-  .content-history{
+  .content-history {
     display: flex;
     flex-direction: column;
   }
 
-  .team-content__photos{
+  .contact-form{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-content{
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    .footer-content__item{
+      width: 80% !important;
+    }
+  }
+  .hidden{
+    display: none !important;
   }
 
+  .header-top{
+    display: flex;
+    justify-content: space-between;
+  }
 }

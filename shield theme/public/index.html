@@ -7,13 +7,15 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="stylesheets/main.css">
   <link rel="stylesheet" href="stylesheets/fontello.css">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:100,400,700" rel="stylesheet">
+  <link rel="stylesheet" href="stylesheets/fonts.css">
   <title>SHIELD THEME</title>
 </head>
 
 <body>
 
-  <div class="header">
+  <!-- Header block -->
+
+  <div class="header" id="header">
     <div class="header-top">
       <div class="header-logo">
         <img src="./images/logo-white.png" alt="logo">
@@ -23,7 +25,7 @@
       </div>
       <div class="header-menu">
         <div class="header-menu__item">
-          Home
+          <a class="btn" href="#">Home</a>
           <div class="menu__item_hidden">
             <div class="hidden-menu__block">
               <div class="menu-title">
@@ -92,7 +94,7 @@
           </div>
         </div>
         <div class="header-menu__item">
-          Page
+          <a class="btn" href="#">Page</a>
           <div class="menu__item_hidden">
             <div class="hidden-menu__block">
               <div class="menu-title">
@@ -197,7 +199,7 @@
           </div>
         </div>
         <div class="header-menu__item">
-          Shortcode
+          <a class="btn" href="#">Shortcode</a>
           <div class="menu__item_hidden">
             <div class="hidden-menu__block">
               <div class="menu-title">
@@ -342,7 +344,7 @@
           </div>
         </div>
         <div class="header-menu__item">
-          Blog
+          <a class="btn" href="./blog.html">Blog</a>
           <div class="menu__item_hidden">
             <div class="hidden-menu__block">
               <div class="menu-title">
@@ -435,7 +437,7 @@
           </div>
         </div>
         <div class="header-menu__item">
-          Portfolio
+          <a class="btn" href="#">Portfolio</a>
           <div class="menu__item_hidden">
             <div class="hidden-menu__block">
               <div class="menu-title">
@@ -516,7 +518,7 @@
           </div>
         </div>
         <div class="header-menu__item">
-          Shop
+          <a class="btn" href="#">Shop</a>
           <div class="menu__item_hidden-small">
             <div class="hidden-menu__block">
               <div class="menu-title"></div>
@@ -532,7 +534,7 @@
           </div>
         </div>
         <div class="header-menu__item">
-          Contact
+          <a class="btn" href="./contact.html">Contact</a>
           <div class="menu__item_hidden-small">
             <div class="hidden-menu__block">
               <div class="menu-title"></div>
@@ -556,288 +558,311 @@
           <i class="icon-search"></i>
         </div>
         <div class="menu__item">
-          <label>
-            <input type="checkbox">
-            <i class="icon-menu"></i>
-            <div class="second-menu_hidden second-menu_show">
-              <ul class="second-menu__title">
-                Other pages
-                <li>
-                  Custom page about
-                </li>
-                <li>
-                  Custom page Team
-                </li>
-                <li>
-                  Custom page countdown
-                </li>
-                <li>
-                  Custom page error 404
-                </li>
-                <li>
-                  Custom page contact us
-                </li>
-              </ul>
-              <ul>
-                Useful links
-                <li>
-                  Home
-                </li>
-                <li>
-                  Shop
-                </li>
-                <li>
-                  Portfolio
-                </li>
-                <li>
-                  Blog
-                </li>
-              </ul>
+          <label for="drop"><i class="icon-menu"></i></label>
+          <input type="checkbox" id="drop">
+          <div class="second-menu_hidden second-menu_show">
+            <div class="second-menu__title">
+              Other pages
             </div>
+            <ul>
+              <li class="second-menu__item">
+                Custom page about
+              </li>
+              <li class="second-menu__item">
+                Custom page Team
+              </li>
+              <li class="second-menu__item">
+                Custom page countdown
+              </li>
+              <li class="second-menu__item">
+                Custom page error 404
+              </li>
+              <li class="second-menu__item">
+                Custom page contact us
+              </li>
+            </ul>
+            <div class="second-menu__title">
+              Useful links
+            </div>
+            <ul>
+              <li class="second-menu__item">
+                Home
+              </li>
+              <li class="second-menu__item">
+                Shop
+              </li>
+              <li class="second-menu__item">
+                Portfolio
+              </li>
+              <li class="second-menu__item">
+                Blog
+              </li>
+            </ul>
+          </div>
         </div>
-        </label>
       </div>
+
+
     </div>
+
+    <!-- header slider block -->
 
     <div class="header-slider">
       <div class="slider__button">
-        <i class="icon-left"></i>
-      </div>
-      <div class="slider__title content-title_move">
-        All for you !
-        <p class="slider__text content-title_move">
-          Knight is a multipurpose PSD template. With modern and smart design,
-          Knight is the perfect template for business, online shop websites.
-        </p>
+        <label for="left"><i class="icon-left"></i></label>
+        <input type="radio" name="slider" id="left">
+        <div class="slider-box_move slider-box_move-slow">
+          <div class="slider__title content_move">
+            All for you !
+            <p class="slider__text content_move">
+              Knight is a multipurpose PSD template. With modern and smart design,
+              Knight is the perfect template for business, online shop websites.
+            </p>
+          </div>
+        </div>
       </div>
       <div class="slider__button">
-        <i class="icon-right"></i>
+        <label for="right"><i class="icon-right"></i></label>
+        <input type="radio" name="slider" id="right">
       </div>
     </div>
   </div>
 
-  <div class="content-history">
-    <div class="content-left">
-      <img src="./images/history.png" alt="history.png">
-    </div>
-    <div class="content-mid">
-      <div class="content-mid__text">
-        <p>
-          We are passionate, creative and enthusiastic designers.
-        </p>
-        <p>
-          We are a team of young and enthusiastic designers, marketers and developers who are specialized at creating professional premium WordPress themes. Our mission is to build user–friendly, clean and modern designs in order to help more and
-          more
-          users improve their livelihood. To us, customer is king.
-          We guarantee that we will invest all of our skills and strengths into products and support. Finally, we would like to thank everyone for support us day by day.
-        </p>
-      </div>
-      <div class="content-skills">
-        <div class="content-skills__icons">
-          <i class="icon-lightbulb"></i>
-        </div>
-        <div class="content-skills__text">
-          creative
-        </div>
-        <div class="content-skills__icons">
-          <i class="icon-coffee"></i>
-        </div>
-        <div class="content-skills__text">
-          passion
-        </div>
-        <div class="content-skills__icons">
-          <i class="icon-star"></i>
-        </div>
-        <div class="content-skills__text">
-          enthusiasm
-        </div>
-      </div>
-    </div>
-    <div class="content-right">
-      <img src="./images/history-img.jpg" alt="history-img.png">
-    </div>
-  </div>
+    <!-- Content-history block -->
 
-  <div class="counter">
-    <div class="content__item">
-      <div class="item-number">
-        228
+    <div class="content-history">
+      <div class="content-left">
+        <img src="./images/history.png" alt="history.png">
       </div>
-      <div class="item-text">
-        / happy clients
+      <div class="content-mid">
+        <div class="content-mid__text">
+          <p>
+            We are passionate, creative and enthusiastic designers.
+          </p>
+          <p>
+            We are a team of young and enthusiastic designers, marketers and developers who are specialized at creating professional premium WordPress themes. Our mission is to build user–friendly, clean and modern designs in order to help more and
+            more
+            users improve their livelihood. To us, customer is king.
+            We guarantee that we will invest all of our skills and strengths into products and support. Finally, we would like to thank everyone for support us day by day.
+          </p>
+        </div>
+        <div class="content-skills">
+          <div class="content-skills__icons">
+            <i class="icon-lightbulb"></i>
+          </div>
+          <div class="content-skills__text">
+            creative
+          </div>
+          <div class="content-skills__icons">
+            <i class="icon-coffee"></i>
+          </div>
+          <div class="content-skills__text">
+            passion
+          </div>
+          <div class="content-skills__icons">
+            <i class="icon-star"></i>
+          </div>
+          <div class="content-skills__text">
+            enthusiasm
+          </div>
+        </div>
+      </div>
+      <div class="content-right">
+        <img src="./images/history-img.jpg" alt="history-img.png">
       </div>
     </div>
-    <div class="content__item">
-      <div class="item-number">
-        228
-      </div>
-      <div class="item-text">
-        / lines of codes
-      </div>
-    </div>
-    <div class="content__item">
-      <div class="item-number">
-        228
-      </div>
-      <div class="item-text">
-        / project completed
-      </div>
-    </div>
-    <div class="content__item">
-      <div class="item-number">
-        228
-      </div>
-      <div class="item-text">
-        / awards won
-      </div>
-    </div>
-  </div>
 
-  <div class="latest-project">
-    <div class="latest-project-header">
-      <div class="latest-project__title">
-        Latest project
+    <!-- Counter block -->
+
+    <div class="counter">
+      <div class="content__item">
+        <div class="item-number">
+          228
+        </div>
+        <div class="item-text">
+          / happy clients
+        </div>
       </div>
-      <div class="latest-project__menu">
-        <div class="project-menu__item">
-          <label>
-            <input type="checkbox">
-            All
-            <div class="all-gallery hidden">
-              <img src="./images/mansory-2-col-2.jpg" width="200" height="200" alt="">
-              <img src="./images/mansory-2-col-3.jpg" width="200" height="200" alt="">
-              <img src="./images/mansory-2-col-7.jpg" width="200" height="200" alt="">
-              <img src="./images/mansory-2-col-6.jpg" width="200" height="200" alt="">
-              <img src="./images/mansory-2-col-10.jpg" width="200" height="200" alt="">
-              <img src="./images/mansory-2-col-11.jpg" width="200" height="200" alt="">
-              <img src="./images/mansory-2-col-14.jpg" width="200" height="200" alt="">
-              <img src="./images/mansory-2-col-15.jpg" width="200" height="200" alt="">
+      <div class="content__item">
+        <div class="item-number">
+          228
+        </div>
+        <div class="item-text">
+          / lines of codes
+        </div>
+      </div>
+      <div class="content__item">
+        <div class="item-number">
+          228
+        </div>
+        <div class="item-text">
+          / project completed
+        </div>
+      </div>
+      <div class="content__item">
+        <div class="item-number">
+          228
+        </div>
+        <div class="item-text">
+          / awards won
+        </div>
+      </div>
+    </div>
+
+    <!-- Latest project block -->
+
+    <div class="latest-project">
+      <div class="latest-project-header">
+        <div class="latest-project__title">
+          Latest project
+        </div>
+        <div class="latest-project__menu">
+          <div class="project-menu__item">
+            <label for="all">All</label>
+            <input type="radio" name="gallery" id="all" checked>
+            <div class="all-gallery scale">
+              <img src="./images/mansory-2-col-2.jpg" width="200" height="200" alt="mansory-2-col-2.jpg">
+              <img src="./images/mansory-2-col-3.jpg" width="200" height="200" alt="mansory-2-col-3.jpg">
+              <img src="./images/mansory-2-col-7.jpg" width="200" height="200" alt="mansory-2-col-7.jpg">
+              <img src="./images/mansory-2-col-6.jpg" width="200" height="200" alt="mansory-2-col-6.jpg">
+              <img src="./images/mansory-2-col-10.jpg" width="200" height="200" alt="mansory-2-col-10.jpg">
+              <img src="./images/mansory-2-col-11.jpg" width="200" height="200" alt="mansory-2-col-11.jpg">
+              <img src="./images/mansory-2-col-14.jpg" width="200" height="200" alt="mansory-2-col-14.jpg">
+              <img src="./images/mansory-2-col-15.jpg" width="200" height="200" alt="mansory-2-col-15.jpg">
+              <img src="./images/grid-2-col-4.jpg" width="200" height="200" alt="grid-2-col-4.jpg">
+              <img src="./images/grid-2-col-8.jpg" width="200" height="200" alt="grid-2-col-8.jpg">
             </div>
-          </label>
-        </div>
-        <div class="project-menu__item">
-          <label>
-            <input type="checkbox">
-            3D
-            <div class="first-gallery move">
-              <img src="./images/mansory-2-col-2.jpg" width="200" height="200" alt="">
-              <img src="./images/mansory-2-col-3.jpg" width="200" height="200" alt="">
-              <img src="./images/mansory-2-col-10.jpg" width="200" height="200" alt="">
-              <img src="./images/mansory-2-col-11.jpg" width="200" height="200" alt="">
-              <img src="./images/mansory-2-col-7.jpg" width="200" height="200" alt="">
-              <img src="./images/mansory-2-col-6.jpg" width="200" height="200" alt="">
-              <img src="./images/mansory-2-col-14.jpg" width="200" height="200" alt="">
-              <img src="./images/mansory-2-col-15.jpg" width="200" height="200" alt="">
+          </div>
+          <div class="project-menu__item">
+            <label for="3d">3D</label>
+            <input type="radio" name="gallery" id="3d">
+            <div class="first-gallery move-right">
+              <img src="./images/mansory-2-col-14.jpg" width="200" height="200" alt="mansory-2-col-14.jpg">
+              <img src="./images/mansory-2-col-15.jpg" width="200" height="200" alt="mansory-2-col-15.jpg">
+              <img src="./images/mansory-2-col-2.jpg" width="200" height="200" alt="mansory-2-col-2.jpg">
+              <img src="./images/mansory-2-col-3.jpg" width="200" height="200" alt="mansory-2-col-3.jpg">
+              <img src="./images/mansory-2-col-7.jpg" width="200" height="200" alt="mansory-2-col-7.jpg">
+              <img src="./images/mansory-2-col-6.jpg" width="200" height="200" alt="mansory-2-col-6.jpg">
             </div>
-          </label>
-        </div>
-        <div class="project-menu__item">
-          <label>
-            <input type="checkbox">
-            Education
-            <div class="second-gallery rotate">
+          </div>
+          <div class="project-menu__item">
+            <label for="education">Education</label>
+            <input type="radio" name="gallery" id="education">
+            <div class="second-gallery move-top">
               <img src="./images/grid-2-col-4.jpg" width="200" height="200" alt="">
               <img src="./images/grid-2-col-8.jpg" width="200" height="200" alt="">
+              <img src="./images/mansory-2-col-6.jpg" width="200" height="200" alt="">
+              <img src="./images/mansory-2-col-7.jpg" width="200" height="200" alt="">
             </div>
-          </label>
-        </div>
-        <div class="project-menu__item">
-          Entertainment
+          </div>
+          <div class="project-menu__item">
+            <label for="entertainment">Entertainment</label>
+            <input type="radio" name="gallery" id="entertainment">
+            <div class="third-gallery move-left">
+              <img src="./images/grid-2-col-4.jpg" width="400" height="400" alt="">
+              <img src="./images/grid-2-col-8.jpg" width="400" height="400" alt="">
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <div class="team-content">
-    <div class="team-content__title">
-      meet our team
-    </div>
-    <div class="team-content__images">
-      <img src="./images/header-seprator.png" alt="header-se-prator.png">
-    </div>
-    <div class="team-content__text">
-      Let’s see our grand projects from the beginning and some upcoming products in the future.<br>
-      They are also nice PSD Template
-    </div>
-    <div class="team-content__photos">
-      <div class="photos__item">
-        <img src="./images/team-1.png" alt="team-1.png">
-        <div class="photos-content">
-          <div class="photos-content__title">
-            Martin Garrix
-          </div>
-          <div class="photos-content__text">
-            Director Art
-          </div>
-          <div class="photos-content__icons">
-            <div class="icon"><i class="icon-twitter"></i></div>
-            <div class="icon"><i class="icon-facebook"></i></div>
-            <div class="icon"><i class="icon-dribbble"></i></div>
-          </div>
-        </div>
-      </div>
-      <div class="photos__item">
-        <img src="./images/team-2.png" alt="team-2.png">
-        <div class="photos-content">
-          <div class="photos-content__title">
-            Martin Garrix
-          </div>
-          <div class="photos-content__text">
-            Director Art
-          </div>
-          <div class="photos-content__icons">
-            <div class="icon"><i class="icon-twitter"></i></div>
-            <div class="icon"><i class="icon-facebook"></i></div>
-            <div class="icon"><i class="icon-dribbble"></i></div>
-          </div>
-        </div>
-      </div>
-      <div class="photos__item">
-        <img src="./images/team-3.png" alt="team-3.png">
-        <div class="photos-content">
-          <div class="photos-content__title">
-            Martin Garrix
-          </div>
-          <div class="photos-content__text">
-            Director Art
-          </div>
-          <div class="photos-content__icons">
-            <div class="icon"><i class="icon-twitter"></i></div>
-            <div class="icon"><i class="icon-facebook"></i></div>
-            <div class="icon"><i class="icon-dribbble"></i></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+    <!-- Team block -->
 
-  <div class="shield-theme">
-    <div class="shield-theme__logo">
-      <img src="./images/callout-ic.png" alt="callout-ic.png">
-    </div>
-    <div class="shield-theme__text">
-      <div class="theme-text__title">
-        shield theme premium wordpress theme
+    <div class="team-content">
+      <div class="team-content__title">
+        meet our team
       </div>
-      <div class="theme-text__text">
-        Use the latest version of the theme and enjoy the site creation.
+      <div class="team-content__images">
+        <img src="./images/header-seprator.png" alt="header-se-prator.png">
+      </div>
+      <div class="team-content__text">
+        Let’s see our grand projects from the beginning and some upcoming products in the future.<br>
+        They are also nice PSD Template
+      </div>
+      <div class="team-content__photos">
+        <div class="photos__item">
+          <img src="./images/team-1.png" alt="team-1.png">
+          <div class="photos-content">
+            <div class="photos-content__title">
+              Martin Garrix
+            </div>
+            <div class="photos-content__text">
+              Director Art
+            </div>
+            <div class="photos-content__icons">
+              <div class="icon"><i class="icon-twitter"></i></div>
+              <div class="icon"><i class="icon-facebook"></i></div>
+              <div class="icon"><i class="icon-dribbble"></i></div>
+            </div>
+          </div>
+        </div>
+        <div class="photos__item">
+          <img src="./images/team-2.png" alt="team-2.png">
+          <div class="photos-content">
+            <div class="photos-content__title">
+              Martin Garrix
+            </div>
+            <div class="photos-content__text">
+              Director Art
+            </div>
+            <div class="photos-content__icons">
+              <div class="icon"><i class="icon-twitter"></i></div>
+              <div class="icon"><i class="icon-facebook"></i></div>
+              <div class="icon"><i class="icon-dribbble"></i></div>
+            </div>
+          </div>
+        </div>
+        <div class="photos__item">
+          <img src="./images/team-3.png" alt="team-3.png">
+          <div class="photos-content">
+            <div class="photos-content__title">
+              Martin Garrix
+            </div>
+            <div class="photos-content__text">
+              Director Art
+            </div>
+            <div class="photos-content__icons">
+              <div class="icon"><i class="icon-twitter"></i></div>
+              <div class="icon"><i class="icon-facebook"></i></div>
+              <div class="icon"><i class="icon-dribbble"></i></div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="shield-theme__button">
-      purchase now
-    </div>
-  </div>
 
-  <div class="our-clients">
-    <div class="our-clients__title">
-      our clients
+    <!-- Shield block -->
+
+    <div class="shield-theme">
+      <div class="shield-theme__logo">
+        <img src="./images/callout-ic.png" alt="callout-ic.png">
+      </div>
+      <div class="shield-theme__text">
+        <div class="theme-text__title">
+          shield theme premium wordpress theme
+        </div>
+        <div class="theme-text__text">
+          Use the latest version of the theme and enjoy the site creation.
+        </div>
+      </div>
+      <div class="shield-theme__button">
+        purchase now
+      </div>
     </div>
-    <div class="our-clients__images">
-      <img src="./images/header-seprator.png" alt="header-seprator.png">
-    </div>
-    <div class="our-clients-wrapper">
-      <label><i class="icon-exchange"></i>
-        <input type="checkbox">
+
+    <!-- Clients block -->
+
+    <div class="our-clients">
+      <div class="our-clients__title">
+        our clients
+      </div>
+      <div class="our-clients__images">
+        <img src="./images/header-seprator.png" alt="header-seprator.png">
+      </div>
+      <div class="our-clients-wrapper">
+        <label for="arrow"><i class="icon-exchange"></i></label>
+        <input type="checkbox" id="arrow">
         <div class="clients-content clients-content_move">
           <div class="client-content_row">
             <div class="client-content__item_column">
@@ -906,269 +931,273 @@
             </div>
           </div>
         </div>
+      </div>
     </div>
-    </label>
-  </div>
 
-  <div class="from-the-blog">
-    <div class="from-the-blog__title">
-      From the blog
-    </div>
-    <div class="from-the-blog__image">
-      <img src="./images/header-seprator.png" alt="header-seprator.png">
-    </div>
-    <div class="from-the-blog__text">
-      Share your single post here. You can choose the latest posts or best articles to show on your homepage.
-    </div>
-    <div class="from-the-blog__content">
-      <div class="blog-content__item">
-        <div class="blog-content__item-image">
-          <img src="./images/post_grid_3.1-1.jpg" alt="post_grid_3.1-1.jpg">
-        </div>
-      </div>
-      <div class="blog-content__item blog-content_column">
-        <div class="blog-content">
-          <div class="blog-content-post">
-            <div class="blog-images-wrapper">
-              <div class="blog-content-post__images"></div>
-            </div>
-          </div>
-          <div class="blog-content-post">
-            <div class="blog-content-post__title">
-              Single post with image
-            </div>
-            <div class="blog-content-post__text">
-              July 02, 2016 ByTheme Squard In PHOTOGRAPHY
-            </div>
-            <div class="blog-content-post__button">
-              Continue reading
-              <i class="icon-right"></i>
-            </div>
-          </div>
-        </div>
-        <div class="blog-content">
-          <div class="blog-content-post">
-            <div class="blog-images-wrapper">
-              <div class="blog-content-post__images"></div>
-            </div>
-          </div>
-          <div class="blog-content-post">
-            <div class="blog-content-post__title">
-              Single post with image
-            </div>
-            <div class="blog-content-post__text">
-              July 02, 2016 ByTheme Squard In PHOTOGRAPHY
-            </div>
-            <div class="blog-content-post__button">
-              Continue reading
-              <i class="icon-right"></i>
-            </div>
-          </div>
-        </div>
-        <div class="blog-content">
-          <div class="blog-content-post">
-            <div class="blog-images-wrapper">
-              <div class="blog-content-post__images"></div>
-            </div>
-          </div>
-          <div class="blog-content-post">
-            <div class="blog-content-post__title">
-              Single post with image
-            </div>
-            <div class="blog-content-post__text">
-              July 02, 2016 ByTheme Squard In PHOTOGRAPHY
-            </div>
-            <div class="blog-content-post__button">
-              Continue reading
-              <i class="icon-right"></i>
-            </div>
-          </div>
-        </div>
-        <div class="blog-content">
-          <div class="blog-content-post">
-            <div class="blog-images-wrapper">
-              <div class="blog-content-post__images"></div>
-            </div>
-          </div>
-          <div class="blog-content-post">
-            <div class="blog-content-post__title">
-              Single post with image
-            </div>
-            <div class="blog-content-post__text">
-              July 02, 2016 ByTheme Squard In PHOTOGRAPHY
-            </div>
-            <div class="blog-content-post__button">
-              Continue reading
-              <i class="icon-right"></i>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="blog-content__button_wrapper">
-      <div class="blog-content__button">
-        Read more blog
-        <i class="icon-right"></i>
-      </div>
-    </div>
-  </div>
+    <!-- From the blog -->
 
-  <div class="thank-you-block">
-    <div class="thank-you-container content_move">
-      <div class="thank-you-block__images">
-        <i class="icon-quote-right"></i>
+    <div class="from-the-blog">
+      <div class="from-the-blog__title">
+        From the blog
       </div>
-      <div class="thank-you-block__text">
-        This theme is beautiful, elegant and support is the first class! I've been able to build an amazing site in just a minute. Thank you for creating an impressive WordPress theme.
+      <div class="from-the-blog__image">
+        <img src="./images/header-seprator.png" alt="header-seprator.png">
       </div>
-      <div class="container-block">
-        <div class="container-block__photo">
+      <div class="from-the-blog__text">
+        Share your single post here. You can choose the latest posts or best articles to show on your homepage.
+      </div>
+      <div class="from-the-blog__content">
+        <div class="blog-content__item">
+          <div class="blog-content__item-image">
+            <img src="./images/post_grid_3.1-1.jpg" alt="post_grid_3.1-1.jpg">
+          </div>
         </div>
-        <div class="container-block__title">
-          Logan Cee
+        <div class="blog-content__item blog-content_column">
+          <div class="blog-content">
+            <div class="blog-content-post">
+              <div class="blog-images-wrapper">
+                <div class="blog-content-post__images"></div>
+              </div>
+            </div>
+            <div class="blog-content-post">
+              <div class="blog-content-post__title">
+                Single post with image
+              </div>
+              <div class="blog-content-post__text">
+                July 02, 2016 ByTheme Squard In PHOTOGRAPHY
+              </div>
+              <div class="blog-content-post__button">
+                Continue reading
+                <i class="icon-right"></i>
+              </div>
+            </div>
+          </div>
+          <div class="blog-content">
+            <div class="blog-content-post">
+              <div class="blog-images-wrapper">
+                <div class="blog-content-post__images"></div>
+              </div>
+            </div>
+            <div class="blog-content-post">
+              <div class="blog-content-post__title">
+                Single post with image
+              </div>
+              <div class="blog-content-post__text">
+                July 02, 2016 ByTheme Squard In PHOTOGRAPHY
+              </div>
+              <div class="blog-content-post__button">
+                Continue reading
+                <i class="icon-right"></i>
+              </div>
+            </div>
+          </div>
+          <div class="blog-content">
+            <div class="blog-content-post">
+              <div class="blog-images-wrapper">
+                <div class="blog-content-post__images"></div>
+              </div>
+            </div>
+            <div class="blog-content-post">
+              <div class="blog-content-post__title">
+                Single post with image
+              </div>
+              <div class="blog-content-post__text">
+                July 02, 2016 ByTheme Squard In PHOTOGRAPHY
+              </div>
+              <div class="blog-content-post__button">
+                Continue reading
+                <i class="icon-right"></i>
+              </div>
+            </div>
+          </div>
+          <div class="blog-content">
+            <div class="blog-content-post">
+              <div class="blog-images-wrapper">
+                <div class="blog-content-post__images"></div>
+              </div>
+            </div>
+            <div class="blog-content-post">
+              <div class="blog-content-post__title">
+                Single post with image
+              </div>
+              <div class="blog-content-post__text">
+                July 02, 2016 ByTheme Squard In PHOTOGRAPHY
+              </div>
+              <div class="blog-content-post__button">
+                Continue reading
+                <i class="icon-right"></i>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="container-block__text">
-          UI/UX Web<br> Designer
+      </div>
+      <div class="blog-content__button_wrapper">
+        <div class="blog-content__button">
+          Read more blog
+          <i class="icon-right"></i>
         </div>
       </div>
     </div>
-  </div>
 
-  <div class="footer">
-    <div class="footer-content">
-      <div class="footer-content__item">
-        <div class="footer-content__title">
-          <img src="./images/logo-white.png" alt="logo-white.png">
-          <div class="footer-content__name">
-            Shield theme
-          </div>
-        </div>
-        <div class="footer-content__text">
-          Shield Theme is a multpurpose HTML Template which is the perfect solution for business, online shop websites
-        </div>
-        <div class="footer-content__text">
-          <div class="footer-content__text-icon">
-            <i class="icon-location"></i>
-          </div>
-          <div class="footer-content__text-block">
-            1234 New Design St, Melbourne Australia
-          </div>
-        </div>
-        <div class="footer-content__text">
-          <div class="footer-content__text-icon">
-            <i class="icon-mail"></i>
-          </div>
-          <div class="footer-content__text-block">
-            hello@example.com
-          </div>
-        </div>
-        <div class="footer-content__text">
-          <div class="footer-content__text-icon">
-            <i class="icon-phone"></i>
-          </div>
-          <div class="footer-content__text-block">
-            (0091) 8547 632521
-          </div>
-        </div>
-      </div>
-      <div class="footer-content__item">
-        <div class="footer-content__item-title">
-          Popular tags
-        </div>
-        <div class="footer-content__item-block">
-          Codeyon
-        </div>
-        <div class="footer-content__item-block">
-          Envato
-        </div>
-        <div class="footer-content__item-block">
-          Graphic River
-        </div>
-        <div class="footer-content__item-block">
-          Knight
-        </div>
-        <div class="footer-content__item-block">
-          Login
-        </div>
-        <div class="footer-content__item-block">
-          Mazing
-        </div>
-        <div class="footer-content__item-block">
-          PhotoDuneTheme
-        </div>
-        <div class="footer-content__item-block">
-          Theme forest
-        </div>
-        <div class="footer-content__item-block">
-          WordPress
-        </div>
-      </div>
-      <div class="footer-content__item">
-        <div class="footer-content__item-title">
-          Recent posts
-        </div>
-        <div class="footer-content__text">
-          Single Post With Image July 2, 2016
-        </div>
-        <div class="footer-content__text">
-          Gallery Post July 2, 2016
-        </div>
-        <div class="footer-content__text">
-          Single Post With Video July 2, 2016
-        </div>
-        <div class="footer-content__text">
-          Single Post With Audio July 2, 2016
-        </div>
-        <div class="footer-content__text">
-          Single Post With Image July 2, 2016
-        </div>
-        <div class="footer-content__text">
-          Single Post With Image July 2, 2016
-        </div>
-      </div>
-      <div class="footer-content__item">
-        <div class="footer-content__item-title">
-          Maling list
-        </div>
-        <div class="footer-content__text footer-content__item_column">
-          Sign up for our mailing list to get latest updates and offers.
-          <form>
-            <input type="search" placeholder="Your email address">
-            <button type="submit"><i class="icon-right"></i></button>
-          </form>
-        </div>
-        <div class="footer-content__icons">
-          <div class="footer-content__icons-item">
-            <i class="icon-gplus"></i>
-          </div>
-          <div class="footer-content__icons-item">
-            <i class="icon-twitter"></i>
-          </div>
-          <div class="footer-content__icons-item">
-            <i class="icon-pinterest-circled"></i>
-          </div>
-          <div class="footer-content__icons-item">
-            <i class="icon-rss"></i>
-          </div>
-          <div class="footer-content__icons-item">
-            <i class="icon-facebook"></i>
-          </div>
-          <div class="footer-content__icons-item">
-            <i class="icon-dribbble"></i>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <div class="footer-bottom-text">
-        Copyrights © 2016 by Shield. All Rights Reserved
-      </div>
-      <div class="footer-bottom-button">
-        <a href="#" class="button_up"><i class="icon-up"></i></a>
-      </div>
-    </div>
-  </div>
+    <!-- Thank you block -->
 
+    <div class="thank-you-block">
+      <div class="thank-you-container content_show">
+        <div class="thank-you-block__images">
+          <i class="icon-quote-right"></i>
+        </div>
+        <div class="thank-you-block__text">
+          This theme is beautiful, elegant and support is the first class! I've been able to build an amazing site in just a minute. Thank you for creating an impressive WordPress theme.
+        </div>
+        <div class="container-block">
+          <div class="container-block__photo">
+          </div>
+          <div class="container-block__title">
+            Logan Cee
+          </div>
+          <div class="container-block__text">
+            UI/UX Web<br> Designer
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer block -->
+
+    <div class="footer">
+      <div class="footer-content">
+        <div class="footer-content__item">
+          <div class="footer-content__title">
+            <img src="./images/logo-white.png" alt="logo-white.png">
+            <div class="footer-content__name">
+              Shield theme
+            </div>
+          </div>
+          <div class="footer-content__text">
+            Shield Theme is a multpurpose HTML Template which is the perfect solution for business, online shop websites
+          </div>
+          <div class="footer-content__text">
+            <div class="footer-content__text-icon">
+              <i class="icon-location"></i>
+            </div>
+            <div class="footer-content__text-block">
+              1234 New Design St, Melbourne Australia
+            </div>
+          </div>
+          <div class="footer-content__text">
+            <div class="footer-content__text-icon">
+              <i class="icon-mail"></i>
+            </div>
+            <div class="footer-content__text-block">
+              hello@example.com
+            </div>
+          </div>
+          <div class="footer-content__text">
+            <div class="footer-content__text-icon">
+              <i class="icon-phone"></i>
+            </div>
+            <div class="footer-content__text-block">
+              (0091) 8547 632521
+            </div>
+          </div>
+        </div>
+        <div class="footer-content__item">
+          <div class="footer-content__item-title">
+            Popular tags
+          </div>
+          <div class="footer-content__item-block">
+            Codeyon
+          </div>
+          <div class="footer-content__item-block">
+            Envato
+          </div>
+          <div class="footer-content__item-block">
+            Graphic River
+          </div>
+          <div class="footer-content__item-block">
+            Knight
+          </div>
+          <div class="footer-content__item-block">
+            Login
+          </div>
+          <div class="footer-content__item-block">
+            Mazing
+          </div>
+          <div class="footer-content__item-block">
+            PhotoDuneTheme
+          </div>
+          <div class="footer-content__item-block">
+            Theme forest
+          </div>
+          <div class="footer-content__item-block">
+            WordPress
+          </div>
+        </div>
+        <div class="footer-content__item">
+          <div class="footer-content__item-title">
+            Recent posts
+          </div>
+          <div class="footer-content__text">
+            Single Post With Image July 2, 2016
+          </div>
+          <div class="footer-content__text">
+            Gallery Post July 2, 2016
+          </div>
+          <div class="footer-content__text">
+            Single Post With Video July 2, 2016
+          </div>
+          <div class="footer-content__text">
+            Single Post With Audio July 2, 2016
+          </div>
+          <div class="footer-content__text">
+            Single Post With Image July 2, 2016
+          </div>
+          <div class="footer-content__text">
+            Single Post With Image July 2, 2016
+          </div>
+        </div>
+        <div class="footer-content__item">
+          <div class="footer-content__item-title">
+            Maling list
+          </div>
+          <div class="footer-content__text footer-content__item_column">
+            Sign up for our mailing list to get latest updates and offers.
+            <form>
+              <input type="search" placeholder="Your email address">
+              <button type="submit"><i class="icon-right"></i></button>
+            </form>
+          </div>
+          <div class="footer-content__icons">
+            <div class="footer-content__icons-item">
+              <i class="icon-gplus"></i>
+            </div>
+            <div class="footer-content__icons-item">
+              <i class="icon-twitter"></i>
+            </div>
+            <div class="footer-content__icons-item">
+              <i class="icon-pinterest-circled"></i>
+            </div>
+            <div class="footer-content__icons-item">
+              <i class="icon-rss"></i>
+            </div>
+            <div class="footer-content__icons-item">
+              <i class="icon-facebook"></i>
+            </div>
+            <div class="footer-content__icons-item">
+              <i class="icon-dribbble"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-bottom-text">
+          Copyrights © 2016 by Shield. All Rights Reserved
+        </div>
+        <div class="footer-bottom-button">
+          <a href="#" class="button_up"><i class="icon-up"></i></a>
+        </div>
+      </div>
+    </div>
 </body>
 
 </html>

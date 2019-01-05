@@ -1,0 +1,68 @@
+.header-mobile {
+  display: inline-block;
+  width: 80px;
+  height: 30px;
+  margin: 15px;
+
+  & input[type="checkbox"] {
+    display: none;
+  }
+
+  .mobile-btn {
+    margin: 10px;
+    text-align: center;
+    padding: 10px;
+    background-color: $hovercolor;
+
+    & i {
+      color: #fff;
+      font-size: 25px;
+    }
+
+    .mobile-menu {
+      display: none;
+      background-color: #000;
+    }
+
+    & input:checked ~ .mobile-menu_show {
+      position: absolute;
+      top: 70px;
+      left: 0;
+      right: 0;
+      display: block;
+      background-color: #000;
+      color: #fff;
+    }
+  }
+  .mobile-menu__item{
+    text-transform: uppercase;
+
+    & i{
+      position: relative;
+      font-size: 15px;
+      margin-left: 140px;
+
+      &:after{
+        position: absolute;
+        opacity: 0.6;
+        left: 0;
+        content: '';
+        width: 20px;
+        height: 20px;
+        background-color: $hovercolor;
+      }
+    }
+
+    & input[type="radio"]{
+      display: none;
+    }
+
+    .item-mob-menu{
+      display: none;
+    }
+
+    & input:checked + .item-mob-menu_show{
+      display: block;
+    }
+  }
+}
