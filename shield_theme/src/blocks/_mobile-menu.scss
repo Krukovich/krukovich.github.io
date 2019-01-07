@@ -32,6 +32,12 @@
       display: block;
       background-color: #000;
       color: #fff;
+      z-index: 2;
+
+      & i {
+        position: absolute;
+        right: 30px;
+      }
     }
   }
 
@@ -40,6 +46,19 @@
     font-weight: bold;
     font-family: 'Montserrat', sans-serif;
     font-size: 20px;
+
+    .item-mob-menu__item{
+      text-transform: none;
+      font-size: 15px;
+      color: #666;
+      padding: 10px;
+
+      &:hover{
+        cursor: pointer;
+        color: $hovercolor;
+        transition: 1s;
+      }
+    }
 
     & i {
       position: relative;
@@ -68,5 +87,17 @@
     & input:checked + .item-mob-menu_show {
       display: block;
     }
+  }
+  .mobile-menu-list{
+    display: none;
+  }
+
+  & input:checked + .mobile-menu-list_show{
+    display: block;
+  }
+
+  .mobile-menu-list__item{
+    color: #fff;
+    padding: 10px;
   }
 }

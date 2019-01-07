@@ -48,6 +48,7 @@
 
         & input:checked ~ .move-top {
           transform: translateY(0);
+          visibility: visible;
           transition: 1s;
         }
 
@@ -83,6 +84,7 @@
           top: 150px;
           left: 20px;
           transform: translateY(250%);
+          visibility: hidden;
           transition: 1s;
         }
 

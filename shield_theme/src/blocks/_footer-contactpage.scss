@@ -1,5 +1,6 @@
-.footer {
+.footer-contactpage {
   background-color: #2b2b2b;
+  margin: 0;
 
   .footer-content {
     display: flex;
@@ -110,6 +111,7 @@
   .footer-bottom {
     height: 100px;
     margin-top: 50px;
+    margin-bottom: -30px;
     background-color: #1f1f1f;
     display: flex;
     justify-content: space-between;
