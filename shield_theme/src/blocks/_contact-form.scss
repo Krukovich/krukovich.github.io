@@ -1,6 +1,5 @@
 .contact-form {
   display: flex;
-  margin: 0 -30px;
 
   .contact-form__left {
     display: flex;
@@ -104,7 +103,7 @@
     .form-item__text {
       line-height: 30px;
       padding: 50px;
-      width: 300px;
+      width: 220px;
       font-family: 'Droid', sans-serif;
       color: #666;
     }
@@ -112,7 +111,7 @@
 }
 
 .googlemap-block {
-  margin: 0 -30px;
+  margin: 0;
 
   .map {
     width: 100%;
