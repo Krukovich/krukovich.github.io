@@ -1,0 +1,43 @@
+.client-slider {
+  position: relative;
+  height: 200px;
+  width: 220px;
+  border: 1px solid transparent;
+  overflow: hidden;
+
+  & input[type="radio"] {
+    display: none;
+  }
+}
+
+.slider__item {
+  display: none;
+}
+
+.client-slider__item {
+  & input:checked + .slider__item_show {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.slider-menu {
+  position: absolute;
+  bottom: 2px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.mobile-slider {
+  padding: 50px;
+}
+
+.icon-bookmark {
+  color: #fff;
+
+  &:hover {
+    color: $hovercolor;
+    cursor: pointer;
+  }
+}

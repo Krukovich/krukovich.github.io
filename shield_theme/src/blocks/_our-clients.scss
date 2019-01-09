@@ -1,6 +1,5 @@
 .our-clients {
   margin-top: 100px;
-  height: 100vh;
   background-image: url("../../public/images/corporate-home-brand1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -33,6 +32,7 @@
     width: 800px;
     margin: 0 auto;
     margin-top: 10px;
+    padding-bottom: 50px;
 
     & input[type="checkbox"]{
       display: none;
@@ -45,7 +45,7 @@
 
     & i{
       position: absolute;
-      bottom: 0;
+      bottom: 25px;
       left: 10px;
       color: #fff;
       font-size: 20px;
@@ -92,5 +92,9 @@
 
   .clients-content {
     display: flex;
+  }
+
+  .mobile-slider{
+    display: none;
   }
 }
