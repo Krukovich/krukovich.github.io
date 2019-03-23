@@ -1,0 +1,19 @@
+{
+  "name": "search_app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server",
+    "build": "webpack",
+    "dev": "webpack-watch-server"
+  },
+  "author": "Krukovich Alexey",
+  "license": "MIT",
+  "devDependencies": {
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0",
+    "webpack-dev-server": "^3.2.1",
+    "webpack-watch-server": "^1.2.1"
+  }
+}
