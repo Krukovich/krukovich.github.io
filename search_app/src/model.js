@@ -43,51 +43,43 @@ let model = {
             });
         return result;     
     },
-                                                    // Search memory by value
-    searchInLocalStorage: function() {
-        debugger;
+                                                    // search by value age
+    searchInLocalStorageAge: function() {
         let data = model.getDataLocalStorage(),
-            gender = document.getElementById("gender"),
             age = document.getElementById("age"),
             result = [];
         data.forEach(function(item) {
-            if (item.gender == gender.value && item.age == age.value) {
+            if (item.age == age.value) {
                 result.push(item);
             }
         });
         return result;
+    },
+                                                    // search by value gender
+    searcInLocalStorageGender: function() {
+        let data = model.getDataLocalStorage(),
+            gender = document.getElementById("gender"),
+            result = [];
+        data.forEach(function(item) {
+            if (item.gender == gender.value) {
+                result.push(item);
+            }
+        });
+        return result;
+    },
+                                                    // search by value money
+    searchInLocalStorageMoney: function() {
+        let moneyMin = document.getElementById("moneyMin").value,
+            moneyMax = document.getElementById("moneyMax").value,
+            data = model.getDataLocalStorage(),
+            result = [];
+            data.forEach(function(item) {
+                if (item.balance > moneyMin && item.balance < moneyMax) {
+                    result.push(item);
+                }
+            });
+          return result;  
     }
-
-    // searchInLocalStorage: function() {
-    //     debugger;
-    //     let data = model.getDataLocalStorage(),
-    //         valueInputArray = [],
-    //         result = [],
-    //         formInput = document.forms.userForm;
-    //         let formInputArray = [].slice.call(formInput);
-    //         formInputArray.forEach(function(item) {
-    //             if (item.type == "text" && item.value !== "") {
-    //                 valueInputArray.push(item.value);
-    //             }
-    //         });
-    //         valueInputArray.forEach(function(elem) {
-    //             let char = typeof elem;
-    //             if (elem === char) {
-    //                 data.forEach(function(item) {
-    //                     if (item.gender == elem) {
-    //                         result.push(item);
-    //                     }
-    //                 });
-    //             } if (elem === char) {
-    //                 data.forEach(function(item) {
-    //                     if (item.age == elem) {
-    //                         result.push(item);
-    //                     }
-    //                 });
-    //             }
-    //         });
-    //     return result; 
-    // }
 }
 
 export default model;

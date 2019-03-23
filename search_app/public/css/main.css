@@ -17,7 +17,6 @@ body {
     padding: 30px;
     display: flex;
     justify-content: space-between;
-    height: 800px;
     overflow: hidden;
 }
 
@@ -143,10 +142,6 @@ body {
     margin-top: 50px;
     width: 300px;
     transform: translateX(-500%);
-    -webkit-transform: translateX(-500%);
-    -moz-transform: translateX(-500%);
-    -ms-transform: translateX(-500%);
-    -o-transform: translateX(-500%);
     transition: 1s;
     -webkit-transition: 1s;
     -moz-transition: 1s;
@@ -160,10 +155,6 @@ body {
     margin-top: 50px;
     width: 300px;
     transform: translateX(0);
-    -webkit-transform: translateX(0);
-    -moz-transform: translateX(0);
-    -ms-transform: translateX(0);
-    -o-transform: translateX(0);
     transition: 1s;
     -webkit-transition: 1s;
     -moz-transition: 1s;
@@ -200,6 +191,28 @@ body {
     margin-top: 20px;   
 }
 
+#form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+}
+
+#filterName, #filterAge, #filterGender, #filterBalance {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 50px;
+}
+
+#moneyMin, #moneyMax {
+    width: 80px;
+}
+
 .content-right__item-list {
     visibility: hidden;
     transition: 1s;
@@ -217,3 +230,18 @@ body {
     -ms-transition: 1s;
     -o-transition: 1s;
 }
+
+@media screen and (max-width: 320px) {
+    .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0px;
+        overflow: hidden;
+    }
+    .content-left__search_show {
+        padding-left: 10px;
+        padding-bottom: 10px;
+    }
+}
+

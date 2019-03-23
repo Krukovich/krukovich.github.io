@@ -17,18 +17,28 @@
             <input type="button" class="btn" value="Close" id="close">
             <div class="content-left__search">
                 <h2>Search filter</h2>
-            <form name="userForm">
-                <label for="surname">Surname</label><br>
-                <input type="text" id="surname"><br>
-                <label for="name">Name</label><br>
-                <input type="text" id="name"><br>
-                <label for="age">Age</label><br>
-                <input type="text" id="age"><br>
-                <label for="gender">Gender</label><br>
-                <input type="text" id="gender"><br>
+            <form id="form" name="userForm">
+                <label for="nameUser">Account name</label>
+                <div class="form__item">
+                    <input type="text" name="nameUser" id="name" placeholder="Name">
+                    <button class="btn" id="filterName">Ok</button>
+                </div>
+                <label for="ageUser">Account age</label>
+                <div class="form__item">
+                    <input type="text" name="ageUser" id="age" placeholder="Age">
+                    <input type="button" value="Ok" class="btn" id="filterAge"> 
+                </div>
+                <label for="genderUser">Account gender</label>
+                <div class="form__item">
+                    <input type="text" name="genderUser" id="gender" placeholder="female/male">
+                    <input type="button" value="Ok" class="btn" id="filterGender">
+                </div>
                 <label for="money">Account balance</label>
-                <input type="text" id="moneyMin" placeholder="min" required>
-                <input type="text" id="moneyMax" placeholder="max" required>
+                <div class="form__item">
+                    <input type="text" id="moneyMin" name="money" placeholder="$1,111">
+                    <input type="text" id="moneyMax" placeholder="max">
+                    <input type="button" value="OK" class="btn" id="filterBalance">
+                </div>    
                 <input type="button" value="Search" class="btn" id="startSearch">
             </form>
             </div>  
