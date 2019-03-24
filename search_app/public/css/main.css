@@ -147,6 +147,10 @@ body {
     -moz-transition: 1s;
     -ms-transition: 1s;
     -o-transition: 1s;
+    -webkit-transform: translateX(-500%);
+    -moz-transform: translateX(-500%);
+    -ms-transform: translateX(-500%);
+    -o-transform: translateX(-500%);
 }
 
 .content-left__search_show {
@@ -231,7 +235,7 @@ body {
     -o-transition: 1s;
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 1200px) {
     .content {
         display: flex;
         flex-direction: column;

@@ -65,7 +65,7 @@ let view = {
         let itemBalance = document.getElementById("item-balance");
             itemBalance.textContent = "";          
     },
-    
+ 
     showInsertItem: function() {
         let item = document.getElementById("dataUser");
             item.classList.add("content-right__item-list_show");

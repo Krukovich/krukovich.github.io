@@ -43,6 +43,19 @@ let model = {
             });
         return result;     
     },
+                                                    // search all 
+    searcInLocalStorageAll: function() {
+        let data = model.getDataLocalStorage(),
+            age = document.getElementById("age").value,
+            gender = document.getElementById("gender").value,
+            result = [];
+            data.forEach(function(item) {
+                if (age == item.age && gender == item.gender) {
+                    result.push(item);
+                }
+            });
+        return result;    
+    },  
                                                     // search by value age
     searchInLocalStorageAge: function() {
         let data = model.getDataLocalStorage(),

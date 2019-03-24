@@ -2,8 +2,6 @@
 
 import model from "./model";
 import view from "./view";
-import { fileURLToPath } from "url";
-
                                                         // activate the search filter window 
 let searcMenu = document.getElementById("filter");
 searcMenu.addEventListener("click", function() {
@@ -31,7 +29,7 @@ people.addEventListener("click", function() {
                                                         // start the search by value 
 let startSearch = document.getElementById("startSearch");
 startSearch.addEventListener("click", function() {
-        let result = model.searchInLocalStorage();
+        let result = model.searcInLocalStorageAll();
         view.clearContentItem();
         view.showContentItem();
         view.showResult(result);                                                     
@@ -59,7 +57,6 @@ people.addEventListener("click", function() {
         view.clearAllUserResult();
         view.showAllUserResult(userData);
         });
-
 });
                                                         // show search age
 let filterAge = document.getElementById("filterAge");
@@ -103,7 +100,6 @@ let outDisplay = document.getElementById("people");
 outDisplay.addEventListener("mouseout", function() {
         view.outDisplayIphone();
 });
-
                                                         // close all
 let close = document.getElementById("close");
 close.addEventListener("click", function() {
