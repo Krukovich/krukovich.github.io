@@ -48,10 +48,14 @@ let model = {
         let data = model.getDataLocalStorage(),
             age = document.getElementById("age").value,
             gender = document.getElementById("gender").value,
+            balanceMin = document.getElementById("moneyMin").value,
+            balanceMax = document.getElementById("moneyMax").value,
             result = [];
             data.forEach(function(item) {
                 if (age == item.age && gender == item.gender) {
-                    result.push(item);
+                    if (item.balance > balanceMin && item.balance < balanceMax) {
+                        result.push(item);
+                    }
                 }
             });
         return result;    
