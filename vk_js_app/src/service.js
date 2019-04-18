@@ -1,15 +1,14 @@
 'use strict'
 
 class Service {
-	constructor() {}
 
 	getDataServer(){
-		$.ajax({
-			url: "https://api.vk.com/method/friends.get?fields=photo_200,sex,bdate,city,country,online,education,universities,schools,relation&access_token=f59ab20caa833f179ea956d7807514a17c6daa847ce0b8b59689fd151c5e8f5e73ef628cc023720f88089&v=V",
+		return $.ajax({
+			url: "https://api.vk.com/method/friends.get?fields=photo_200,sex,bdate,city,country,online,education,universities,schools,relation&access_token=ce385eae50397516a3b88e5355a62407e58f43b9e8b151c487f5843661ed22b81b0ed6d44f038164f4b34&v=V",
 			method: "GET",
 			dataType: "JSONP",
 			success: function(data){
-				console.log(data);
+				return data;
 			}
 
 		})

@@ -1,9 +1,12 @@
 'use strict'
 
-import Service from "./service"
-
 class View {
     constructor(){}
+
+    showFriendsData(friendsData){
+        console.log(friendsData);
+    }
+
 }
 
 export default View;

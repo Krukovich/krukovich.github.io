@@ -1,13 +1,18 @@
 import Service from "../src/service";
+import View from "../src/view";
 
-class Controller {
-	constructor(){
-		let service = new Service();
+	const controller = function() {
+		let	service = new Service();
+
+		let view = new View();
+
 		let loadFriends = document.getElementById("loadFriends");
 			loadFriends.addEventListener("click", function(){
-			service.getDataServer();
-		});
-	}
+		const dataFriends = service.getDataServer();
+
+		view.showFriendsData(dataFriends);
+	});
 }
 
-export default Controller;
+
+export default controller;

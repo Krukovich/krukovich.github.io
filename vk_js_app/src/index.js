@@ -1,9 +1,10 @@
 import main from "../css/main.css";
 
-import Controller from "../src/Controller"
-import Model from "../src/model"
-import View from "./view";
+import controller from "../src/Controller"
+import loginController from "../src/controllerLogin";
 
-let model = new Model();
-let cont = new Controller();
-let view = new View();
+loginController();
+controller();
+
+
+
