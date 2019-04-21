@@ -13,6 +13,7 @@
 
 <body>
   <header>
+    <div class="dws-wrapper">
     <div class="header__wrapper">
       <div class="header">
         <div class="header__logo">
@@ -38,7 +39,7 @@
           Алексей
         </div>
         <div class="profile__image">
-          <img src="img/profil.jpg" alt="profile">
+          <img id="profileImage" src="img/profil.jpg" alt="profile">
         </div>
         <div class="profile__arrow">
           <i class="icon-down-open"></i>
@@ -67,9 +68,9 @@
           </li>
           <li class="numb_row">
             <i class="icon-user"></i>
-              <input type="button" value="Друзья" id="loadFriends">
+            <a href="#" id="loadFriends">Друзья</a>
             <div class="numb">
-              <span>+4</span>
+              <span id="friendsCount"></span>
             </div>
           </li>
           <li>
@@ -78,7 +79,7 @@
           </li>
           <li>
             <i class="icon-camera"></i>
-            Фотографии
+            <a href="#" id="loadPhotos">Фотографии</a>
           </li>
           <li>
             <i class="icon-note-beamed"></i>
@@ -118,25 +119,25 @@
         <div class="content__mid">
           <div class="content__header">
             <div class="content__logo">
-              <img src="img/post.jpg" alt="">
+              <img id="userPhoto" src="img/post.jpg" alt="">
             </div>
-            <div class="header__name">
-              <span>Горящие туры</span><br>
-              сегодня в 16:30
+            <div class="header__name" id="headerName">
+              <span id="userName">Горящие туры</span>
+              <span id="userTime">сегодня в 16:30</span>
             </div>
           </div>
-          <div class="content__title">
+          <div class="content__title" id="contentTitle">
             <a href="#">#горящиетуры</a>
           </div>
-          <div class="content__text">
+          <div class="content__text" id="contentText">
             Квебек, Канада
           </div>
-          <div class="content_photo">
-            <img src="img/1.jpg" alt="">
-            <img src="img/2.jpg" alt="">
-            <img src="img/3.jpg" alt="">
-            <img src="img/4.jpg" alt="">
-            <img src="img/5.jpg" alt="">
+          <div class="content_photo" id="friendsPhoto">
+            <img class="content-photo__item" src="img/1.jpg" alt="">
+            <img class="content-photo__item" src="img/2.jpg" alt="">
+            <img class="content-photo__item" src="img/3.jpg" alt="">
+            <img class="content-photo__item" src="img/4.jpg" alt="">
+            <img class="content-photo__item" src="img/5.jpg" alt="">
           </div>
           <div class="content__stats-wrapper">
             <div class="content__stats">
@@ -159,14 +160,14 @@
             </div>
           </div>
         </div>
-        <div class="content__mid">
+        <div class="content__mid" id="contentPage">
           <div class="content__header">
             <div class="content__logo">
               <img src="img/post_kino.jpg" alt="">
             </div>
             <div class="header__name">
-              <span>Кинофан</span><br>
-              вчера в 16:30
+              <span>Кинофан</span>
+              <span>вчера в 16:30</span>
             </div>
           </div>
           <div class="content__title">
@@ -206,14 +207,14 @@
             </div>
           </div>
         </div>
-        <div class="content__mid">
+        <div class="content__mid" id="contentPageTwo">
           <div class="content__header">
             <div class="content__logo">
               <img src="img/ps4_profile.jpg" alt="">
             </div>
             <div class="header__name">
-              <span>PlayStation 4 НОВОСТИ | PS4 ОБМЕН ИГР В БЕЛАРУСИ</span><br>
-              1 января
+              <span>PlayStation 4 НОВОСТИ | PS4 ОБМЕН ИГР В БЕЛАРУСИ</span>
+              <span>1 января</span>
             </div>
           </div>
           <div class="content__title">
@@ -323,7 +324,11 @@
     </div>
   </div>
   </div>
+  <div class="login">
+    <a href="https://oauth.vk.com/authorize?client_id=6949483&display=page&redirect_uri=https://krukovich.github.io/&scope=friends&response_type=token&v=5.95&state=123456" target="_blank" rel="noopener noreferrer" class="login-user" id="loginUser">Запуск</a>
+  </div>
+</div>
   <script src="node_modules/jquery/dist/jquery.min.js"></script>
-  <script src="js/bundle.js"></script>
+  <script src="dist/bundle.js"></script>
 </body>
 </html>

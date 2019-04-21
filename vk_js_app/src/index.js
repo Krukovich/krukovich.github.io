@@ -1,10 +1,15 @@
+'use strict'
+
 import main from "../css/main.css";
+import controller from "../src/controller/controller"
+import showUserPhotos from "../src/controller/controllerPhotos"
+import login from "../src/controller/controllerLogin"
 
-import controller from "../src/Controller"
-import loginController from "../src/controllerLogin";
-
-loginController();
 controller();
+showUserPhotos();
+login();
+
+
 
 
 
