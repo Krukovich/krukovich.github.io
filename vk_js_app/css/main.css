@@ -43,13 +43,18 @@ header{
   font-family: 'Roboto', sans-serif;
   width: 230px;
   height: 28px;
-  background: #224b7a url("https://vk.com/images/svg_icons/ic_head_loupe.svg");
+  background-color: #224b7a;
+  background-image: url("https://vk.com/images/svg_icons/ic_head_loupe.svg");
   background-repeat: no-repeat;
   background-position: 10px;
   border: transparent;
   padding-left: 27px;
   border-radius: 14px;
   color: #d9e2ec;
+  -webkit-border-radius: 14px;
+  -moz-border-radius: 14px;
+  -ms-border-radius: 14px;
+  -o-border-radius: 14px;
 }
 
 .header__search input:focus{
@@ -82,6 +87,10 @@ header{
   width: 25px;
   height: 25px;
   background-color: #224b7a;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
 }
 
 .nav__play:hover{
@@ -97,6 +106,10 @@ header{
   height: 10px;
   background-color: #224b7a;
   transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
 }
 
 .nav__play i{
@@ -105,6 +118,10 @@ header{
   left: 55%;
   transform: translate(-50%,-50%);
   color: rgb(207, 207, 207);
+  -webkit-transform: translate(-50%,-50%);
+  -moz-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  -o-transform: translate(-50%,-50%);
 }
 
 .header__profile{
@@ -129,6 +146,10 @@ header{
   margin-top: 5px;
   width: 30px;
   border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
 }
 
 .profile__arrow{
@@ -137,6 +158,52 @@ header{
 }
 
 /************** клас для центровки контента*****/
+
+.img-item {
+  display: inline-block;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: transform;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -moz-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transition: 1s;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+  width: 170px;
+  height: 170px;
+}
+
+.img-item:hover {
+  cursor: pointer;
+  transform: scale(1.10);
+  z-index: 1;
+  transition: 1s;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+  -webkit-transform: scale(1.10);
+  -moz-transform: scale(1.10);
+  -ms-transform: scale(1.10);
+  -o-transform: scale(1.10);
+  width: 170px;
+  height: 170px;
+  border-radius: 20%;
+  -webkit-border-radius: 20%;
+  -moz-border-radius: 20%;
+  -ms-border-radius: 20%;
+  -o-border-radius: 20%;
+}
+
 .content__wrapper{
   width: 960px;
   margin: 0 auto;
@@ -152,7 +219,7 @@ header{
   flex-wrap: wrap;
 }
 
-.content_photo img{
+.content-photo__item{
   margin-left: 10px;
   margin-bottom: 10px;
   width: 30%;
@@ -160,6 +227,7 @@ header{
 }
 
 /******* описываем левую часть*****/
+
 .content__left{
   position: relative;
   width: 149px;
@@ -200,6 +268,50 @@ header{
   right: 2px;
 }
 
+/* описываем блок друзей */
+
+.content-photo__friends {
+  position: relative;
+  overflow: hidden;
+  margin: 6px;
+  height: 170px;
+  width: 170px;
+}
+
+.content-photo__friends:hover .content-photo__item-name {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  transform: translateX(0);
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transition: 1s;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+}
+
+.content-photo__item-name {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  color: white;
+  font-weight: bold;
+  transform: translateX(-110%);
+  -webkit-transform: translateX(-110%);
+  -moz-transform: translateX(-110%);
+  -ms-transform: translateX(-110%);
+  -o-transform: translateX(-110%);
+  transition: 1s;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+}
+
 /****** описываем центральную часть******/
 
 .mid__list{
@@ -221,6 +333,8 @@ header{
 }
 
 .header__name{
+  display: flex;
+  flex-direction: column;
   margin-top: 20px;
   margin-left: 20px;
   line-height: 15px;
@@ -230,6 +344,7 @@ header{
 .header__name span{
   text-transform: uppercase;
   font-weight: bold;
+  padding-bottom: 5px;
 }
 
 .content__logo{
@@ -239,6 +354,10 @@ header{
 
 .content__logo img{
   border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
 }
 
 .content__title{
@@ -317,7 +436,6 @@ header{
 
 }
 
-
 /***** модификатор для первых двух столбцов******/
 .content_column{
   display: flex;
@@ -347,6 +465,7 @@ header{
 }
 
 /********* модификатор для выбранного поля*********/
+
 .content__right_checked{
   border-left: 2px solid #4a76a8;
   background-color: rgba(0, 33, 255, 0.09);
@@ -426,4 +545,87 @@ header{
   padding-left: 7px;
   color: #224b7a;
   opacity: 0.55;
+}
+
+.dws-wrapper {
+  position: relative;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 1000px;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 2;
+}
+
+/* Кнопка авторизации */
+
+.login {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2222;
+  transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  -moz-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  -o-transform: translate(-50%,-50%);
+}
+
+.login-user {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+}
+
+.login-user::before,
+.login-user::after {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 100px;
+	height: 100px;
+	border: 2px solid rgba(255, 255, 255, 0.1);
+	border-radius: 50%;
+	content: '';
+	opacity: 0;
+	-webkit-transition: transform 0.3s, opacity 0.3s;
+	-moz-transition: transform 0.3s, opacity 0.3s;
+	transition: transform 0.3s, opacity 0.3s;
+	-webkit-transform: translateX(-50%) translateY(-50%) scale(0.2);
+	-moz-transform: translateX(-50%) translateY(-50%) scale(0.2);
+	transform: translateX(-50%) translateY(-50%) scale(0.2);
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-ms-border-radius: 50%;
+	-o-border-radius: 50%;
+	-ms-transition: transform 0.3s, opacity 0.3s;
+	-o-transition: transform 0.3s, opacity 0.3s;
+	-ms-transform: translateX(-50%) translateY(-50%) scale(0.2);
+	-o-transform: translateX(-50%) translateY(-50%) scale(0.2);
+}
+
+.login-user::after {
+	width: 90px;
+	height: 90px;
+	border-width: 6px;
+	-webkit-transform: translateX(-50%) translateY(-50%) scale(0.8);
+	-moz-transform: translateX(-50%) translateY(-50%) scale(0.8);
+	transform: translateX(-50%) translateY(-50%) scale(0.8);
+	-ms-transform: translateX(-50%) translateY(-50%) scale(0.8);
+	-o-transform: translateX(-50%) translateY(-50%) scale(0.8);
+}
+
+.login-user:hover::before,
+.login-user:hover::after,
+.login-user:focus::before,
+.login-user:focus::after {
+	opacity: 1;
+	-webkit-transform: translateX(-50%) translateY(-50%) scale(1);
+	-moz-transform: translateX(-50%) translateY(-50%) scale(1);
+	transform: translateX(-50%) translateY(-50%) scale(1);
+	-ms-transform: translateX(-50%) translateY(-50%) scale(1);
+	-o-transform: translateX(-50%) translateY(-50%) scale(1);
 }
