@@ -78,7 +78,7 @@ class View {
             let photoItemName = document.createElement("div");
             let img = document.createElement("img");
             img.classList.add("img-item");
-            img.setAttribute("src", item.src_xxbig);
+            img.setAttribute("src", item.src_big);
         photoItem.append(img);
         photoItem.append(photoItemName);
         divPhotoInsert.append(photoItem);
