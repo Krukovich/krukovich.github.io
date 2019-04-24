@@ -135,7 +135,8 @@ header{
   padding-left: 10px;
 }
 
-.profile__name{
+.profile__name,
+.profile__time {
   color: #fff;
   font-weight: bold;
   margin-top: 10px;
@@ -197,11 +198,11 @@ header{
   -o-transform: scale(1.10);
   width: 170px;
   height: 170px;
-  border-radius: 20%;
-  -webkit-border-radius: 20%;
-  -moz-border-radius: 20%;
-  -ms-border-radius: 20%;
-  -o-border-radius: 20%;
+  border-radius: 25%;
+  -webkit-border-radius: 25%;
+  -moz-border-radius: 25%;
+  -ms-border-radius: 25%;
+  -o-border-radius: 25%;
 }
 
 .content__wrapper{
@@ -437,6 +438,7 @@ header{
 }
 
 /***** модификатор для первых двух столбцов******/
+
 .content_column{
   display: flex;
   flex-direction: column;

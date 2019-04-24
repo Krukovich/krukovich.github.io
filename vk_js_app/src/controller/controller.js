@@ -1,8 +1,10 @@
 import Service from "../helper/service";
 import View from "../view/view";
 import Model from "../model/model";
+import Helper from "../helper/helper"
 
 	const controller = function() {
+		let helper = new Helper();
 		let	service = new Service();
 		let view = new View();
 		let model = new Model();
@@ -10,14 +12,17 @@ import Model from "../model/model";
 			loadFriends.addEventListener("click", function(){
 		
 		service.getDataServer();
-		let data = model.getFriendsData();
+		let data = helper.getFriendsData();
+		let friendsData = model.changeFriendsData(data);
 		view.removeDataInPage();
-		view.showFriendsData(data);
-		view.showFriendsCount(data);
+		view.showFriendsData(friendsData);
+		view.showFriendsCount(friendsData);
 
 		service.getDataUserServer();
-		let dataUser = model.getUserData();
+		let dataUser = helper.getUserData();
 		view.insertUserData(dataUser);
+
+		helper.getUserToken();
 	});
 
 }

@@ -1,16 +1,15 @@
 body {
   margin: 0;
   padding: 0;
-  background-image: url("../img/lines.png");
 }
 
-/*
+
 .dws_choice {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-}*/
+}
 
 .choice__checkbox[type="checkbox"] {
   display: none;
