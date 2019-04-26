@@ -8,6 +8,7 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
   <link rel="stylesheet" href="css/fontello.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/link.css">
   <title>VK app</title>
 </head>
 
@@ -33,8 +34,8 @@
           </div>
         </div>
       </div>
-      <div class="header__profile" id="profileName">
-        <div class="profile__name" id="userName">
+      <div class="header__profile">
+        <div class="profile__name">
           Алексей
         </div>
         <div class="profile__image">
@@ -43,11 +44,10 @@
         <div class="profile__arrow">
           <i class="icon-down-open"></i>
         </div>
-        <div class="profile__time" id="loginTime">
-        </div>
       </div>
     </div>
   </header>
+
   <div class="content content__wrapper">
     <div class="left__wrapper">
       <div class="content__left content_column">
@@ -56,12 +56,9 @@
             <i class="icon-home"></i>
             <a href="#">Моя страница</a>
           </li>
-          <li class="numb_row">
+          <li>
             <i class="icon-doc"></i>
-            <a href="#" id="userNews">Новости</a>
-            <div class="numb">
-              <span id="newsCount"></span>
-            </div>
+            Новости
           </li>
           <li class="numb_row">
             <i class="icon-chat"></i>
@@ -81,12 +78,9 @@
             <i class="icon-users"></i>
             Группы
           </li>
-          <li class="numb_row">
+          <li>
             <i class="icon-camera"></i>
             <a href="#" id="loadPhotos">Фотографии</a>
-            <div class="numb">
-              <span id="photosCount"></span>
-            </div>
           </li>
           <li>
             <i class="icon-note-beamed"></i>
@@ -121,9 +115,9 @@
         </ul>
       </div>
     </div>
-    <div class="mid__wrapper" id="midWrapper">
-      <div class="mid__list content_column" id="midList">
-        <div class="content__mid" id="contentMid">
+    <div class="mid__wwrapper">
+      <div class="mid__list content_column">
+        <div class="content__mid">
           <div class="content__header">
             <div class="content__logo">
               <img id="userPhoto" src="img/post.jpg" alt="">
@@ -330,10 +324,13 @@
       <i class="icon-user"></i>
     </div>
   </div>
-  <div class="login-user">
-    <a href="https://oauth.vk.com/authorize?client_id=6949483&display=page&redirect_uri=http://krukovich.github.io/vk_js_app/&scope=friends&response_type=token&v=5.95&state=123456" id="start">Click</a>
-  </div>
+    <div class="login">
+    <div class="login-user">
+        <a href="https://oauth.vk.com/authorize?client_id=6949483&display=page&redirect_uri=http://krukovich.github.io/index.html&scope=friends&response_type=token&v=5.95&state=123456" id="start">Click</a>
+    </div>
+    </div>
 </div>
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
   <script src="dist/bundle.js"></script>
 </body>
 </html>

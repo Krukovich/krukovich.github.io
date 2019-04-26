@@ -56,9 +56,9 @@ class Service {
 		});
 	}
 
-	isTokenInUrl() {
-		const url = window.location.href;
-		return url.includes('access_token');
+	getUserToken() {
+		let strGET = window.location.search.replace( '=', '&');
+		console.log(strGET);
 	}
 }
 export default Service;
