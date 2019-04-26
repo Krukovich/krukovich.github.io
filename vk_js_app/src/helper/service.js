@@ -57,10 +57,19 @@ class Service {
 	}
 
 	getUserToken() {
-		let strGET = window.location.search.replace( '=', '&');
-		console.log(strGET);
+		window.onload = function() {
+			let search = document.URL,
+    		keys = {};
+
+		search.split('&').forEach(function(item) {
+    		item = item.split('=');
+    		keys[item[0]] = item[1];
+		});
+		console.log(keys);
+		}
 	}
 }
+
 export default Service;
 
 
