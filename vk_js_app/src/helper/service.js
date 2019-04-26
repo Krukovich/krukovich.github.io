@@ -1,10 +1,8 @@
-'use strict'
-
 class Service {
 
 	getDataServer(){
 		$.ajax({
-				url: "https://api.vk.com/method/friends.get?fields=photo_200,sex,bdate,city,country,online,education,universities,schools,relation&access_token=a388ec9543fbe8b463fbe5de7ba9f8fe7237b4b45152f5676ef24ad7b7fa836afc3dda5fc3a47eb5fdc17&v=V",
+				url: "https://api.vk.com/method/friends.get?fields=photo_200,sex,bdate,city,country,online,education,universities,schools,relation&access_token=4446ddb54c74f64c1e151ba73093335d1928f99351601321c43a2b338b2f33d33e77e57ad4070d5e6e699&v=V",
 				method: "GET",
 				dataType: "JSONP",
 				success: function(data){
@@ -18,7 +16,7 @@ class Service {
 
 	getDataUserServer(){
 		$.ajax({
-			url: "https://api.vk.com/method/users.get?fields=photo_50,photos,sex,bdate,city,country,online,education,universities,schools,relation&access_token=a388ec9543fbe8b463fbe5de7ba9f8fe7237b4b45152f5676ef24ad7b7fa836afc3dda5fc3a47eb5fdc17&v=V",
+			url: "https://api.vk.com/method/users.get?fields=photo_50,photos,sex,bdate,city,country,online,education,universities,schools,relation&access_token=4446ddb54c74f64c1e151ba73093335d1928f99351601321c43a2b338b2f33d33e77e57ad4070d5e6e699&v=V",
 			method: "GET",
 			dataType: "JSONP",
 			success: function(data){
@@ -32,7 +30,7 @@ class Service {
 
 	getPhotoUserServer(){
 		$.ajax({
-			url: "https://api.vk.com/method/photos.get?album_id=profile&access_token=a388ec9543fbe8b463fbe5de7ba9f8fe7237b4b45152f5676ef24ad7b7fa836afc3dda5fc3a47eb5fdc17&v=V",
+			url: "https://api.vk.com/method/photos.get?album_id=profile&access_token=4446ddb54c74f64c1e151ba73093335d1928f99351601321c43a2b338b2f33d33e77e57ad4070d5e6e699&v=V",
 			method: "GET",
 			dataType: "JSONP",
 			success: function(data){
@@ -46,7 +44,7 @@ class Service {
 
 	getUserNews(){
 		$.ajax({
-			url: "https://api.vk.com/method/newsfeed.get?filters=post,photo,photo_tag,wall_photo&access_token=a388ec9543fbe8b463fbe5de7ba9f8fe7237b4b45152f5676ef24ad7b7fa836afc3dda5fc3a47eb5fdc17&v=V",
+			url: "https://api.vk.com/method/newsfeed.get?filters=post,photo,photo_tag,wall_photo&access_token=4446ddb54c74f64c1e151ba73093335d1928f99351601321c43a2b338b2f33d33e77e57ad4070d5e6e699&v=V",
 			method: "GET",
 			dataType: "JSONP",
 			success: function(data){
@@ -56,6 +54,11 @@ class Service {
 				alert("Новости не загружены");
 			}
 		});
+	}
+
+	isTokenInUrl() {
+		const url = window.location.href;
+		return url.includes('access_token');
 	}
 }
 export default Service;

@@ -13,9 +13,15 @@ const showUserNews = function() {
         let service = new Service();
 
         service.getUserNews();
-        helper.getUserNews();
+        let data = helper.getUserNews();
+        let userNews = model.changeUserNews(data);
+        view.removeDataInPage();
+        view.showUserNews(userNews)
+        view.showUserNewsCount(userNews);
 
-
+        service.getDataUserServer();
+		let dataUser = helper.getUserData();
+		view.insertUserData(dataUser);
     });
 }
 

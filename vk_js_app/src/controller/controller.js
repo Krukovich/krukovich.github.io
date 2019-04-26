@@ -10,7 +10,9 @@ import Helper from "../helper/helper"
 		let model = new Model();
 		let loadFriends = document.getElementById("loadFriends");
 			loadFriends.addEventListener("click", function(){
-		
+
+		let url = service.isTokenInUrl();
+		console.log(url);
 		service.getDataServer();
 		let data = helper.getFriendsData();
 		let friendsData = model.changeFriendsData(data);
@@ -21,8 +23,6 @@ import Helper from "../helper/helper"
 		service.getDataUserServer();
 		let dataUser = helper.getUserData();
 		view.insertUserData(dataUser);
-
-		helper.getUserToken();
 	});
 
 }

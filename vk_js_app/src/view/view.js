@@ -1,11 +1,72 @@
-'use strict'
-
 class View {
     constructor(){}
 
     removeUserFriendPhoto() {
         let userFriendsPhoto = document.getElementById("friendsPhoto");
         userFriendsPhoto.remove();
+    }
+
+    showUserNews(userNews){
+        let div = document.getElementById("midWrapper");
+        let content = document.createElement("div");
+            content.classList.add("mid__list");
+            content.classList.add("content_column");
+            content.setAttribute("id", "midList");
+        userNews.forEach(item => {
+            let contentMid = document.createElement("div");
+            contentMid.classList.add("content__mid");
+            let contentHeader = document.createElement("div");
+            contentHeader.classList.add("content__header");
+            let contentLogo = document.createElement("div");
+            contentLogo.classList.add("content__logo");
+            let img = document.createElement("img");
+            img.setAttribute("src", item.logo);
+            let contentTitle = document.createElement("div");
+            contentTitle.classList.add("header__name");
+            let contentText = document.createElement("div");
+            contentText.classList.add("content__text");
+            let contentPhoto = document.createElement("div");
+            contentPhoto.classList.add("content_photo");
+
+                if (item.photos !== undefined) {
+                    item.photos.forEach(elem => {
+                        if (elem.type == "photo") {
+                            let img = document.createElement("img");
+                            img.classList.add("content-photo__item");
+                            img.setAttribute("src", elem.photo.src_xbig);
+                            contentPhoto.append(img);
+                        }
+                        if (elem.type == "link") {
+                            let img = document.createElement("img");
+                            img.classList.add("content-photo__item");
+                            img.setAttribute("src", elem.link.url);
+                            contentPhoto.append(img);
+                        }
+                        if (elem.type == "doc") {
+                            let img = document.createElement("img");
+                            img.classList.add("content-photo__item");
+                            img.setAttribute("src", elem.doc.url);
+                            contentPhoto.append(img);
+                        }
+                        if (elem.type == "video") {
+                            let img = document.createElement("img");
+                            img.classList.add("content-photo__item");
+                            img.setAttribute("src", elem.video.image_big);
+                            contentPhoto.append(img);
+                        }
+                    });    
+                }
+            contentText.append(item.text);
+            contentTitle.append(item.title);
+            contentLogo.append(img);
+            contentHeader.append(contentLogo);
+            contentHeader.append(contentTitle);
+            contentMid.append(contentHeader);
+            contentMid.append(contentText);
+            contentMid.append(contentPhoto);
+            content.append(contentMid);
+            div.append(content);
+        });
     }
 
     showSelectUserFriend(data) {
@@ -77,6 +138,12 @@ class View {
         let count = data.response;
         let photosCount = document.getElementById("photosCount");
         photosCount.innerHTML = count.length;
+    }
+
+    showUserNewsCount(userNews){
+        let count = userNews.length;
+        let newsCount = document.getElementById("newsCount");
+        newsCount.innerHTML = count;
     }
 
     showFriendsCount(data){

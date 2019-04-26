@@ -86,36 +86,6 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./css/link.css":
-/*!**********************!*\
-  !*** ./css/link.css ***!
-  \**********************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-var content = __webpack_require__(/*! !../node_modules/css-loader/dist/cjs.js!./link.css */ "./node_modules/css-loader/dist/cjs.js!./css/link.css");
-
-if(typeof content === 'string') content = [[module.i, content, '']];
-
-var transform;
-var insertInto;
-
-
-
-var options = {"hmr":true}
-
-options.transform = transform
-options.insertInto = undefined;
-
-var update = __webpack_require__(/*! ../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
-
-if(content.locals) module.exports = content.locals;
-
-if(false) {}
-
-/***/ }),
-
 /***/ "./css/main.css":
 /*!**********************!*\
   !*** ./css/main.css ***!
@@ -146,21 +116,6 @@ if(false) {}
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/dist/cjs.js!./css/link.css":
-/*!************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js!./css/link.css ***!
-  \************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
-// Module
-exports.push([module.i, ".dws-wrapper {\r\n    position: absolute;\r\n    top: 0;\r\n    left: 0;\r\n    right: 0;\r\n    bottom: 0;\r\n    z-index: 999999999999999;\r\n    background-color: rgba(0, 0, 0, 0.9);\r\n} \r\n\r\n.login-user {\r\n    position: absolute;\r\n    top: 50%;\r\n    left: 50%;\r\n    transform: translate(-50%,-50%);\r\n    -webkit-transform: translate(-50%,-50%);\r\n    -moz-transform: translate(-50%,-50%);\r\n    -ms-transform: translate(-50%,-50%);\r\n    -o-transform: translate(-50%,-50%);\r\n}\r\n\r\n.login-user a {\r\n    text-decoration: none;\r\n    color: #fff;\r\n    font-size: 40px;\r\n}\r\n\r\n.login-user a::before,\r\n.login-user a::after {\r\n\tposition: absolute;\r\n\ttop: 50%;\r\n\tleft: 50%;\r\n\twidth: 100px;\r\n\theight: 100px;\r\n\tborder: 2px solid rgba(255, 255, 255, 0.144);\r\n\tborder-radius: 50%;\r\n\tcontent: '';\r\n\topacity: 0;\r\n\t-webkit-transition: transform 0.3s, opacity 0.3s;\r\n\t-moz-transition: transform 0.3s, opacity 0.3s;\r\n\ttransition: transform 0.3s, opacity 0.3s;\r\n\t-webkit-transform: translateX(-50%) translateY(-50%) scale(0.2);\r\n\t-moz-transform: translateX(-50%) translateY(-50%) scale(0.2);\r\n\ttransform: translateX(-50%) translateY(-50%) scale(0.2);\r\n\t-ms-transition: transform 0.3s, opacity 0.3s;\r\n\t-o-transition: transform 0.3s, opacity 0.3s;\r\n\t-ms-transform: translateX(-50%) translateY(-50%) scale(0.2);\r\n\t-o-transform: translateX(-50%) translateY(-50%) scale(0.2);\r\n}\r\n\r\n.login-user a::after {\r\n\twidth: 90px;\r\n\theight: 90px;\r\n\tborder-width: 6px;\r\n\t-webkit-transform: translateX(-50%) translateY(-50%) scale(0.8);\r\n\t-moz-transform: translateX(-50%) translateY(-50%) scale(0.8);\r\n\ttransform: translateX(-50%) translateY(-50%) scale(0.8);\r\n\t-ms-transform: translateX(-50%) translateY(-50%) scale(0.8);\r\n\t-o-transform: translateX(-50%) translateY(-50%) scale(0.8);\r\n}\r\n\r\n.login-user a:hover::before,\r\n.login-user a:hover::after,\r\n.login-user a:focus::before,\r\n.login-user a:focus::after {\r\n\topacity: 1;\r\n\t-webkit-transform: translateX(-50%) translateY(-50%) scale(1);\r\n\t-moz-transform: translateX(-50%) translateY(-50%) scale(1);\r\n\ttransform: translateX(-50%) translateY(-50%) scale(1);\r\n}", ""]);
-
-
-
-/***/ }),
-
 /***/ "./node_modules/css-loader/dist/cjs.js!./css/main.css":
 /*!************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js!./css/main.css ***!
@@ -170,7 +125,7 @@ exports.push([module.i, ".dws-wrapper {\r\n    position: absolute;\r\n    top: 0
 
 exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
-exports.push([module.i, "body{\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n  background-color: #edeef0;\n  font-family: 'Roboto', sans-serif;\n  font-size: 12.5px;\n}\n\nheader{\n  position: sticky;\n  z-index: 2;\n  top: 0;\n  height: 42px;\n  background-color: #4a76a8;\n}\n\n/********** Стили для header *********/\n\n.header__wrapper{\n  display: flex;\n  justify-content: space-between;\n  width: 960px;\n  margin: 0 auto;\n}\n\n.header{\n  display: flex;\n  justify-content: space-between;\n  width: 500px;\n}\n\n.header__logo{\n  margin: 11px 10px 0 0;\n}\n\n.header__search{\n  margin-left: 120px;\n  margin-top: 7px;\n}\n\n.header__search input{\n  font-family: 'Roboto', sans-serif;\n  width: 230px;\n  height: 28px;\n  background-color: #224b7a;\n  background-image: url(\"https://vk.com/images/svg_icons/ic_head_loupe.svg\");\n  background-repeat: no-repeat;\n  background-position: 10px;\n  border: transparent;\n  padding-left: 27px;\n  border-radius: 14px;\n  color: #d9e2ec;\n  -webkit-border-radius: 14px;\n  -moz-border-radius: 14px;\n  -ms-border-radius: 14px;\n  -o-border-radius: 14px;\n}\n\n.header__search input:focus{\n  background-color: #fff;\n  outline: none;\n}\n\n.header__nav{\n  display: flex;\n  padding-left: 20px;\n}\n\n.nav__item{\n  padding-top: 10px;\n  padding-left: 15px;\n  width: 35px;\n}\n\n.nav__item:hover{\n  width: 35px;\n  height: 32px;\n  cursor: pointer;\n  background-color: #3d6898;\n}\n\n.nav__play{\n  position: relative;\n  margin-top: 8px;\n  border-radius: 4px;\n  width: 25px;\n  height: 25px;\n  background-color: #224b7a;\n  -webkit-border-radius: 4px;\n  -moz-border-radius: 4px;\n  -ms-border-radius: 4px;\n  -o-border-radius: 4px;\n}\n\n.nav__play:hover{\n  cursor: pointer;\n}\n\n.nav__play::before{\n  content: \"\";\n  position: absolute;\n  left: -3px;\n  top: 7px;\n  width: 10px;\n  height: 10px;\n  background-color: #224b7a;\n  transform: rotate(45deg);\n  -webkit-transform: rotate(45deg);\n  -moz-transform: rotate(45deg);\n  -ms-transform: rotate(45deg);\n  -o-transform: rotate(45deg);\n}\n\n.nav__play i{\n  position: absolute;\n  top: 50%;\n  left: 55%;\n  transform: translate(-50%,-50%);\n  color: rgb(207, 207, 207);\n  -webkit-transform: translate(-50%,-50%);\n  -moz-transform: translate(-50%,-50%);\n  -ms-transform: translate(-50%,-50%);\n  -o-transform: translate(-50%,-50%);\n}\n\n.header__profile{\n   display: flex;\n   justify-content: flex-end;\n}\n\n.header__profile:hover{\n  background-color: #3d6898;\n  cursor: pointer;\n  padding-left: 10px;\n}\n\n.profile__name,\n.profile__time {\n  color: #fff;\n  font-weight: bold;\n  margin-top: 10px;\n  margin-right: 10px;\n}\n\n.profile__image img{\n  margin-top: 5px;\n  width: 30px;\n  border-radius: 50%;\n  -webkit-border-radius: 50%;\n  -moz-border-radius: 50%;\n  -ms-border-radius: 50%;\n  -o-border-radius: 50%;\n}\n\n.profile__arrow{\n  color: rgb(207, 207, 207);\n  margin-top: 10px;\n}\n\n/************** клас для центровки контента*****/\n\n.img-item {\n  display: inline-block;\n  -webkit-transition-duration: 0.3s;\n  transition-duration: 0.3s;\n  -webkit-transition-property: -webkit-transform;\n  transition-property: transform;\n  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);\n  -webkit-transform: translateZ(0);\n  -ms-transform: translateZ(0);\n  transform: translateZ(0);\n  box-shadow: 0 0 1px rgba(0, 0, 0, 0);\n  -moz-transform: translateZ(0);\n  -o-transform: translateZ(0);\n  transition: 1s;\n  -webkit-transition: 1s;\n  -moz-transition: 1s;\n  -ms-transition: 1s;\n  -o-transition: 1s;\n  width: 170px;\n  height: 170px;\n}\n\n.img-item:hover {\n  cursor: pointer;\n  transform: scale(1.10);\n  z-index: 1;\n  transition: 1s;\n  box-shadow: 0 0 10px rgba(0,0,0,0.5);\n  -webkit-transition: 1s;\n  -moz-transition: 1s;\n  -ms-transition: 1s;\n  -o-transition: 1s;\n  -webkit-transform: scale(1.10);\n  -moz-transform: scale(1.10);\n  -ms-transform: scale(1.10);\n  -o-transform: scale(1.10);\n  width: 170px;\n  height: 170px;\n  border-radius: 25%;\n  -webkit-border-radius: 25%;\n  -moz-border-radius: 25%;\n  -ms-border-radius: 25%;\n  -o-border-radius: 25%;\n}\n\n.content__wrapper{\n  width: 960px;\n  margin: 0 auto;\n}\n\n.content{\n  margin-top: 15px;\n  display: flex;\n}\n\n.content_photo{\n  display: flex;\n  flex-wrap: wrap;\n}\n\n.content-photo__item{\n  margin-left: 10px;\n  margin-bottom: 10px;\n  width: 30%;\n  height: 20%;\n}\n\n/******* описываем левую часть*****/\n\n.content__left{\n  position: relative;\n  width: 149px;\n  height: 100%;\n}\n\n.content__left ul{\n  padding-left: 0px;\n}\n.content__left li{\n  font-size: 12.5px;\n  list-style: none;\n  color: #285473;\n}\n\n.content__left li:hover{\n  background-color: rgba(0, 33, 255, 0.09);\n  cursor: pointer;\n\n}\n\n.content__left i{\n  font-size: 17px;\n  line-height: 30px;\n  margin-right: 10px;\n  opacity: 0.55;\n  color: #224b7a;\n}\n\n.numb_row{\n  position: relative;\n  display: flex;\n  line-height: 35px;\n}\n\n.numb_row span{\n  position: absolute;\n  right: 2px;\n}\n\n/* описываем блок друзей */\n\n.content-photo__friends {\n  position: relative;\n  overflow: hidden;\n  margin: 6px;\n  height: 170px;\n  width: 170px;\n}\n\n.content-photo__friends:hover .content-photo__item-name {\n  position: absolute;\n  top: 5px;\n  left: 5px;\n  transform: translateX(0);\n  -webkit-transform: translateX(0);\n  -moz-transform: translateX(0);\n  -ms-transform: translateX(0);\n  -o-transform: translateX(0);\n  transition: 1s;\n  -webkit-transition: 1s;\n  -moz-transition: 1s;\n  -ms-transition: 1s;\n  -o-transition: 1s;\n}\n\n.content-photo__item-name {\n  position: absolute;\n  top: 5px;\n  left: 5px;\n  color: white;\n  font-weight: bold;\n  transform: translateX(-110%);\n  -webkit-transform: translateX(-110%);\n  -moz-transform: translateX(-110%);\n  -ms-transform: translateX(-110%);\n  -o-transform: translateX(-110%);\n  transition: 1s;\n  -webkit-transition: 1s;\n  -moz-transition: 1s;\n  -ms-transition: 1s;\n  -o-transition: 1s;\n}\n\n/****** описываем центральную часть******/\n\n.mid__list{\n  display: flex;\n  justify-content: space-between;\n}\n\n.content__mid{\n  width: 550px;\n  height: 100%;\n  margin-left: 10px;\n  margin-right: 10px;\n  margin-bottom: 20px;\n  background-color: #fff;\n}\n\n.content__header{\n  display: flex;\n}\n\n.header__name{\n  display: flex;\n  flex-direction: column;\n  margin-top: 20px;\n  margin-left: 20px;\n  line-height: 15px;\n  color: #224b7a;\n}\n\n.header__name span{\n  text-transform: uppercase;\n  font-weight: bold;\n  padding-bottom: 5px;\n}\n\n.content__logo{\n  margin-top: 15px;\n  margin-left: 15px;\n}\n\n.content__logo img{\n  border-radius: 50%;\n  -webkit-border-radius: 50%;\n  -moz-border-radius: 50%;\n  -ms-border-radius: 50%;\n  -o-border-radius: 50%;\n}\n\n.content__title{\n  margin: 5px;\n}\n\n.content__text{\n  margin: 5px;\n}\n\n.content__stats-wrapper{\n  display: flex;\n  justify-content: space-between;\n}\n\n.content__stats{\n  display: flex;\n}\n\n.stats__comment{\n  display: flex;\n}\n\n.stats__post{\n  display: flex;\n}\n\n.content__stats i{\n  line-height: 45px;\n  margin-left: 20px;\n  font-size: 20px;\n  color: grey;\n}\n\n.content__stats p{\n  margin-left: 10px;\n  font-size: 15px;\n  color: grey;\n}\n\n.stats__like{\n  display: flex;\n}\n\n.content__views{\n  display: flex;\n  margin-right: 40px;\n}\n.content__views i{\n  font-size: 20px;\n  line-height: 45px;\n  color: grey;\n}\n\n.content__views p{\n  margin-left: 10px;\n  font-size: 15px;\n  color: grey;\n}\n\n.content__video{\n  display: flex;\n}\n\n.video__left img{\n  margin-left: 10px;\n  margin-right: 10px;\n  height: 400px;\n  width: 250px;\n}\n\n.video__right img{\n  margin-bottom: 10px;\n  width: 250px;\n  height: 190px;\n\n}\n\n/***** модификатор для первых двух столбцов******/\n\n.content_column{\n  display: flex;\n  flex-direction: column;\n}\n\n/******** правая часть фиксированная **************/\n\n.content__right{\n  position: fixed;\n  width: 230px;\n  height: 340px;\n  background-color: #fff;\n}\n\n.content__right ul{\n  padding-left: 0px;\n}\n\n.content__right li{\n  padding-left: 10px;\n  list-style: none;\n  height: 31px;\n  font-size: 12.5px;\n  line-height: 30px;\n  color: #285473;\n}\n\n/********* модификатор для выбранного поля*********/\n\n.content__right_checked{\n  border-left: 2px solid #4a76a8;\n  background-color: rgba(0, 33, 255, 0.09);\n  font-weight: bold;\n}\n\n.content__right_padding li{\n  padding-left: 30px;\n  color: grey;\n}\n\n.content__right_flex{\n  display: flex;\n  justify-content: space-between;\n  padding-right: 10px;\n}\n\n/************ класс для вставки нежней границы в список ****************/\n.border{\n  margin-top: 15px;\n  margin-right: 10px;\n  border-top: 1px solid rgb(207, 207, 207);\n}\n\n.content__right_active li:hover{\n  background-color: rgba(0, 33, 255, 0.09);\n  cursor: pointer;\n}\n\n.filter{\n  color: #224b7a;\n  opacity: 0.55;\n}\n\n.interest{\n  display: flex;\n  justify-content: space-around;\n  margin-top: 30px;\n  height: 40px;\n  background-color: #fff;\n}\n\n.interest__title{\n  padding-top: 5px;\n}\n\n.interest__title i{\n  font-size: 20px;\n  color: #d64c10;\n}\n\n.interest__check{\n  padding-top: 7px;\n}\n\n/*********** нижний блок с чатом ******************/\n\n.chat{\n  position: fixed;\n  height: 90px;\n  width: 50px;\n  bottom: 0;\n  right: 20px;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-around;\n  background-color: rgba(0, 33, 255, 0.09);\n}\n\n.chat__image img{\n  padding-left: 5px;\n  width: 40px;\n  border-radius: 50%;\n}\n\n.chat__profile{\n  padding-left: 7px;\n  color: #224b7a;\n  opacity: 0.55;\n}", ""]);
+exports.push([module.i, "body{\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n  background-color: #edeef0;\n  font-family: 'Roboto', sans-serif;\n  font-size: 12.5px;\n}\n\nheader{\n  position: sticky;\n  z-index: 2;\n  top: 0;\n  height: 42px;\n  background-color: #4a76a8;\n}\n\n/********** Стили для header *********/\n\n.header__wrapper{\n  display: flex;\n  justify-content: space-between;\n  width: 960px;\n  margin: 0 auto;\n}\n\n.header{\n  display: flex;\n  justify-content: space-between;\n  width: 500px;\n}\n\n.header__logo{\n  margin: 11px 10px 0 0;\n}\n\n.header__search{\n  margin-left: 120px;\n  margin-top: 7px;\n}\n\n.header__search input{\n  font-family: 'Roboto', sans-serif;\n  width: 230px;\n  height: 28px;\n  background-color: #224b7a;\n  background-image: url(\"https://vk.com/images/svg_icons/ic_head_loupe.svg\");\n  background-repeat: no-repeat;\n  background-position: 10px;\n  border: transparent;\n  padding-left: 27px;\n  border-radius: 14px;\n  color: #d9e2ec;\n  -webkit-border-radius: 14px;\n  -moz-border-radius: 14px;\n  -ms-border-radius: 14px;\n  -o-border-radius: 14px;\n}\n\n.header__search input:focus{\n  background-color: #fff;\n  outline: none;\n}\n\n.header__nav{\n  display: flex;\n  padding-left: 20px;\n}\n\n.nav__item{\n  padding-top: 10px;\n  padding-left: 15px;\n  width: 35px;\n}\n\n.nav__item:hover{\n  width: 35px;\n  height: 32px;\n  cursor: pointer;\n  background-color: #3d6898;\n}\n\n.nav__play{\n  position: relative;\n  margin-top: 8px;\n  border-radius: 4px;\n  width: 25px;\n  height: 25px;\n  background-color: #224b7a;\n  -webkit-border-radius: 4px;\n  -moz-border-radius: 4px;\n  -ms-border-radius: 4px;\n  -o-border-radius: 4px;\n}\n\n.nav__play:hover{\n  cursor: pointer;\n}\n\n.nav__play::before{\n  content: \"\";\n  position: absolute;\n  left: -3px;\n  top: 7px;\n  width: 10px;\n  height: 10px;\n  background-color: #224b7a;\n  transform: rotate(45deg);\n  -webkit-transform: rotate(45deg);\n  -moz-transform: rotate(45deg);\n  -ms-transform: rotate(45deg);\n  -o-transform: rotate(45deg);\n}\n\n.nav__play i{\n  position: absolute;\n  top: 50%;\n  left: 55%;\n  transform: translate(-50%,-50%);\n  color: rgb(207, 207, 207);\n  -webkit-transform: translate(-50%,-50%);\n  -moz-transform: translate(-50%,-50%);\n  -ms-transform: translate(-50%,-50%);\n  -o-transform: translate(-50%,-50%);\n}\n\n.header__profile{\n   display: flex;\n   justify-content: flex-end;\n}\n\n.header__profile:hover{\n  background-color: #3d6898;\n  cursor: pointer;\n  padding-left: 10px;\n}\n\n.profile__name,\n.profile__time {\n  color: #fff;\n  font-weight: bold;\n  margin-top: 10px;\n  margin-right: 10px;\n}\n\n.profile__image img{\n  margin-top: 5px;\n  width: 30px;\n  border-radius: 50%;\n  -webkit-border-radius: 50%;\n  -moz-border-radius: 50%;\n  -ms-border-radius: 50%;\n  -o-border-radius: 50%;\n}\n\n.profile__arrow{\n  color: rgb(207, 207, 207);\n  margin-top: 10px;\n}\n\n/************** клас для центровки контента*****/\n\n.img-item {\n  display: inline-block;\n  -webkit-transition-duration: 0.3s;\n  transition-duration: 0.3s;\n  -webkit-transition-property: -webkit-transform;\n  transition-property: transform;\n  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);\n  -webkit-transform: translateZ(0);\n  -ms-transform: translateZ(0);\n  transform: translateZ(0);\n  box-shadow: 0 0 1px rgba(0, 0, 0, 0);\n  -moz-transform: translateZ(0);\n  -o-transform: translateZ(0);\n  transition: 1s;\n  -webkit-transition: 1s;\n  -moz-transition: 1s;\n  -ms-transition: 1s;\n  -o-transition: 1s;\n  width: 170px;\n  height: 170px;\n}\n\n.img-item:hover {\n  cursor: pointer;\n  transform: scale(1.10);\n  z-index: 1;\n  transition: 1s;\n  box-shadow: 0 0 10px rgba(0,0,0,0.5);\n  -webkit-transition: 1s;\n  -moz-transition: 1s;\n  -ms-transition: 1s;\n  -o-transition: 1s;\n  -webkit-transform: scale(1.10);\n  -moz-transform: scale(1.10);\n  -ms-transform: scale(1.10);\n  -o-transform: scale(1.10);\n  width: 170px;\n  height: 170px;\n  border-radius: 25%;\n  -webkit-border-radius: 25%;\n  -moz-border-radius: 25%;\n  -ms-border-radius: 25%;\n  -o-border-radius: 25%;\n}\n\n.content__wrapper{\n  width: 960px;\n  margin: 0 auto;\n}\n\n.content{\n  margin-top: 15px;\n  display: flex;\n}\n\n.content_photo{\n  display: flex;\n  flex-wrap: wrap;\n}\n\n.content-photo__item{\n  margin-left: 10px;\n  margin-bottom: 10px;\n  width: 30%;\n  height: 20%;\n}\n\n/******* описываем левую часть*****/\n\n.content__left{\n  position: relative;\n  width: 149px;\n  height: 100%;\n}\n\n.content__left ul{\n  padding-left: 0px;\n}\n.content__left li{\n  font-size: 12.5px;\n  list-style: none;\n  color: #285473;\n}\n\n.content__left li:hover{\n  background-color: rgba(0, 33, 255, 0.09);\n  cursor: pointer;\n}\n\n.content__left i{\n  font-size: 17px;\n  line-height: 30px;\n  margin-right: 10px;\n  opacity: 0.55;\n  color: #224b7a;\n}\n\n.numb_row{\n  position: relative;\n  display: flex;\n  line-height: 35px;\n}\n\n.numb_row span{\n  position: absolute;\n  right: 2px;\n}\n\n/* описываем блок друзей */\n\n.content-photo__friends {\n  position: relative;\n  overflow: hidden;\n  margin: 6px;\n  height: 170px;\n  width: 170px;\n}\n\n.content-photo__friends:hover .content-photo__item-name {\n  position: absolute;\n  top: 5px;\n  left: 5px;\n  transform: translateX(0);\n  -webkit-transform: translateX(0);\n  -moz-transform: translateX(0);\n  -ms-transform: translateX(0);\n  -o-transform: translateX(0);\n  transition: 1s;\n  -webkit-transition: 1s;\n  -moz-transition: 1s;\n  -ms-transition: 1s;\n  -o-transition: 1s;\n}\n\n.content-photo__item-name {\n  position: absolute;\n  top: 5px;\n  left: 5px;\n  color: white;\n  font-weight: bold;\n  transform: translateX(-110%);\n  -webkit-transform: translateX(-110%);\n  -moz-transform: translateX(-110%);\n  -ms-transform: translateX(-110%);\n  -o-transform: translateX(-110%);\n  transition: 1s;\n  -webkit-transition: 1s;\n  -moz-transition: 1s;\n  -ms-transition: 1s;\n  -o-transition: 1s;\n}\n\n/****** описываем центральную часть******/\n\n.mid__list{\n  display: flex;\n  justify-content: space-between;\n}\n\n.content__mid{\n  width: 550px;\n  height: 100%;\n  margin-left: 10px;\n  margin-right: 10px;\n  margin-bottom: 20px;\n  background-color: #fff;\n}\n\n.content__header{\n  display: flex;\n}\n\n.header__name{\n  display: flex;\n  flex-direction: column;\n  margin-top: 20px;\n  margin-left: 20px;\n  line-height: 15px;\n  color: #224b7a;\n}\n\n.header__name span{\n  text-transform: uppercase;\n  font-weight: bold;\n  padding-bottom: 5px;\n}\n\n.content__logo{\n  margin-top: 15px;\n  margin-left: 15px;\n}\n\n.content__logo img{\n  border-radius: 50%;\n  -webkit-border-radius: 50%;\n  -moz-border-radius: 50%;\n  -ms-border-radius: 50%;\n  -o-border-radius: 50%;\n}\n\n.content__title{\n  margin: 5px;\n}\n\n.content__text{\n  margin: 5px;\n}\n\n.content__stats-wrapper{\n  display: flex;\n  justify-content: space-between;\n}\n\n.content__stats{\n  display: flex;\n}\n\n.stats__comment{\n  display: flex;\n}\n\n.stats__post{\n  display: flex;\n}\n\n.content__stats i{\n  line-height: 45px;\n  margin-left: 20px;\n  font-size: 20px;\n  color: grey;\n}\n\n.content__stats p{\n  margin-left: 10px;\n  font-size: 15px;\n  color: grey;\n}\n\n.stats__like{\n  display: flex;\n}\n\n.content__views{\n  display: flex;\n  margin-right: 40px;\n}\n.content__views i{\n  font-size: 20px;\n  line-height: 45px;\n  color: grey;\n}\n\n.content__views p{\n  margin-left: 10px;\n  font-size: 15px;\n  color: grey;\n}\n\n.content__video{\n  display: flex;\n}\n\n.video__left img{\n  margin-left: 10px;\n  margin-right: 10px;\n  height: 400px;\n  width: 250px;\n}\n\n.video__right img{\n  margin-bottom: 10px;\n  width: 250px;\n  height: 190px;\n\n}\n\n/***** модификатор для первых двух столбцов******/\n\n.content_column{\n  display: flex;\n  flex-direction: column;\n}\n\n/******** правая часть фиксированная **************/\n\n.content__right{\n  position: fixed;\n  width: 230px;\n  height: 340px;\n  background-color: #fff;\n}\n\n.content__right ul{\n  padding-left: 0px;\n}\n\n.content__right li{\n  padding-left: 10px;\n  list-style: none;\n  height: 31px;\n  font-size: 12.5px;\n  line-height: 30px;\n  color: #285473;\n}\n\n/********* модификатор для выбранного поля*********/\n\n.content__right_checked{\n  border-left: 2px solid #4a76a8;\n  background-color: rgba(0, 33, 255, 0.09);\n  font-weight: bold;\n}\n\n.content__right_padding li{\n  padding-left: 30px;\n  color: grey;\n}\n\n.content__right_flex{\n  display: flex;\n  justify-content: space-between;\n  padding-right: 10px;\n}\n\n/************ класс для вставки нежней границы в список ****************/\n.border{\n  margin-top: 15px;\n  margin-right: 10px;\n  border-top: 1px solid rgb(207, 207, 207);\n}\n\n.content__right_active li:hover{\n  background-color: rgba(0, 33, 255, 0.09);\n  cursor: pointer;\n}\n\n.filter{\n  color: #224b7a;\n  opacity: 0.55;\n}\n\n.interest{\n  display: flex;\n  justify-content: space-around;\n  margin-top: 30px;\n  height: 40px;\n  background-color: #fff;\n}\n\n.interest__title{\n  padding-top: 5px;\n}\n\n.interest__title i{\n  font-size: 20px;\n  color: #d64c10;\n}\n\n.interest__check{\n  padding-top: 7px;\n}\n\n/*********** нижний блок с чатом ******************/\n\n.chat{\n  position: fixed;\n  height: 90px;\n  width: 50px;\n  bottom: 0;\n  right: 20px;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-around;\n  background-color: rgba(0, 33, 255, 0.09);\n}\n\n.chat__image img{\n  padding-left: 5px;\n  width: 40px;\n  border-radius: 50%;\n}\n\n.chat__profile{\n  padding-left: 7px;\n  color: #224b7a;\n  opacity: 0.55;\n}", ""]);
 
 
 
@@ -806,7 +761,9 @@ __webpack_require__.r(__webpack_exports__);
 		let model = new _model_model__WEBPACK_IMPORTED_MODULE_2__["default"]();
 		let loadFriends = document.getElementById("loadFriends");
 			loadFriends.addEventListener("click", function(){
-		
+
+		let url = service.isTokenInUrl();
+		console.log(url);
 		service.getDataServer();
 		let data = helper.getFriendsData();
 		let friendsData = model.changeFriendsData(data);
@@ -817,8 +774,6 @@ __webpack_require__.r(__webpack_exports__);
 		service.getDataUserServer();
 		let dataUser = helper.getUserData();
 		view.insertUserData(dataUser);
-
-		helper.getUserToken();
 	});
 
 }
@@ -866,6 +821,32 @@ const showUserPhotos = function() {
     });
 }
 /* harmony default export */ __webpack_exports__["default"] = (showUserPhotos);
+
+/***/ }),
+
+/***/ "./src/controller/login.js":
+/*!*********************************!*\
+  !*** ./src/controller/login.js ***!
+  \*********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _helper_service__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../helper/service */ "./src/helper/service.js");
+
+
+const login = function() {
+
+    let service = new _helper_service__WEBPACK_IMPORTED_MODULE_0__["default"]();
+    
+    let start = document.getElementById("start");
+    start.addEventListener("click", function() {
+        service.getUserToken();
+    });
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (login);
 
 /***/ }),
 
@@ -934,9 +915,15 @@ const showUserNews = function() {
         let service = new _helper_service__WEBPACK_IMPORTED_MODULE_0__["default"]();
 
         service.getUserNews();
-        helper.getUserNews();
+        let data = helper.getUserNews();
+        let userNews = model.changeUserNews(data);
+        view.removeDataInPage();
+        view.showUserNews(userNews)
+        view.showUserNewsCount(userNews);
 
-
+        service.getDataUserServer();
+		let dataUser = helper.getUserData();
+		view.insertUserData(dataUser);
     });
 }
 
@@ -996,13 +983,11 @@ class Helper {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-
-
 class Service {
 
 	getDataServer(){
 		$.ajax({
-				url: "https://api.vk.com/method/friends.get?fields=photo_200,sex,bdate,city,country,online,education,universities,schools,relation&access_token=a388ec9543fbe8b463fbe5de7ba9f8fe7237b4b45152f5676ef24ad7b7fa836afc3dda5fc3a47eb5fdc17&v=V",
+				url: "https://api.vk.com/method/friends.get?fields=photo_200,sex,bdate,city,country,online,education,universities,schools,relation&access_token=4446ddb54c74f64c1e151ba73093335d1928f99351601321c43a2b338b2f33d33e77e57ad4070d5e6e699&v=V",
 				method: "GET",
 				dataType: "JSONP",
 				success: function(data){
@@ -1016,7 +1001,7 @@ class Service {
 
 	getDataUserServer(){
 		$.ajax({
-			url: "https://api.vk.com/method/users.get?fields=photo_50,photos,sex,bdate,city,country,online,education,universities,schools,relation&access_token=a388ec9543fbe8b463fbe5de7ba9f8fe7237b4b45152f5676ef24ad7b7fa836afc3dda5fc3a47eb5fdc17&v=V",
+			url: "https://api.vk.com/method/users.get?fields=photo_50,photos,sex,bdate,city,country,online,education,universities,schools,relation&access_token=4446ddb54c74f64c1e151ba73093335d1928f99351601321c43a2b338b2f33d33e77e57ad4070d5e6e699&v=V",
 			method: "GET",
 			dataType: "JSONP",
 			success: function(data){
@@ -1030,7 +1015,7 @@ class Service {
 
 	getPhotoUserServer(){
 		$.ajax({
-			url: "https://api.vk.com/method/photos.get?album_id=profile&access_token=a388ec9543fbe8b463fbe5de7ba9f8fe7237b4b45152f5676ef24ad7b7fa836afc3dda5fc3a47eb5fdc17&v=V",
+			url: "https://api.vk.com/method/photos.get?album_id=profile&access_token=4446ddb54c74f64c1e151ba73093335d1928f99351601321c43a2b338b2f33d33e77e57ad4070d5e6e699&v=V",
 			method: "GET",
 			dataType: "JSONP",
 			success: function(data){
@@ -1044,7 +1029,7 @@ class Service {
 
 	getUserNews(){
 		$.ajax({
-			url: "https://api.vk.com/method/newsfeed.get?filters=post,photo,photo_tag,wall_photo&access_token=a388ec9543fbe8b463fbe5de7ba9f8fe7237b4b45152f5676ef24ad7b7fa836afc3dda5fc3a47eb5fdc17&v=V",
+			url: "https://api.vk.com/method/newsfeed.get?filters=post,photo,photo_tag,wall_photo&access_token=4446ddb54c74f64c1e151ba73093335d1928f99351601321c43a2b338b2f33d33e77e57ad4070d5e6e699&v=V",
 			method: "GET",
 			dataType: "JSONP",
 			success: function(data){
@@ -1054,6 +1039,11 @@ class Service {
 				alert("Новости не загружены");
 			}
 		});
+	}
+
+	isTokenInUrl() {
+		const url = window.location.href;
+		return url.includes('access_token');
 	}
 }
 /* harmony default export */ __webpack_exports__["default"] = (Service);
@@ -1081,12 +1071,11 @@ class Service {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _css_main_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../css/main.css */ "./css/main.css");
 /* harmony import */ var _css_main_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_css_main_css__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _css_link_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../css/link.css */ "./css/link.css");
-/* harmony import */ var _css_link_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_css_link_css__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _src_controller_controller__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../src/controller/controller */ "./src/controller/controller.js");
-/* harmony import */ var _src_controller_controllerPhotos__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../src/controller/controllerPhotos */ "./src/controller/controllerPhotos.js");
-/* harmony import */ var _src_controller_selectFriend__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../src/controller/selectFriend */ "./src/controller/selectFriend.js");
-/* harmony import */ var _src_controller_showUserNews__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../src/controller/showUserNews */ "./src/controller/showUserNews.js");
+/* harmony import */ var _src_controller_controller__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../src/controller/controller */ "./src/controller/controller.js");
+/* harmony import */ var _src_controller_controllerPhotos__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../src/controller/controllerPhotos */ "./src/controller/controllerPhotos.js");
+/* harmony import */ var _src_controller_selectFriend__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../src/controller/selectFriend */ "./src/controller/selectFriend.js");
+/* harmony import */ var _src_controller_showUserNews__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../src/controller/showUserNews */ "./src/controller/showUserNews.js");
+/* harmony import */ var _src_controller_login__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../src/controller/login */ "./src/controller/login.js");
 
 
 
@@ -1096,10 +1085,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-Object(_src_controller_controller__WEBPACK_IMPORTED_MODULE_2__["default"])();
-Object(_src_controller_selectFriend__WEBPACK_IMPORTED_MODULE_4__["default"])();
-Object(_src_controller_controllerPhotos__WEBPACK_IMPORTED_MODULE_3__["default"])();
-Object(_src_controller_showUserNews__WEBPACK_IMPORTED_MODULE_5__["default"])();
+Object(_src_controller_controller__WEBPACK_IMPORTED_MODULE_1__["default"])();
+Object(_src_controller_selectFriend__WEBPACK_IMPORTED_MODULE_3__["default"])();
+Object(_src_controller_controllerPhotos__WEBPACK_IMPORTED_MODULE_2__["default"])();
+Object(_src_controller_showUserNews__WEBPACK_IMPORTED_MODULE_4__["default"])();
+Object(_src_controller_login__WEBPACK_IMPORTED_MODULE_5__["default"])();
+
 
 
 
@@ -1145,6 +1136,27 @@ class Model {
             result.user = array[0];
             return result;
         }
+
+        changeUserNews(data) {
+            let dataGroup = data.response.groups;
+            let dataItem = data.response.items;
+            let result = [];
+            dataItem.forEach(item => {
+                let number = Math.abs(item.source_id);
+                let news = {};
+                dataGroup.forEach(elem => {
+                    if (number == elem.gid) {
+                        news.title = elem.name;
+                        news.logo = elem.photo;
+                        news.text = item.text;
+                        news.likes = item.likes;
+                        news.photos = item.attachments;
+                        result.push(news);
+                    }
+                });
+            });
+            return result;
+        }
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (Model);   
@@ -1160,14 +1172,75 @@ class Model {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-
-
 class View {
     constructor(){}
 
     removeUserFriendPhoto() {
         let userFriendsPhoto = document.getElementById("friendsPhoto");
         userFriendsPhoto.remove();
+    }
+
+    showUserNews(userNews){
+        let div = document.getElementById("midWrapper");
+        let content = document.createElement("div");
+            content.classList.add("mid__list");
+            content.classList.add("content_column");
+            content.setAttribute("id", "midList");
+        userNews.forEach(item => {
+            let contentMid = document.createElement("div");
+            contentMid.classList.add("content__mid");
+            let contentHeader = document.createElement("div");
+            contentHeader.classList.add("content__header");
+            let contentLogo = document.createElement("div");
+            contentLogo.classList.add("content__logo");
+            let img = document.createElement("img");
+            img.setAttribute("src", item.logo);
+            let contentTitle = document.createElement("div");
+            contentTitle.classList.add("header__name");
+            let contentText = document.createElement("div");
+            contentText.classList.add("content__text");
+            let contentPhoto = document.createElement("div");
+            contentPhoto.classList.add("content_photo");
+
+                if (item.photos !== undefined) {
+                    item.photos.forEach(elem => {
+                        if (elem.type == "photo") {
+                            let img = document.createElement("img");
+                            img.classList.add("content-photo__item");
+                            img.setAttribute("src", elem.photo.src_xbig);
+                            contentPhoto.append(img);
+                        }
+                        if (elem.type == "link") {
+                            let img = document.createElement("img");
+                            img.classList.add("content-photo__item");
+                            img.setAttribute("src", elem.link.url);
+                            contentPhoto.append(img);
+                        }
+                        if (elem.type == "doc") {
+                            let img = document.createElement("img");
+                            img.classList.add("content-photo__item");
+                            img.setAttribute("src", elem.doc.url);
+                            contentPhoto.append(img);
+                        }
+                        if (elem.type == "video") {
+                            let img = document.createElement("img");
+                            img.classList.add("content-photo__item");
+                            img.setAttribute("src", elem.video.image_big);
+                            contentPhoto.append(img);
+                        }
+                    });    
+                }
+            contentText.append(item.text);
+            contentTitle.append(item.title);
+            contentLogo.append(img);
+            contentHeader.append(contentLogo);
+            contentHeader.append(contentTitle);
+            contentMid.append(contentHeader);
+            contentMid.append(contentText);
+            contentMid.append(contentPhoto);
+            content.append(contentMid);
+            div.append(content);
+        });
     }
 
     showSelectUserFriend(data) {
@@ -1239,6 +1312,12 @@ class View {
         let count = data.response;
         let photosCount = document.getElementById("photosCount");
         photosCount.innerHTML = count.length;
+    }
+
+    showUserNewsCount(userNews){
+        let count = userNews.length;
+        let newsCount = document.getElementById("newsCount");
+        newsCount.innerHTML = count;
     }
 
     showFriendsCount(data){

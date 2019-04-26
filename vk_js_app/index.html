@@ -56,9 +56,12 @@
             <i class="icon-home"></i>
             <a href="#">Моя страница</a>
           </li>
-          <li>
+          <li class="numb_row">
             <i class="icon-doc"></i>
             <a href="#" id="userNews">Новости</a>
+            <div class="numb">
+              <span id="newsCount"></span>
+            </div>
           </li>
           <li class="numb_row">
             <i class="icon-chat"></i>
@@ -327,7 +330,11 @@
       <i class="icon-user"></i>
     </div>
   </div>
+  <div class="login-user">
+    <a href="https://oauth.vk.com/authorize?client_id=6949483&display=page&redirect_uri=http://krukovich.github.io/vk_js_app/&scope=friends&response_type=token&v=5.95&state=123456" id="start">Click</a>
   </div>
+</div>
+
   <script src="node_modules/jquery/dist/jquery.min.js"></script>
   <script src="dist/bundle.js"></script>
 </body>
