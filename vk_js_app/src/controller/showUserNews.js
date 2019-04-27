@@ -12,8 +12,8 @@ const showUserNews = function() {
         let view = new View();
         let service = new Service();
 
-        const token = helper.getUserTokenLocalStorege();
-        service.getUserNewsAndPutLocalStorege(token);
+        let accessToken = localStorage.getItem("tokenAccess");
+        service.getUserNewsAndPutLocalStorege(accessToken);
 
         let data = helper.getUserNewsLocalStorege();
         let userNews = model.changeUserNews(data);

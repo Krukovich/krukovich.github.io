@@ -23,7 +23,7 @@ class Service {
 				localStorage.setItem("objectUser",JSON.stringify(data));
 			},
 			error: function(){
-				alert("Данные пользователя не загружен");
+				alert("Данные пользователя не загружены");
 			}
 		});
 	}

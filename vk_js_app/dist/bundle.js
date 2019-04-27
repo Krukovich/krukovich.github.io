@@ -11362,8 +11362,8 @@ __webpack_require__.r(__webpack_exports__);
 		let loadFriends = document.getElementById("loadFriends");
 			loadFriends.addEventListener("click", function(){
 
-		const token = helper.getUserTokenLocalStorege();		
-		service.getDataServerAndPutLocalStorege(token);
+		let accessToken = localStorage.getItem("tokenAccess");
+		service.getDataServerAndPutLocalStorege(accessToken);
 
 		let data = helper.getFriendsDataLocalStorege();
 		let friendsData = model.changeFriendsData(data);
@@ -11409,8 +11409,8 @@ const showUserPhotos = function() {
     let loadUserPhotos = document.getElementById("loadPhotos");
     loadUserPhotos.addEventListener("click", function() {
     
-    const token = helper.getUserTokenLocalStorege();
-    service.getPhotoUserServerAndPutLocalStorege(token);
+    let accessToken = localStorage.getItem("tokenAccess");
+    service.getPhotoUserServerAndPutLocalStorege(accessToken);
     
     let dataPhoto = helper.getUserPhotosLocalStorege();
     view.removeDataInPage();
@@ -11519,8 +11519,8 @@ const showUserNews = function() {
         let view = new _view_view__WEBPACK_IMPORTED_MODULE_1__["default"]();
         let service = new _helper_service__WEBPACK_IMPORTED_MODULE_0__["default"]();
 
-        const token = helper.getUserTokenLocalStorege();
-        service.getUserNewsAndPutLocalStorege(token);
+        let accessToken = localStorage.getItem("tokenAccess");
+        service.getUserNewsAndPutLocalStorege(accessToken);
 
         let data = helper.getUserNewsLocalStorege();
         let userNews = model.changeUserNews(data);
@@ -11614,7 +11614,7 @@ __webpack_require__.r(__webpack_exports__);
 				localStorage.setItem("objectUser",JSON.stringify(data));
 			},
 			error: function(){
-				alert("Данные пользователя не загружен");
+				alert("Данные пользователя не загружены");
 			}
 		});
 	}

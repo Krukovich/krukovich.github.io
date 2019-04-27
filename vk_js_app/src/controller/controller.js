@@ -11,8 +11,8 @@ import Helper from "../helper/helper"
 		let loadFriends = document.getElementById("loadFriends");
 			loadFriends.addEventListener("click", function(){
 
-		const token = helper.getUserTokenLocalStorege();		
-		service.getDataServerAndPutLocalStorege(token);
+		let accessToken = localStorage.getItem("tokenAccess");
+		service.getDataServerAndPutLocalStorege(accessToken);
 
 		let data = helper.getFriendsDataLocalStorege();
 		let friendsData = model.changeFriendsData(data);

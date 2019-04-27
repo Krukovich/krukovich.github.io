@@ -10,8 +10,8 @@ const showUserPhotos = function() {
     let loadUserPhotos = document.getElementById("loadPhotos");
     loadUserPhotos.addEventListener("click", function() {
     
-    const token = helper.getUserTokenLocalStorege();
-    service.getPhotoUserServerAndPutLocalStorege(token);
+    let accessToken = localStorage.getItem("tokenAccess");
+    service.getPhotoUserServerAndPutLocalStorege(accessToken);
     
     let dataPhoto = helper.getUserPhotosLocalStorege();
     view.removeDataInPage();
