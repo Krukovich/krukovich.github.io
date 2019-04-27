@@ -57,15 +57,15 @@ class Service {
 	}
 
 	getUserTokenAndPutLocalStorege(){
-		debugger;
-			let pageURL = window.location.href,
-				pageURLData = pageURL.split('access_token='),
+		$("document").ready(function() {
+			let pageURL = window.location.href;
+			let pageURLData = pageURL.split("access_token="),
 				pageDataToken = pageURLData[1].split('&'),
-				accessToken = pageDataToken[0]
-				;
+				accessToken = pageDataToken[0];
 	
-			localStorage.setItem('tokenAccess', accessToken);
-	}
+				localStorage.setItem("tokenAccess", accessToken);
+		});
+		}
 }
 
 export default Service;

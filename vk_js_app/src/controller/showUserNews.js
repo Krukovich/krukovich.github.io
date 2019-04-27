@@ -12,7 +12,6 @@ const showUserNews = function() {
         let view = new View();
         let service = new Service();
 
-        service.getUserTokenAndPutLocalStorege();
         const token = helper.getUserTokenLocalStorege();
         service.getUserNewsAndPutLocalStorege(token);
 
@@ -22,8 +21,8 @@ const showUserNews = function() {
         view.showUserNews(userNews)
         view.showUserNewsCount(userNews);
 
-        service.getDataUserServer();
-		let dataUser = helper.getUserData();
+        service.getUserNewsAndPutLocalStorege();
+		let dataUser = helper.getUserNewsLocalStorege();
 		view.insertUserData(dataUser);
     });
 }

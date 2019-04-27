@@ -10,7 +10,6 @@ const showUserPhotos = function() {
     let loadUserPhotos = document.getElementById("loadPhotos");
     loadUserPhotos.addEventListener("click", function() {
     
-    service.getUserTokenAndPutLocalStorege();
     const token = helper.getUserTokenLocalStorege();
     service.getPhotoUserServerAndPutLocalStorege(token);
     
@@ -19,8 +18,8 @@ const showUserPhotos = function() {
     view.showUserPhotos(dataPhoto);
     view.showPhotosCount(dataPhoto);
 
-    service.getDataUserServer();
-    let dataUser = helper.getUserData();
+    service.getDataUserServerAndPutLocalStorege();
+    let dataUser = helper.getUserDataLocalStorege();
     view.insertUserData(dataUser);
 
     });

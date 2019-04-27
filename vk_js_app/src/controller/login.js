@@ -6,7 +6,9 @@ const login = function() {
     
     let start = document.getElementById("start");
     start.addEventListener("click", function() {
-        service.getUserToken();
+        service.getUserTokenAndPutLocalStorege();
+        let login = document.getElementById("login");
+        login.remove();
     });
 }
 

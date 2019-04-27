@@ -11,7 +11,6 @@ import Helper from "../helper/helper"
 		let loadFriends = document.getElementById("loadFriends");
 			loadFriends.addEventListener("click", function(){
 
-		service.getUserTokenAndPutLocalStorege();
 		const token = helper.getUserTokenLocalStorege();		
 		service.getDataServerAndPutLocalStorege(token);
 
@@ -22,8 +21,8 @@ import Helper from "../helper/helper"
 		view.showFriendsData(friendsData);
 		view.showFriendsCount(friendsData);
 
-		service.getDataUserServer();
-		let dataUser = helper.getUserData();
+		service.getDataUserServerAndPutLocalStorege();
+		let dataUser = helper.getUserDataLocalStorege();
 		view.insertUserData(dataUser);
 	});
 

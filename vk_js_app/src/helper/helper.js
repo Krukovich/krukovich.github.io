@@ -5,7 +5,7 @@ class Helper {
         return data;
     }
 
-    getUserData(){
+    getUserDataLocalStorege(){
         const data = JSON.parse(localStorage.getItem("objectUser"));
         const dataUser = data.response[0];
         return dataUser;
