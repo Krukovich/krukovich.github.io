@@ -1,12 +1,6 @@
 class Helper {
 
-    getUserToken() {
-        let url_string = document.URL,
-            url = new URL(url_string),
-            accessToken = url.searchParams.get("access_token");
-    }
-
-    getFriendsData(){
+    getFriendsDataLocalStorege(){
         const data = JSON.parse(localStorage.getItem("objectUserFriends"));
         return data;
     }
@@ -17,14 +11,19 @@ class Helper {
         return dataUser;
     }
 
-    getUserPhotos(){
+    getUserPhotosLocalStorege(){
         const data = JSON.parse(localStorage.getItem("objectUserPhotos"));
         return data;
     }
 
-    getUserNews(){
+    getUserNewsLocalStorege(){
         const data = JSON.parse(localStorage.getItem("objectUserNews"));
         return data; 
+    }
+
+    getUserTokenLocalStorege(){
+        const data = JSON.parse(localStorage.getItem("tokenAccess"));
+        return data;
     }
 }
 

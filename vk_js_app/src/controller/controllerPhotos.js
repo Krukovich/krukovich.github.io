@@ -9,9 +9,12 @@ const showUserPhotos = function() {
     let service = new Service();
     let loadUserPhotos = document.getElementById("loadPhotos");
     loadUserPhotos.addEventListener("click", function() {
-        
-    service.getPhotoUserServer();
-    let dataPhoto = helper.getUserPhotos();
+    
+    service.getUserTokenAndPutLocalStorege();
+    const token = helper.getUserTokenLocalStorege();
+    service.getPhotoUserServerAndPutLocalStorege(token);
+    
+    let dataPhoto = helper.getUserPhotosLocalStorege();
     view.removeDataInPage();
     view.showUserPhotos(dataPhoto);
     view.showPhotosCount(dataPhoto);

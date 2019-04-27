@@ -11,7 +11,7 @@ const selectFriend = function() {
             let model = new Model();
             let view = new View();
     
-            let data = helper.getFriendsData();
+            let data = helper.getFriendsDataLocalStorege();
             let userFriend = model.selectUserFriend(data, userId);
             view.removeDataInPage();
             view.showSelectUserFriend(userFriend);

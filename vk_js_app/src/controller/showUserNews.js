@@ -12,8 +12,11 @@ const showUserNews = function() {
         let view = new View();
         let service = new Service();
 
-        service.getUserNews();
-        let data = helper.getUserNews();
+        service.getUserTokenAndPutLocalStorege();
+        const token = helper.getUserTokenLocalStorege();
+        service.getUserNewsAndPutLocalStorege(token);
+
+        let data = helper.getUserNewsLocalStorege();
         let userNews = model.changeUserNews(data);
         view.removeDataInPage();
         view.showUserNews(userNews)

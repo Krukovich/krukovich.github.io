@@ -11361,12 +11361,14 @@ __webpack_require__.r(__webpack_exports__);
 		let model = new _model_model__WEBPACK_IMPORTED_MODULE_2__["default"]();
 		let loadFriends = document.getElementById("loadFriends");
 			loadFriends.addEventListener("click", function(){
-		
-		service.getUserToken();
 
-		service.getDataServer();
-		let data = helper.getFriendsData();
+		service.getUserTokenAndPutLocalStorege();
+		const token = helper.getUserTokenLocalStorege();		
+		service.getDataServerAndPutLocalStorege(token);
+
+		let data = helper.getFriendsDataLocalStorege();
 		let friendsData = model.changeFriendsData(data);
+
 		view.removeDataInPage();
 		view.showFriendsData(friendsData);
 		view.showFriendsCount(friendsData);
@@ -11407,9 +11409,12 @@ const showUserPhotos = function() {
     let service = new _helper_service__WEBPACK_IMPORTED_MODULE_2__["default"]();
     let loadUserPhotos = document.getElementById("loadPhotos");
     loadUserPhotos.addEventListener("click", function() {
-        
-    service.getPhotoUserServer();
-    let dataPhoto = helper.getUserPhotos();
+    
+    service.getUserTokenAndPutLocalStorege();
+    const token = helper.getUserTokenLocalStorege();
+    service.getPhotoUserServerAndPutLocalStorege(token);
+    
+    let dataPhoto = helper.getUserPhotosLocalStorege();
     view.removeDataInPage();
     view.showUserPhotos(dataPhoto);
     view.showPhotosCount(dataPhoto);
@@ -11475,7 +11480,7 @@ const selectFriend = function() {
             let model = new _model_model__WEBPACK_IMPORTED_MODULE_1__["default"]();
             let view = new _view_view__WEBPACK_IMPORTED_MODULE_0__["default"]();
     
-            let data = helper.getFriendsData();
+            let data = helper.getFriendsDataLocalStorege();
             let userFriend = model.selectUserFriend(data, userId);
             view.removeDataInPage();
             view.showSelectUserFriend(userFriend);
@@ -11514,8 +11519,11 @@ const showUserNews = function() {
         let view = new _view_view__WEBPACK_IMPORTED_MODULE_1__["default"]();
         let service = new _helper_service__WEBPACK_IMPORTED_MODULE_0__["default"]();
 
-        service.getUserNews();
-        let data = helper.getUserNews();
+        service.getUserTokenAndPutLocalStorege();
+        const token = helper.getUserTokenLocalStorege();
+        service.getUserNewsAndPutLocalStorege(token);
+
+        let data = helper.getUserNewsLocalStorege();
         let userNews = model.changeUserNews(data);
         view.removeDataInPage();
         view.showUserNews(userNews)
@@ -11542,13 +11550,7 @@ const showUserNews = function() {
 __webpack_require__.r(__webpack_exports__);
 class Helper {
 
-    getUserToken() {
-        let url_string = document.URL,
-            url = new URL(url_string),
-            accessToken = url.searchParams.get("access_token");
-    }
-
-    getFriendsData(){
+    getFriendsDataLocalStorege(){
         const data = JSON.parse(localStorage.getItem("objectUserFriends"));
         return data;
     }
@@ -11559,14 +11561,19 @@ class Helper {
         return dataUser;
     }
 
-    getUserPhotos(){
+    getUserPhotosLocalStorege(){
         const data = JSON.parse(localStorage.getItem("objectUserPhotos"));
         return data;
     }
 
-    getUserNews(){
+    getUserNewsLocalStorege(){
         const data = JSON.parse(localStorage.getItem("objectUserNews"));
         return data; 
+    }
+
+    getUserTokenLocalStorege(){
+        const data = JSON.parse(localStorage.getItem("tokenAccess"));
+        return data;
     }
 }
 
@@ -11585,9 +11592,9 @@ class Helper {
 __webpack_require__.r(__webpack_exports__);
 /* WEBPACK VAR INJECTION */(function($) {class Service {
 
-	getDataServer(){
+	getDataServerAndPutLocalStorege(accessToken){
 		$.ajax({
-				url: "https://api.vk.com/method/friends.get?fields=photo_200,sex,bdate,city,country,online,education,universities,schools,relation&access_token=4446ddb54c74f64c1e151ba73093335d1928f99351601321c43a2b338b2f33d33e77e57ad4070d5e6e699&v=V",
+				url: "https://api.vk.com/method/friends.get?fields=photo_200,sex,bdate,city,country,online,education,universities,schools,relation&access_token=" + accessToken + "&v=V",
 				method: "GET",
 				dataType: "JSONP",
 				success: function(data){
@@ -11599,9 +11606,9 @@ __webpack_require__.r(__webpack_exports__);
 		});
 	}
 
-	getDataUserServer(){
+	getDataUserServerAndPutLocalStorege(accessToken){
 		$.ajax({
-			url: "https://api.vk.com/method/users.get?fields=photo_50,photos,sex,bdate,city,country,online,education,universities,schools,relation&access_token=4446ddb54c74f64c1e151ba73093335d1928f99351601321c43a2b338b2f33d33e77e57ad4070d5e6e699&v=V",
+			url: "https://api.vk.com/method/users.get?fields=photo_50,photos,sex,bdate,city,country,online,education,universities,schools,relation&access_token=" + accessToken + "&v=V",
 			method: "GET",
 			dataType: "JSONP",
 			success: function(data){
@@ -11613,9 +11620,9 @@ __webpack_require__.r(__webpack_exports__);
 		});
 	}
 
-	getPhotoUserServer(){
+	getPhotoUserServerAndPutLocalStorege(accessToken){
 		$.ajax({
-			url: "https://api.vk.com/method/photos.get?album_id=profile&access_token=4446ddb54c74f64c1e151ba73093335d1928f99351601321c43a2b338b2f33d33e77e57ad4070d5e6e699&v=V",
+			url: "https://api.vk.com/method/photos.get?album_id=profile&access_token=" + accessToken + "&v=V",
 			method: "GET",
 			dataType: "JSONP",
 			success: function(data){
@@ -11627,9 +11634,9 @@ __webpack_require__.r(__webpack_exports__);
 		});
 	}
 
-	getUserNews(){
+	getUserNewsAndPutLocalStorege(accessToken){
 		$.ajax({
-			url: "https://api.vk.com/method/newsfeed.get?filters=post,photo,photo_tag,wall_photo&access_token=4446ddb54c74f64c1e151ba73093335d1928f99351601321c43a2b338b2f33d33e77e57ad4070d5e6e699&v=V",
+			url: "https://api.vk.com/method/newsfeed.get?filters=post,photo,photo_tag,wall_photo&access_token=" + accessToken + "&v=V",
 			method: "GET",
 			dataType: "JSONP",
 			success: function(data){
@@ -11641,11 +11648,18 @@ __webpack_require__.r(__webpack_exports__);
 		});
 	}
 
-	getUserToken() {
-		let strGET = window.location.search.replace( '=', '&');
-		console.log(strGET);
+	getUserTokenAndPutLocalStorege(){
+		debugger;
+			let pageURL = window.location.href,
+				pageURLData = pageURL.split('access_token='),
+				pageDataToken = pageURLData[1].split('&'),
+				accessToken = pageDataToken[0]
+				;
+	
+			localStorage.setItem('tokenAccess', accessToken);
 	}
 }
+
 /* harmony default export */ __webpack_exports__["default"] = (Service);
 
 

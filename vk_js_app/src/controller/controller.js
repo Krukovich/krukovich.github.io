@@ -10,12 +10,14 @@ import Helper from "../helper/helper"
 		let model = new Model();
 		let loadFriends = document.getElementById("loadFriends");
 			loadFriends.addEventListener("click", function(){
-		
-		service.getUserToken();
 
-		service.getDataServer();
-		let data = helper.getFriendsData();
+		service.getUserTokenAndPutLocalStorege();
+		const token = helper.getUserTokenLocalStorege();		
+		service.getDataServerAndPutLocalStorege(token);
+
+		let data = helper.getFriendsDataLocalStorege();
 		let friendsData = model.changeFriendsData(data);
+
 		view.removeDataInPage();
 		view.showFriendsData(friendsData);
 		view.showFriendsCount(friendsData);
