@@ -57,14 +57,12 @@ class Service {
 	}
 
 	getUserTokenAndPutLocalStorege(){
-		$("document").ready(function() {
 			let pageURL = window.location.href;
 			let pageURLData = pageURL.split("access_token="),
 				pageDataToken = pageURLData[1].split('&'),
 				accessToken = pageDataToken[0];
 	
 				localStorage.setItem("tokenAccess", accessToken);
-		});
 		}
 }
 
