@@ -20,10 +20,6 @@ const showUserNews = function() {
         view.removeDataInPage();
         view.showUserNews(userNews)
         view.showUserNewsCount(userNews);
-
-        service.getUserNewsAndPutLocalStorege();
-		let dataUser = helper.getUserNewsLocalStorege();
-		view.insertUserData(dataUser);
     });
 }
 

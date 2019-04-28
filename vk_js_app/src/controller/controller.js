@@ -20,10 +20,6 @@ import Helper from "../helper/helper"
 		view.removeDataInPage();
 		view.showFriendsData(friendsData);
 		view.showFriendsCount(friendsData);
-
-		service.getDataUserServerAndPutLocalStorege();
-		let dataUser = helper.getUserDataLocalStorege();
-		view.insertUserData(dataUser);
 	});
 
 }

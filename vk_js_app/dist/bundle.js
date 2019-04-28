@@ -11371,10 +11371,6 @@ __webpack_require__.r(__webpack_exports__);
 		view.removeDataInPage();
 		view.showFriendsData(friendsData);
 		view.showFriendsCount(friendsData);
-
-		service.getDataUserServerAndPutLocalStorege();
-		let dataUser = helper.getUserDataLocalStorege();
-		view.insertUserData(dataUser);
 	});
 
 }
@@ -11416,11 +11412,6 @@ const showUserPhotos = function() {
     view.removeDataInPage();
     view.showUserPhotos(dataPhoto);
     view.showPhotosCount(dataPhoto);
-
-    service.getDataUserServerAndPutLocalStorege();
-    let dataUser = helper.getUserDataLocalStorege();
-    view.insertUserData(dataUser);
-
     });
 }
 /* harmony default export */ __webpack_exports__["default"] = (showUserPhotos);
@@ -11448,6 +11439,10 @@ const login = function() {
         service.getUserTokenAndPutLocalStorege();
         let login = document.getElementById("login");
         login.remove();
+
+        service.getDataUserServerAndPutLocalStorege();
+		let dataUser = helper.getUserDataLocalStorege();
+		view.insertUserData(dataUser);
     });
 }
 
@@ -11527,10 +11522,6 @@ const showUserNews = function() {
         view.removeDataInPage();
         view.showUserNews(userNews)
         view.showUserNewsCount(userNews);
-
-        service.getUserNewsAndPutLocalStorege();
-		let dataUser = helper.getUserNewsLocalStorege();
-		view.insertUserData(dataUser);
     });
 }
 

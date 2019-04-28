@@ -9,6 +9,10 @@ const login = function() {
         service.getUserTokenAndPutLocalStorege();
         let login = document.getElementById("login");
         login.remove();
+
+        service.getDataUserServerAndPutLocalStorege();
+		let dataUser = helper.getUserDataLocalStorege();
+		view.insertUserData(dataUser);
     });
 }
 

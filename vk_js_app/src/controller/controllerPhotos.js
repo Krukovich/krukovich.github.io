@@ -17,11 +17,6 @@ const showUserPhotos = function() {
     view.removeDataInPage();
     view.showUserPhotos(dataPhoto);
     view.showPhotosCount(dataPhoto);
-
-    service.getDataUserServerAndPutLocalStorege();
-    let dataUser = helper.getUserDataLocalStorege();
-    view.insertUserData(dataUser);
-
     });
 }
 export default showUserPhotos;
