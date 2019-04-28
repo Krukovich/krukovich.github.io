@@ -11390,18 +11390,16 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _view_view__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../view/view */ "./src/view/view.js");
-/* harmony import */ var _model_model__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../model/model */ "./src/model/model.js");
-/* harmony import */ var _helper_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../helper/service */ "./src/helper/service.js");
-/* harmony import */ var _helper_helper__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../helper/helper */ "./src/helper/helper.js");
-
+/* harmony import */ var _helper_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../helper/service */ "./src/helper/service.js");
+/* harmony import */ var _helper_helper__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../helper/helper */ "./src/helper/helper.js");
 
 
 
 
 const showUserPhotos = function() {
-    let helper = new _helper_helper__WEBPACK_IMPORTED_MODULE_3__["default"]();
+    let helper = new _helper_helper__WEBPACK_IMPORTED_MODULE_2__["default"]();
     let view = new _view_view__WEBPACK_IMPORTED_MODULE_0__["default"]();
-    let service = new _helper_service__WEBPACK_IMPORTED_MODULE_2__["default"]();
+    let service = new _helper_service__WEBPACK_IMPORTED_MODULE_1__["default"]();
     let loadUserPhotos = document.getElementById("loadPhotos");
     loadUserPhotos.addEventListener("click", function() {
     
@@ -11428,11 +11426,17 @@ const showUserPhotos = function() {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _helper_service__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../helper/service */ "./src/helper/service.js");
+/* harmony import */ var _helper_helper__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../helper/helper */ "./src/helper/helper.js");
+/* harmony import */ var _view_view__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../view/view */ "./src/view/view.js");
+
+
 
 
 const login = function() {
 
     let service = new _helper_service__WEBPACK_IMPORTED_MODULE_0__["default"]();
+    let helper = new _helper_helper__WEBPACK_IMPORTED_MODULE_1__["default"]();
+    let view = new _view_view__WEBPACK_IMPORTED_MODULE_2__["default"]();
     
     let start = document.getElementById("start");
     start.addEventListener("click", function() {

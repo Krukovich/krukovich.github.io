@@ -1,7 +1,7 @@
 import Service from "../helper/service";
 import View from "../view/view";
 import Model from "../model/model";
-import Helper from "../helper/helper"
+import Helper from "../helper/helper";
 
 	const controller = function() {
 		let helper = new Helper();

@@ -1,5 +1,4 @@
 import View from "../view/view";
-import Model from "../model/model";
 import Service from "../helper/service";
 import Helper from "../helper/helper";
 
