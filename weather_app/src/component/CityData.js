@@ -52,7 +52,7 @@ class CityData extends Component {
 
   async getData(result) {
     let cityId = result.id;
-    let url = "http://api.openweathermap.org/data/2.5/group?id=" + cityId + "&units=metric&APPID=216ac8952d174875f2b0182d8ff16394";
+    let url = "https://api.openweathermap.org/data/2.5/group?id=" + cityId + "&units=metric&APPID=216ac8952d174875f2b0182d8ff16394";
     let response = await fetch(url);
     let data = await response.json();
     this.setState({
