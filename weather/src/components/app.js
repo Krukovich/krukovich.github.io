@@ -1,11 +1,14 @@
 import React, { Component } from "react";
 import Example from "./BurgerMenu";
-import s from "../css/app.css";
+import Weather from "./Weather";
 
 class App extends Component {
   render() {
     return (
+      <div>
         <Example />
+        <Weather />
+      </div>
     );
   }
 }
