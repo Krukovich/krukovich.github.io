@@ -1,0 +1,27 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+}
+
+.input-block {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+#button-search{
+    margin-top: 20px;
+}
+
+#button-result {
+    display: none;
+    width: 178px;
+}
