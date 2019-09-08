@@ -66,22 +66,26 @@ class CityData extends Component {
   }
 
   async getData(result, options) {
-    let cityId = result.id,
-        selectOption = options,
-        url = "";
+    if (!(result.name)) {
+      alert("Город не найден");
+    } else {
+      let cityId = result.id,
+      selectOption = options,
+      url = "";
     if (selectOption === "weather_week") {
       url = "https://api.openweathermap.org/data/2.5/forecast?id=" + cityId + "&lang=ru&units=metric&APPID=216ac8952d174875f2b0182d8ff16394";
     } else {
       url = "https://api.openweathermap.org/data/2.5/group?id=" + cityId + "&lang=ru&units=metric&APPID=216ac8952d174875f2b0182d8ff16394";
     }
-    let response = await fetch(url);
-    let data = await response.json();
-    this.setState({
-        result: data
-    });
-    localStorage.removeItem("cityData");
-    var serialObj = JSON.stringify(data);
-    localStorage.setItem("cityData", serialObj);
+      let response = await fetch(url);
+      let data = await response.json();
+      this.setState({
+          result: data
+      });
+      localStorage.removeItem("cityData");
+      var serialObj = JSON.stringify(data);
+      localStorage.setItem("cityData", serialObj);
+    }
   }
 
   render() {
