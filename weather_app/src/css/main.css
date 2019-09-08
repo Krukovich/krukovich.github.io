@@ -61,6 +61,11 @@ body {
   letter-spacing: 2px;
   text-align: center;
 }
+
+.span-btn:hover {
+  cursor: pointer;
+}
+
 .span-btn:before,
 .span-btn:after {
   content: "";
@@ -95,11 +100,11 @@ body {
 .span-btn:hover {background: rgba(255,255,255,.2);}
 
 .span-btn input[type="checkbox"] {
-  display: none;
+  display: none; 
 }
 
-.span-btn input[type="checkbox"]:checked ~ .span-btn {
-  display: none;
+.active {
+  background: rgba(255,255,255,.2);
 }
 
 .list-group-flush i {

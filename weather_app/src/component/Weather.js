@@ -23,17 +23,32 @@ class Weather extends Component {
     }
 
     getDatalocalStorage() {
+        const translateData = JSON.parse(localStorage.getItem("translateData"));
         const data = JSON.parse(localStorage.getItem("cityData"));
-        if (data) {
-            this.setState({
-                temp: data.list[0].main.temp,
-                tempMax: data.list[0].main.temp_max,
-                tempMin: data.list[0].main.temp_min,
-                name: data.list[0].name,
-                pressure: data.list[0].main.pressure,
-                wind: data.list[0].wind.speed,
-                description: data.list[0].weather[0].description
-            });
+        if (data || translateData) {
+            if (data.list[0].name === translateData.nameTranslate) {
+                let cityData = new CityData();
+                let name = cityData.normalizeValue(translateData.name);
+                this.setState({
+                    temp: data.list[0].main.temp,
+                    tempMax: data.list[0].main.temp_max,
+                    tempMin: data.list[0].main.temp_min,
+                    name: name,
+                    pressure: data.list[0].main.pressure,
+                    wind: data.list[0].wind.speed,
+                    description: data.list[0].weather[0].description
+                });
+            } else {
+                this.setState({
+                    temp: data.list[0].main.temp,
+                    tempMax: data.list[0].main.temp_max,
+                    tempMin: data.list[0].main.temp_min,
+                    name: data.list[0].name,
+                    pressure: data.list[0].main.pressure,
+                    wind: data.list[0].wind.speed,
+                    description: data.list[0].weather[0].description
+                });
+            }
             setTimeout(function() {
                 let btn = document.getElementById("button-result");
                 btn.style.display = "none";
@@ -45,7 +60,7 @@ class Weather extends Component {
         let icon = this.state.description;
         if (icon === "ясно") {
             return <i className="icon-sun" />;
-        } if (icon === "") {
+        } if (icon === "облачно") {
             return <i className="icon-cloud" />;
         } if (icon === "") {
             return <i className="icon-rain" />;
@@ -61,7 +76,6 @@ class Weather extends Component {
   render() {
     return (
         <div className="content">
-
             <div className="content-block">
                 <Card style={{ width: '18rem' }}>
                 <Card.Body>
