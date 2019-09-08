@@ -1,5 +1,5 @@
 html {
-    height: 100%
+    height: 100%;
 }
 
 body {
@@ -7,6 +7,7 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
+  font-family: 'Neucha', cursive;
 }
 
 .content {
@@ -14,7 +15,11 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 70px;
+    padding-top: 35px;
+}
+
+.content-block {
+  position: relative;
 }
 
 .input-block {
@@ -24,15 +29,23 @@ body {
 }
 
 #button-search{
-    margin-top: 20px;
+  position: relative;
+  margin-top: 20px;
+  height: 50px;
+  line-height: 10px;
 }
 
 #button-result {
-    display: none;
-    width: 178px;
+  position: relative;
+  display: none;
+  width: 200px;
+  height: 50px;
+  line-height: 10px;
 }
 
-a{
+.span-btn{
+  font-family: 'Pattaya', sans-serif;
+  width: 200px;
   text-decoration: none;
   outline: none;
   display: inline-block;
@@ -43,12 +56,13 @@ a{
   border: 1px solid rgba(255,255,255,.4);
   background: none;
   font-weight: 300;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Neucha', cursive;
   text-transform: uppercase;
   letter-spacing: 2px;
+  text-align: center;
 }
-a:before,
-a:after {
+.span-btn:before,
+.span-btn:after {
   content: "";
   position: absolute;
   width: 0;
@@ -56,26 +70,60 @@ a:after {
   opacity: 0;
   box-sizing: border-box;
 }
-a:before {
+.span-btn:before {
   bottom: 0;
   left: 0;
   border-left: 1px solid white;
   border-top: 1px solid white;
   transition: 0s ease opacity .8s, .2s ease width .4s, .2s ease height .6s;
 }
-a:after {
+.span-btn:after {
   top: 0;
   right: 0;
   border-right: 1px solid white;
   border-bottom: 1px solid white;
   transition: 0s ease opacity .4s, .2s ease width , .2s ease height .2s;
 }
-a:hover:before,
-a:hover:after{
+.span-btn:hover:before,
+.span-btn:hover:after{
   height: 100%;
   width: 100%;
   opacity: 1;
 }
-a:hover:before {transition: 0s ease opacity 0s, .2s ease height, .2s ease width .2s;}
-a:hover:after {transition: 0s ease opacity .4s, .2s ease height .4s , .2s ease width .6s;}
-a:hover {background: rgba(255,255,255,.2);}
+.span-btn:hover:before {transition: 0s ease opacity 0s, .2s ease height, .2s ease width .2s;}
+.span-btn:hover:after {transition: 0s ease opacity .4s, .2s ease height .4s , .2s ease width .6s;}
+.span-btn:hover {background: rgba(255,255,255,.2);}
+
+.span-btn input[type="checkbox"] {
+  display: none;
+}
+
+.span-btn input[type="checkbox"]:checked ~ .span-btn {
+  display: none;
+}
+
+.list-group-flush i {
+  padding: 0 20px 0 0;
+  font-size: 18px;
+}
+
+.weather-icon i {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  font-size: 50px;
+}
+
+#search-icon {
+  position: absolute;
+  left: 5px;
+  top: 15px;
+  font-size: 20px;
+}
+
+#result-icon {
+  position: absolute;
+  left: 5px;
+  top: 15px;
+  font-size: 20px;
+}

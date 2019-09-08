@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { InputGroup } from "react-bootstrap";
+import { FormControl } from "react-bootstrap";
 import "../css/main.css"
 
 class CityData extends Component {
@@ -29,11 +31,24 @@ class CityData extends Component {
           result.name = city.name;
         }
       });
+      let options = this.selectSearchOption();
       this.showButtonResult();
-      this.getData(result);
+      this.getData(result, options);
     } else {
       alert("Поле название города пустое!");
     }
+  }
+
+  selectSearchOption() {
+    let form = document.forms.selectWeatherBtn;
+    let selectOption = "";
+    let formsItem = form.elements.options;
+        formsItem.forEach(function(item) {
+          if (item.checked === true) {
+            selectOption = item.id;
+          }
+        });
+    return selectOption;
   }
 
   showButtonResult() {
@@ -50,9 +65,15 @@ class CityData extends Component {
     return newStr;
   }
 
-  async getData(result) {
-    let cityId = result.id;
-    let url = "https://api.openweathermap.org/data/2.5/group?id=" + cityId + "&units=metric&APPID=216ac8952d174875f2b0182d8ff16394";
+  async getData(result, options) {
+    let cityId = result.id,
+        selectOption = options,
+        url = "";
+    if (selectOption === "weather_week") {
+      url = "https://api.openweathermap.org/data/2.5/forecast?id=" + cityId + "&lang=ru&units=metric&APPID=216ac8952d174875f2b0182d8ff16394";
+    } else {
+      url = "https://api.openweathermap.org/data/2.5/group?id=" + cityId + "&lang=ru&units=metric&APPID=216ac8952d174875f2b0182d8ff16394";
+    }
     let response = await fetch(url);
     let data = await response.json();
     this.setState({
@@ -66,8 +87,10 @@ class CityData extends Component {
   render() {
     return (
       <div className="input-block">
-        <input id="city" type="text" placeholder="Введите город" />
-        <a id="button-search" onClick={this.getCityName.bind(this)}>Поик города</a>
+        <InputGroup size="lg">
+          <FormControl  id="city" placeholder="Введите город" aria-label="Large" aria-describedby="inputGroup-sizing-sm" />
+        </InputGroup>
+        <span className="span-btn" id="button-search" onClick={this.getCityName.bind(this)}><i className="icon-search" id="search-icon"/>Поиcк города</span>
       </div>
     );
   }

@@ -3,8 +3,6 @@ import { Card } from "react-bootstrap";
 import { ListGroup} from "react-bootstrap";
 import { ListGroupItem } from "react-bootstrap";
 import CityData from "./CityData";
-import BurgerMenu from "./BurgerMenu";
-import "../css/main.css"
 
 class Weather extends Component {
     constructor(props) {
@@ -36,7 +34,28 @@ class Weather extends Component {
                 wind: data.list[0].wind.speed,
                 description: data.list[0].weather[0].description
             });
+            setTimeout(function() {
+                let btn = document.getElementById("button-result");
+                btn.style.display = "none";
+            },2000);
         }
+    }
+
+    showWeatherIcon() {
+        let icon = this.state.description;
+        if (icon === "ясно") {
+            return <i className="icon-sun" />;
+        } if (icon === "") {
+            return <i className="icon-cloud" />;
+        } if (icon === "") {
+            return <i className="icon-rain" />;
+        } if (icon === "пасмурно") {
+            return <i className="icon-cloud-sun" />;
+        } if (icon === "") {
+            return <i className="icon-snow" />;
+        } if (icon === "") {
+            return <i className="icon-cloud-flash" />;
+        }    
     }
 
   render() {
@@ -47,19 +66,20 @@ class Weather extends Component {
                 <Card style={{ width: '18rem' }}>
                 <Card.Body>
                 <Card.Title>Город: {this.state.name}</Card.Title>
+                <div className="weather-icon">{this.showWeatherIcon()}</div>
                     <Card.Text>Описание: {this.state.description}</Card.Text>
                 </Card.Body>
                 <ListGroup className="list-group-flush">
-                    <ListGroupItem>Температура: {this.state.temp} &#8451;</ListGroupItem>
-                    <ListGroupItem>Температура макс.: {this.state.tempMax} &#8451;</ListGroupItem>
-                    <ListGroupItem>Температура мини.: {this.state.tempMin} &#8451;</ListGroupItem>
-                    <ListGroupItem>Давление: {this.state.pressure}</ListGroupItem>
-                    <ListGroupItem>Скорость ветра: {this.state.wind} m/c</ListGroupItem>
+                    <ListGroupItem><i className="icon-temperatire" />Температура: {this.state.temp} &#8451;</ListGroupItem>
+                    <ListGroupItem><i className="icon-temperatire" />Температура макс.: {this.state.tempMax} &#8451;</ListGroupItem>
+                    <ListGroupItem><i className="icon-temperatire" />Температура мин.: {this.state.tempMin} &#8451;</ListGroupItem>
+                    <ListGroupItem><i className="icon-temperature" />Давление: {this.state.pressure}</ListGroupItem>
+                    <ListGroupItem><i className="icon-wind" />Скорость ветра: {this.state.wind} м/c</ListGroupItem>
                 </ListGroup>
                 </Card>
             </div>
             <CityData />
-            <a id="button-result" onClick={this.getDatalocalStorage.bind(this)}>Узнать погоду</a>
+            <span className="span-btn" id="button-result" onClick={this.getDatalocalStorage.bind(this)}><i className="icon-th-list" id="result-icon"/>Узнать погоду</span>
         </div>
     );
   }
