@@ -67,7 +67,7 @@ class CityData extends Component {
     return (
       <div className="input-block">
         <input id="city" type="text" placeholder="Введите город" />
-        <button id="button-search" onClick={this.getCityName.bind(this)}>Поик города</button>
+        <a id="button-search" onClick={this.getCityName.bind(this)}>Поик города</a>
       </div>
     );
   }

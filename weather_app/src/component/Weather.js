@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import { Button } from 'react-bootstrap/Button';
 import { Card } from "react-bootstrap";
 import { ListGroup} from "react-bootstrap";
 import { ListGroupItem } from "react-bootstrap";
 import CityData from "./CityData";
+import BurgerMenu from "./BurgerMenu";
 import "../css/main.css"
 
 class Weather extends Component {
@@ -42,6 +42,7 @@ class Weather extends Component {
   render() {
     return (
         <div className="content">
+
             <div className="content-block">
                 <Card style={{ width: '18rem' }}>
                 <Card.Body>
@@ -58,7 +59,7 @@ class Weather extends Component {
                 </Card>
             </div>
             <CityData />
-            <button id="button-result" onClick={this.getDatalocalStorage.bind(this)}>Узнать погоду</button>
+            <a id="button-result" onClick={this.getDatalocalStorage.bind(this)}>Узнать погоду</a>
         </div>
     );
   }
