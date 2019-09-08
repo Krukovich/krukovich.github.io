@@ -127,3 +127,16 @@ body {
   top: 15px;
   font-size: 20px;
 }
+
+@media screen and (max-width: 420px) {
+  .content {
+    padding-top: 60px;
+  }
+  #button-search{
+    margin-top: 10px;
+  }
+  
+  #button-result {
+    margin-top: 0;
+  }
+}
