@@ -23,36 +23,21 @@ class Weather extends Component {
     }
 
     getDatalocalStorage() {
-        const translateData = JSON.parse(localStorage.getItem("translateData"));
         const data = JSON.parse(localStorage.getItem("cityData"));
-        if (data || translateData) {
-            if (data.list[0].name === translateData.nameTranslate) {
-                let cityData = new CityData();
-                let name = cityData.normalizeValue(translateData.name);
-                this.setState({
-                    temp: data.list[0].main.temp,
-                    tempMax: data.list[0].main.temp_max,
-                    tempMin: data.list[0].main.temp_min,
-                    name: name,
-                    pressure: data.list[0].main.pressure,
-                    wind: data.list[0].wind.speed,
-                    description: data.list[0].weather[0].description
-                });
-            } else {
-                this.setState({
-                    temp: data.list[0].main.temp,
-                    tempMax: data.list[0].main.temp_max,
-                    tempMin: data.list[0].main.temp_min,
-                    name: data.list[0].name,
-                    pressure: data.list[0].main.pressure,
-                    wind: data.list[0].wind.speed,
-                    description: data.list[0].weather[0].description
-                });
-            }
+        if (data) {
+            this.setState({
+                temp: data.main.temp,
+                tempMax: data.main.temp_max,
+                tempMin: data.main.temp_min,
+                name: data.translaneName,
+                pressure: data.main.pressure,
+                wind: data.wind.speed,
+                description: data.weather[0].description
+            }); 
             setTimeout(function() {
                 let btn = document.getElementById("button-result");
                 btn.style.display = "none";
-            },2000);
+            },2000);               
         }
     }
 
@@ -60,9 +45,9 @@ class Weather extends Component {
         let icon = this.state.description;
         if (icon === "ясно") {
             return <i className="icon-sun" />;
-        } if (icon === "облачно") {
+        } if (icon === "облачно" || icon === "туман") {
             return <i className="icon-cloud" />;
-        } if (icon === "") {
+        } if (icon === "дождь") {
             return <i className="icon-rain" />;
         } if (icon === "пасмурно") {
             return <i className="icon-cloud-sun" />;
