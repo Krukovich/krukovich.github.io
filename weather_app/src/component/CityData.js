@@ -72,6 +72,13 @@ class CityData extends Component {
     btn.style.display = "block";
   }
 
+  hiddenButtonResult() {
+    setTimeout(function() {
+      let btn = document.getElementById("button-result");
+      btn.style.display = "none";
+    },1000);    
+  }
+
   normalizeValue(value) {
     let str = value.toLowerCase(),
         arrStr = str.split(""),
@@ -82,11 +89,13 @@ class CityData extends Component {
   }
 
   async getData(normalizeName, options) {
+    let flagSort;
     if (!(normalizeName)) {
       alert("Город не найден");
     } else {
       let url = "";
       if (options === "weather_week") {
+        flagSort = true;
         url = "https://api.openweathermap.org/data/2.5/forecast?q=" + normalizeName + "&lang=ru&units=metric&APPID=216ac8952d174875f2b0182d8ff16394";
       } else {
         url = "https://api.openweathermap.org/data/2.5/weather?q=" + normalizeName + "&lang=ru&units=metric&APPID=216ac8952d174875f2b0182d8ff16394";
@@ -95,18 +104,56 @@ class CityData extends Component {
         let data = await response.json();
         if (data.cod != 200) {
           alert(data.message);
-          setTimeout(function() {
-            let btn = document.getElementById("button-result");
-            btn.style.display = "none";
-          },2000);     
+          this.hiddenButtonResult(); 
         } else {
-          let name = await this.translatekName(data.name);
-          data.translaneName = name;
-          localStorage.removeItem("cityData");
-          let serialObj = JSON.stringify(data);
-          localStorage.setItem("cityData", serialObj);    
+          if (flagSort) {
+            const dataSort =  this.sortDataOnFiveDays(data);
+            let name = await this.translatekName(data.city.name);
+            this.putDataInLocalStorage(dataSort, name, flagSort);
+          } else {
+            let name = await this.translatekName(data.name);
+            this.putDataInLocalStorage(data, name, null);
+          }
         }
       }    
+    }
+
+    putDataInLocalStorage(data, translateName, flagSort) {
+      if (flagSort) {
+        let obj = {};
+        obj.translateName = translateName;
+        obj.list = data;
+        obj.flagSort = flagSort;
+        localStorage.removeItem("cityData");
+        let serialObj = JSON.stringify(obj);
+        localStorage.setItem("cityData", serialObj);
+      } else {
+        data.translateName = translateName;
+        localStorage.removeItem("cityData");
+        let serialObj = JSON.stringify(data);
+        localStorage.setItem("cityData", serialObj);
+      }    
+    }
+
+    sortDataOnFiveDays(data) {
+      if (data) {
+        let list = data.list,
+            result = [],
+            str = list[0].dt_txt.substr(8, 2),
+            num = Number(str);
+        list.forEach(function(item) {
+          let tempStr = item.dt_txt.substr(8, 2),
+              tempNum = Number(tempStr);
+          if (num <= tempStr) {
+            result.push(item);
+            num += 1;
+            if (result.length > 5) {
+            result.pop();
+            }
+          }
+        });
+        return result;
+      }
     }
 
   render() {
