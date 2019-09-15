@@ -21,6 +21,7 @@ class Weather extends Component {
       }
 
     componentDidMount() {
+        this.getDatalocalStorage();
         let mass = [1,2,3],
             item = mass[Math.floor(Math.random()*mass.length)],
             body = document.getElementById("body");
@@ -40,10 +41,24 @@ class Weather extends Component {
           }
     }
 
+    showContent(flagSort) {
+        let content = document.getElementById("content");
+        let contentFiveDay = document.getElementById("content-block__fiveday");
+        if(flagSort) {
+            content.style.display = "none";
+            contentFiveDay.style.display = "flex";
+        } else {
+            contentFiveDay.style.display = "none";
+            content.style.display = "flex";
+        }
+    }
+
+
     getDatalocalStorage() {
         const data = JSON.parse(localStorage.getItem("cityData"));
         if (data) {
             if (data.flagSort === true) {
+                this.showContent(true);
                 const dataCity = {
                     list: data.list,
                     cityName: data.translateName
@@ -52,8 +67,9 @@ class Weather extends Component {
                     list: dataCity
                 });
                 let btn = new CityData();
-                btn.hiddenButtonResult();  
+                btn.hiddenButtonResult();
             } else {
+                this.showContent(false);
                 this.setState({
                     temp: data.main.temp,
                     tempMax: data.main.temp_max,

@@ -7,17 +7,17 @@ class CityData extends Component {
   constructor(props) {
     super(props);
     this.state = {
-        result: "",
-        temp: "0",
-        tempMax: "0",
-        tempMin: "0",
-        name: "",
-        pressure: "0",
-        wind: "0",
-        description: ""
+      result: "",
+      temp: "0",
+      tempMax: "0",
+      tempMin: "0",
+      name: "",
+      pressure: "0",
+      wind: "0",
+      description: ""
     };
   }
-  
+
   async getCityName() {
     let city = document.getElementById("city");
     let tempName = city.value;

@@ -28,10 +28,6 @@ class WeatherFiveDay extends Component {
     render() {
 
         if (this.props.data != "") {
-
-            let content = document.getElementById("content");
-            content.style.display = "none";
-
             const cityName = this.props.data.cityName;
             const data = this.props.data.list;
             const list = data.map((item) => {
@@ -58,12 +54,15 @@ class WeatherFiveDay extends Component {
                 );
             })
             return (
-                <div className="content-block__fiveday">
+                <div className="content-block__fiveday" id="content-block__fiveday">
                     {list}
                 </div>
             );
         } else {
-            return null
+            return (
+                <div className="content-block__fiveday" id="content-block__fiveday">
+                </div>
+            );
         } 
     }
 }
