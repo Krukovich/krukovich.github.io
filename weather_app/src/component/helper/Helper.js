@@ -38,5 +38,13 @@ class Helper extends Component {
         return result;
     }
 
+    userSelectAndWrite(cityName) {
+        let userselectDiv = document.getElementById("userSelected");
+        let div = document.createElement("div");
+        div.className = "ca-main";
+        div.append(cityName);
+        userselectDiv.append(div);
+    };
+
 }
 export default Helper;

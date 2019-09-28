@@ -102,7 +102,7 @@ class Weather extends Component {
   render() {
     return (
         <div>
-            <SecondMenu />
+            <SecondMenu /> 
             <WeatherFiveDay data={this.state.list}/>
             <div className="content" id="content">
                 <div className="content-block">
