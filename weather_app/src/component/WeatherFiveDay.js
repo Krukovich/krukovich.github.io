@@ -14,8 +14,8 @@ class WeatherFiveDay extends Component {
             return <i className="icon-rain" />;
         } if (description === "пасмурно") {
             return <i className="icon-cloud-sun" />;
-        } if (description === "") {
-            return <i className="icon-snow" />;
+        } if (description === "туманно") {
+            return <i className="icon-cloud-wind" />;
         } if (description === "") {
             return <i className="icon-cloud-flash" />;
         }    

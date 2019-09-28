@@ -29,7 +29,6 @@ class SecondMenu extends Component {
             if (event.target.className == "ca-main") {
                 let helper = new Helper();
                 let cityData = new CityData();
-
                 let cityName = event.target.innerHTML,
                     cityInput = document.getElementById("city");
                 cityInput.value = cityName;

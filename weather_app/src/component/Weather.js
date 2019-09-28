@@ -41,6 +41,7 @@ class Weather extends Component {
     showContent(flagSort) {
         let content = document.getElementById("content");
         let contentFiveDay = document.getElementById("content-block__fiveday");
+        
         if(flagSort) {
             content.style.display = "none";
             contentFiveDay.style.display = "flex";

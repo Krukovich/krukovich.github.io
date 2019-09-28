@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { InputGroup } from "react-bootstrap";
 import { FormControl } from "react-bootstrap";
+import Helper from "../component/helper/Helper";
 import "../css/main.css"
 
 class CityData extends Component {
@@ -19,11 +20,14 @@ class CityData extends Component {
   }
 
   async getCityName() {
-    let city = document.getElementById("city");
-    let tempName = city.value;
+    let helper = new Helper(),
+        city = document.getElementById("city"),
+        tempName = city.value;
     let cityName = await this.checkedNameAndTranslate(tempName);
+
     if (cityName != "") {
       let normalizeName = this.normalizeValue(cityName);
+      helper.userSelectAndWrite(normalizeName);
       let options = this.selectSearchOption();
       this.showButtonResult();
       this.getData(normalizeName, options);
@@ -60,6 +64,7 @@ class CityData extends Component {
     let selectOption = "";
     let formsItem = form.elements.options;
         formsItem.forEach(function(item) {
+
           if (item.checked === true) {
             selectOption = item.id;
           }
@@ -94,6 +99,7 @@ class CityData extends Component {
       alert("Город не найден");
     } else {
       let url = "";
+
       if (options === "weather_week") {
         flagSort = true;
         url = "https://api.openweathermap.org/data/2.5/forecast?q=" + normalizeName + "&lang=ru&units=metric&APPID=216ac8952d174875f2b0182d8ff16394";
@@ -102,6 +108,7 @@ class CityData extends Component {
       }
         let response = await fetch(url);
         let data = await response.json();
+
         if (data.cod != 200) {
           alert(data.message);
           this.hiddenButtonResult(); 
@@ -144,6 +151,7 @@ class CityData extends Component {
         list.forEach(function(item) {
           let tempStr = item.dt_txt.substr(8, 2),
               tempNum = Number(tempStr);
+              
           if (num <= tempStr) {
             result.push(item);
             num += 1;
@@ -167,4 +175,5 @@ class CityData extends Component {
     );
   }
 }
+
 export default CityData;

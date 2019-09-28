@@ -5,8 +5,10 @@ class BurgerMenu extends React.Component {
 
   componentDidMount() {
     window.addEventListener("click", function(event){
+
       if (event.target.className === "span-btn" || event.target.className === "span-btn active" ) {
         let str = event.target.className;
+        
         if (str.indexOf("active") > 0) {
           event.target.classList.remove("active");
         } else {

@@ -39,12 +39,28 @@ class Helper extends Component {
     }
 
     userSelectAndWrite(cityName) {
-        let userselectDiv = document.getElementById("userSelected");
-        let div = document.createElement("div");
-        div.className = "ca-main";
-        div.append(cityName);
-        userselectDiv.append(div);
-    };
+        let userselectDiv = document.getElementById("userSelected"),
+            divs= userselectDiv.childNodes;
 
+        if (divs.length > 0) {
+            let divArray = [].slice.call(divs);
+            let result = divArray.filter(function(item){
+                return item.innerHTML == cityName;
+            });
+            
+            if (result.length  == 0) {
+                let div = document.createElement("div");
+                div.className = "ca-main";
+                div.append(cityName);
+                userselectDiv.append(div);
+            }
+        } else {
+            let div = document.createElement("div");
+            div.className = "ca-main";
+            div.append(cityName);
+            userselectDiv.append(div);
+        }
+    };
 }
+
 export default Helper;
