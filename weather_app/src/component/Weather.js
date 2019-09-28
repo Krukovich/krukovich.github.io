@@ -4,6 +4,8 @@ import { ListGroup} from "react-bootstrap";
 import { ListGroupItem } from "react-bootstrap";
 import CityData from "./CityData";
 import WeatherFiveDay  from "../component/WeatherFiveDay";
+import SecondMenu from "./SecondMenu";
+import Helper from "../component/helper/Helper";
 
 class Weather extends Component {
     constructor(props) {
@@ -16,29 +18,24 @@ class Weather extends Component {
             name: "",
             pressure: "0",
             wind: "0",
-            description: ""
+            description: "",
+            randomList: ""
         };
       }
 
-    componentDidMount() {
-        this.getDatalocalStorage();
-        let mass = [1,2,3],
-            item = mass[Math.floor(Math.random()*mass.length)],
-            body = document.getElementById("body");
+    componentWillMount() {
+        let helper = new Helper();
+        helper.randomBackground();
+    }
 
-        switch (item) {
-            case 1:
-                body.className="bodybg1";
-                break;
-            case 2:
-                body.className="bodybg2";
-                break;
-            case 3:
-                body.className="bodybg3";
-                break;
-            default:
-                body.className="bodybg1";
-          }
+    componentDidMount() {
+        let helper = new Helper();
+        let massName = helper.getRandomCityName();
+        this.setState({
+            randomList: massName
+        });
+
+        this.getDatalocalStorage();
     }
 
     showContent(flagSort) {
@@ -105,6 +102,7 @@ class Weather extends Component {
   render() {
     return (
         <div>
+            <SecondMenu />
             <WeatherFiveDay data={this.state.list}/>
             <div className="content" id="content">
                 <div className="content-block">

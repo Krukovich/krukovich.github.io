@@ -2,6 +2,7 @@ html {
     height: 100%;
 }
 
+/* Стили для показа случайных обоев */
 .bodybg1 {
   height: 100%;
   margin: 0;
@@ -34,6 +35,7 @@ html {
   background-size: cover;
   background-position: bottom;
 }
+/* Конец стилей */
 
 .content {
     display: flex;
@@ -54,6 +56,7 @@ html {
     margin-top: 20px;
 }
 
+/* Стили для всех кнопок */
 #button-search{
   position: relative;
   margin-top: 20px;
@@ -132,7 +135,9 @@ html {
 .active {
   background: rgba(255,255,255,.2);
 }
+/* Конец стилей */
 
+/* Оформление fontello иконок */
 .list-group-flush i {
   padding: 0 20px 0 0;
   font-size: 18px;
@@ -158,7 +163,9 @@ html {
   top: 15px;
   font-size: 20px;
 }
+/* Конец стилей */
 
+/* Стили для карточек погоды на неделю */
 .content-block__fiveday {
   display: flex;
   flex-direction: row;
@@ -189,6 +196,78 @@ html {
   -ms-transform: rotateZ(20deg);
   transform: rotateZ(20deg);
 }
+/* Конец стилей */
+
+/* Стили для доп. меню выбора города */
+.accordion {
+  width: 200px;
+  position: fixed;
+  top: 20px;
+  left: 100px;
+}
+
+.btn, .btn-link {
+  text-decoration: none !important;
+  color: #000;
+}
+
+.btn-link:hover {
+  color: #000;
+  text-decoration: none;
+}
+
+.btn:hover {
+  color: #000;
+  text-decoration: none;
+}
+
+.card-body li {
+  list-style: none;
+}
+
+.cityname__item:hover {
+  cursor: pointer;
+}
+
+.ca-menu li:hover{
+  background: #e1f0fa;
+ }
+.ca-menu li:hover .ca-icon{
+  font-size: 40px;
+  color: #259add;
+  opacity: 0.8;
+  text-shadow: 0px 0px 13px #fff;
+}
+.ca-menu li:hover .ca-main{
+  opacity: 1;
+  color:#2676ac;
+  animation: moveFromTop 300ms ease-in-out;
+}
+.ca-menu li:hover .ca-sub{
+  opacity: 1;
+  animation: moveFromBottom 300ms ease-in-out;
+} 
+@keyframes moveFromBottom {
+  from {
+  opacity: 0;
+  transform: translateY(200%);
+}
+  to {
+  opacity: 1;
+  transform: translateY(0%);
+  }
+} 
+@keyframes moveFromTop {
+  from {
+  opacity: 0;
+  transform: translateY(-200%);
+  }
+to {
+  opacity: 1;
+  transform: translateY(0%);
+  }
+}  
+/* Конец стилей */
 
 @media screen and (max-width: 420px) {
   body {
