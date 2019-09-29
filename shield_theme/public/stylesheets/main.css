@@ -936,7 +936,6 @@ body {
 
 .latest-project {
   position: relative;
-  height: 100vh;
   overflow: hidden;
 }
 .latest-project .latest-project-header {
