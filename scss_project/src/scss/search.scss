@@ -1,0 +1,86 @@
+@import "../scss/core.scss";
+
+.search-wrapper {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.96);
+    height: 100%;
+    z-index: 1;
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+
+    .search-footer {
+        position: absolute;
+        bottom: 0;
+        background-color: $primary-color;
+        height: 100px;
+        width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+    }
+
+    .search-footer-block {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex; 
+        -webkit-box-pack: center; 
+            -ms-flex-pack: center; 
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+
+        img {
+            margin-right: 15px;
+        }
+
+        span {
+            font-family: "Rubik-Medium";
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 21px;
+            text-transform: uppercase;
+            color: #FFFFFF;
+        }
+    }
+
+    .close-btn {
+        position: absolute;
+        top: 46px;
+        right: 68px;
+    }
+
+    .close-btn:hover {
+        cursor: pointer;
+    }
+
+    .search-input {
+        width: 930px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+        border: none;
+        border-bottom: 1px solid rgba(52, 54, 59, 0.2);
+        outline: none;
+
+        font-family: "Rubik-Medium";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21px;
+        color: #34363B;
+    }
+}
