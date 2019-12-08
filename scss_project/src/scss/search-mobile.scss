@@ -1,6 +1,7 @@
 @import "../scss//core.scss";
 
 .search-mobile-wrapper {
+    overflow: hidden;
     transform: translateX(100%);
     position: absolute;
     top: 0;
