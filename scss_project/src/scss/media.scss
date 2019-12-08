@@ -1,19 +1,33 @@
 @import "../scss/core.scss";
 
 @media (min-width: 992px) and (max-width: 1199px) {
-
+    // .main-content-mobile {
+    //     display: none;
+    // }
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
-  
+@media screen and (max-width: 991px) {
+    .main-content {
+        display: none;
+    }
+    
+    .main-content-mobile {
+        display: block;
+    }
 }
 
 @media (min-width: 576px) and (max-width: 767px) {
- 
+    // .main-content-mobile {
+    //     display: none;
+    // }
 }
    
 @media screen and (max-width: 575px) {
-    .main-content  {
-        display: none;
-    }
+    // .main-content-mobile {
+    //     display: block;
+    // }
+
+    // .main-content {
+    //     display: none;
+    // }
 }

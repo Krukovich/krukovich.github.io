@@ -32,7 +32,6 @@ window.onload = () => {
         mainContent.style.height = "100%";
     })
 
-
     let btnMenu = document.getElementById("btnMenu");
     btnMenu.addEventListener("click", () => {
         let blockMenu = document.getElementById("blockMenu");
@@ -45,5 +44,25 @@ window.onload = () => {
         let blockMenu = document.getElementById("blockMenu");
         blockMenu.style.transform = "translateY(100%)";
         blockMenu.style.transition = "1s";
+    });
+
+    let searchBtnsecond = document.getElementById("searchBtnsecond");
+    searchBtnsecond.addEventListener("click", () => {
+        let searchMobile = document.getElementById("searchMobile");
+        let contentMobile = document.getElementById("contentMobile");
+        contentMobile.style.transform = "translateY(-100%)";
+        contentMobile.style.transition = "1s";
+        searchMobile.style.transform = "translateY(0)";
+        searchMobile.style.transition = "1s";
+    });
+
+    let mobileBtnClose = document.getElementById("mobileBtnClose");
+    mobileBtnClose.addEventListener("click", () => {
+        let searchMobile = document.getElementById("searchMobile");
+        let contentMobile = document.getElementById("contentMobile");
+        contentMobile.style.transform = "translateY(0)";
+        contentMobile.style.transition = "1s";
+        searchMobile.style.transform = "translateY(-100%)";
+        searchMobile.style.transition = "1s";
     });
 }

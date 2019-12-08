@@ -117,3 +117,24 @@
     }
 }
 
+.main-content-mobile {
+    display: none;
+    position: relative;
+
+    .main-content-mobile__menu {
+        img {
+            position: absolute;
+            left: 20px;
+            top: 26px;
+        }
+
+    }
+
+    .main-content-mobile__search {
+        img {
+            position: absolute;
+            top: 27px;
+            right: 20px;
+        }
+    }
+}

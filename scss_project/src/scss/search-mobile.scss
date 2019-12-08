@@ -1,0 +1,65 @@
+@import "../scss//core.scss";
+
+.search-mobile-wrapper {
+    transform: translateX(100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 1);
+    height: 100vh;
+
+    .close-btn {
+        position: absolute;
+        top: 26px;
+        right: 20px;
+    }
+
+    .search-input {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+        width: 200px;
+        border: none;
+        border-bottom: 1px solid rgba(52, 54, 59, 0.2);
+        outline: none;
+        font-family: "Rubik-Medium";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21px;
+        color: #34363B;
+    }
+
+    .search-footer {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 100px;
+        background-color: $primary-color;
+
+        .search-footer-block {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%,-50%);
+                    transform: translate(-50%,-50%);
+
+            span {
+                font-family: "Rubik-Medium";
+                font-style: normal;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 17px;
+                text-transform: uppercase;
+                color: #FFFFFF;
+                margin-left: 10px;
+                vertical-align: super;
+            }
+        }
+    }
+}
