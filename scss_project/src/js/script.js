@@ -49,9 +49,8 @@ window.onload = () => {
     let searchBtnsecond = document.getElementById("searchBtnsecond");
     searchBtnsecond.addEventListener("click", () => {
         let searchMobile = document.getElementById("searchMobile");
-        let contentMobile = document.getElementById("contentMobile");
-        contentMobile.style.transform = "translateY(-100%)";
-        contentMobile.style.transition = "1s";
+        let mainContentMobile = document.getElementById("mainContentMobile");
+        mainContentMobile.style.display = "none";
         searchMobile.style.transform = "translateY(0)";
         searchMobile.style.transition = "1s";
     });
@@ -59,10 +58,41 @@ window.onload = () => {
     let mobileBtnClose = document.getElementById("mobileBtnClose");
     mobileBtnClose.addEventListener("click", () => {
         let searchMobile = document.getElementById("searchMobile");
-        let contentMobile = document.getElementById("contentMobile");
-        contentMobile.style.transform = "translateY(0)";
-        contentMobile.style.transition = "1s";
+        let mainContentMobile = document.getElementById("mainContentMobile");
+        mainContentMobile.style.display = "block";
         searchMobile.style.transform = "translateY(-100%)";
         searchMobile.style.transition = "1s";
+    });
+
+    let menuBtnSecond = document.getElementById("menuBtnSecond");
+    menuBtnSecond.addEventListener("click", () => {
+        let menuMobile = document.getElementById("menuMobile");
+        let mainContentMobile = document.getElementById("mainContentMobile");
+        mainContentMobile.style.display = "none";
+        menuMobile.style.transform = "translateX(0)";
+        menuMobile.style.transition = "1s";
+    });
+
+    let btnCloseMenuMobile = document.getElementById("btnCloseMenuMobile");
+    btnCloseMenuMobile.addEventListener("click", () => {
+        let menuMobile = document.getElementById("menuMobile");
+        let mainContentMobile = document.getElementById("mainContentMobile");
+        mainContentMobile.style.display = "block";
+        menuMobile.style.transform = "translateX(-100%)";
+        menuMobile.style.transition = "1s";
+    });
+
+
+    let btnUp = document.getElementById("btnUp");
+    btnUp.addEventListener("click", () => {
+        let timer = setInterval(() => {
+        let top = Math.max(document.body.scrollTop,document.documentElement.scrollTop);
+
+            if (top > 0) {
+                window.scrollBy(0,-50);
+            } else {
+                clearInterval(timer);
+            }
+        },20);
     });
 }

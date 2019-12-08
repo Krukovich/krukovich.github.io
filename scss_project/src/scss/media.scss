@@ -1,9 +1,9 @@
 @import "../scss/core.scss";
 
 @media (min-width: 992px) and (max-width: 1199px) {
-    // .main-content-mobile {
-    //     display: none;
-    // }
+    .main-content-mobile {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 991px) {
