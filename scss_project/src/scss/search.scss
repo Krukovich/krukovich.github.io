@@ -53,6 +53,10 @@
             text-transform: uppercase;
             color: #FFFFFF;
         }
+
+        span:hover {
+            cursor: pointer;
+        }
     }
 
     .close-btn {

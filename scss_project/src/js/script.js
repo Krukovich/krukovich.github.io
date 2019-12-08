@@ -82,12 +82,11 @@ window.onload = () => {
         menuMobile.style.transition = "1s";
     });
 
-
+    //прокручиваем страницу наверх
     let btnUp = document.getElementById("btnUp");
     btnUp.addEventListener("click", () => {
         let timer = setInterval(() => {
         let top = Math.max(document.body.scrollTop,document.documentElement.scrollTop);
-
             if (top > 0) {
                 window.scrollBy(0,-50);
             } else {
@@ -95,4 +94,14 @@ window.onload = () => {
             }
         },20);
     });
+
+    //меняем картинку background
+    setInterval(() => {
+        let mainContent = document.getElementById("mainContent");
+        if (mainContent.className.indexOf("main-content-second") < 0) {
+            mainContent.classList.add("main-content-second");
+        } else {
+            mainContent.classList.remove("main-content-second");
+        }
+    }, 5000);
 }

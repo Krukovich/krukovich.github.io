@@ -1,7 +1,8 @@
 @import "../scss//core.scss";
 
 .search-mobile-wrapper {
-    transform: translateY(-100%);
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
     position: absolute;
     top: 0;
     left: 0;

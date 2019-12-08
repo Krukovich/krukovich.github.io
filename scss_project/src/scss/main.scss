@@ -8,3 +8,19 @@ body {
 }
 
 
+.main-content{
+    background: url("../img/bg/fon.jpg") no-repeat;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+}
+
+.main-content-second {
+    background: url("../img/bg/fon_revers.jpg") no-repeat; 
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+}
+
