@@ -1,0 +1,156 @@
+.content {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    .content-left {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        margin: 140px 0  0 100px;
+        width: 690px;
+
+        .content-left-title {
+            font-family: "Montserrat-ExtraBold";
+            font-style: normal;
+            font-weight: 900;
+            font-size: 34px;
+            line-height: 41px;
+            text-transform: uppercase;
+            color: #2E40DD;
+        }
+
+        .content-block {
+            .content-block-left {
+                margin-top: 43px;
+
+                .content-block-left__item {
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    margin-bottom: 28px;
+                    margin-right: 58px;
+
+                    .block-left-text {
+                        display: -webkit-box;
+                        display: -ms-flexbox;
+                        display: flex;
+                        -webkit-box-orient: vertical;
+                        -webkit-box-direction: normal;
+                            -ms-flex-direction: column;
+                                flex-direction: column;
+                        margin-left: 24px;
+                        font-family: "Montserrat-Medium";
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 18px;
+                        line-height: 22px;
+                        color: #212121;
+                    }
+                }
+            }
+
+            .content-block-right {
+                margin-top: 40px;
+
+                .content-block-right__item {
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    margin-bottom: 28px;
+
+                    .card {
+                        width: 45px;
+                        height: 32px;
+                    }
+
+                    .block-right-text {
+                        display: -webkit-box;
+                        display: -ms-flexbox;
+                        display: flex;
+                        -webkit-box-orient: vertical;
+                        -webkit-box-direction: normal;
+                            -ms-flex-direction: column;
+                                flex-direction: column;
+                        margin-left: 24px;
+                        font-family: "Montserrat-Medium";
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 18px;
+                        line-height: 22px;
+                        color: #212121;
+                    }
+
+                    .img-block {
+                        position: relative;
+                        width: 40px;
+                        height: 40px;
+                        background-image: url("../img/icons/Rectangle_circle.png");
+
+                        img {
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            -webkit-transform: translate(-50%, -50%);
+                                    transform: translate(-50%, -50%);
+                        }
+                    }
+                }
+            }
+        }
+
+        .content-block-text {
+            font-family: "Montserrat-Medium";
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 22px;
+            color: #212121;
+            width: 540px;
+            margin-top: 40px;
+        }
+
+        .content-block-button {
+            margin-top: 22px;
+
+            input {
+                background: -webkit-gradient(linear, left top, right top, color-stop(-5.6%, #2E40DD), color-stop(70.12%, #3778F3));
+                background: linear-gradient(90deg, #2E40DD -5.6%, #3778F3 70.12%);
+                -webkit-box-shadow: 0px 0px 70px rgba(72, 106, 228, 0.5);
+                        box-shadow: 0px 0px 70px rgba(72, 106, 228, 0.5);
+                border-radius: 500px;
+                height: 60px;
+                width: 232px;
+                font-family: "Montserrat-Medium";
+                font-style: normal;
+                font-weight: 800;
+                font-size: 20px;
+                line-height: 24px;
+                color: #FFFFFF;
+                border: none;
+                outline: none;
+            }
+
+            input:hover {
+                cursor: pointer;
+            }
+        }
+    }
+
+    .content-right {
+        position: absolute;
+        top: -4px;
+        right: 0px;
+    }
+
+    .content-block {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+}
