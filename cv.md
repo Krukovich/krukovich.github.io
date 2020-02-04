@@ -6,6 +6,8 @@ Email: Shaht3r@gmail.com
 
 Skype: Shaht3r
 
+Viber: +37529 258-99-13
+
 LinkedIn: https://www.linkedin.com/in/алексей-крукович-914698182/         
 
 ## 3. Summary
