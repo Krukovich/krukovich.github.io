@@ -24,6 +24,10 @@ Development Software: WebStorm, Microsoft Visual Studio.
 
 Patterns: MVC, Single Page Application
 
+## 5 Code examples 
+
+https://github.com/Krukovich/krukovich.github.io/tree/master/js_react_cart
+
 ## 6. Experience 
 
 June 2019 – January 2020: Front-end Developer at "Масштабные решения" 
