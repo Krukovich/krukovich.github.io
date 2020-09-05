@@ -6994,7 +6994,7 @@ a.close.disabled {
 }
 
 .bg-primary {
-  background-color: #bd5d38 !important;
+  background-color: #34495e !important;
 }
 
 a.bg-primary:hover,
@@ -11045,7 +11045,7 @@ p.lead {
   color: #fff;
   border-radius: 100%;
   font-size: 1.5rem;
-  margin-right: 1.5rem;
+  margin: 0;
 }
 
 .social-icons .social-icon:last-child {
@@ -11087,6 +11087,10 @@ section.resume-section .resume-section-content {
     padding-top: 5rem;
     padding-bottom: 5rem;
   }
+}
+
+.skills {
+  padding: 0 !important;
 }
 
 .skills li {
