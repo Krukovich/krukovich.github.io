@@ -1,6 +1,27 @@
-(function ($) {
-  "use strict";
+"use strict";
 
+// add dark mode
+function addDarkmodeWidget() {
+  const options = {
+    bottom: '30px', 
+    right: '30px', 
+    left: 'unset', 
+    time: '0.5s', 
+    mixColor: '#fff', 
+    backgroundColor: '#fff',  
+    buttonColorDark: '#100f2c',  
+    buttonColorLight: '#fff', 
+    saveInCookies: false, 
+    label: '🌓', 
+    autoMatchOsTheme: true 
+  }
+  
+  const darkmode = new Darkmode(options);
+  darkmode.showWidget();
+}
+window.addEventListener('load', addDarkmodeWidget);
+
+(function ($) {
   // Smooth scrolling using jQuery easing
   $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function () {
     if (
