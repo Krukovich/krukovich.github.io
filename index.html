@@ -1,887 +1,674 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" data-theme="light">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <meta name="description" content="" />
-  <meta name="author" content="" />
-  <title>Resume</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Krukovich Alexey — Senior Front-end / Tech Lead" />
+  <title>Krukovich Alexey — Front-end / Tech Lead</title>
   <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
-  <!-- Fancybox -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css"
-  integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
-  <!-- Font Awesome icons (free version)-->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
   <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
-  <!-- Google fonts-->
-  <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
-  <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
-  <!-- Core theme CSS (includes Bootstrap)-->
   <link href="css/styles.css" rel="stylesheet" />
 </head>
 
 <body id="page-top">
 
-  <!-- Navigation-->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
-    <a class="navbar-brand js-scroll-trigger" href="#page-top">
-      <span class="d-block d-lg-none">Krukovich Alexey</span>
-      <span class="d-none d-lg-block">
-        <img class="img-fluid img-profile rounded-circle mx-auto mb-2"
-          src="assets/img/photo.png" alt="photo" />
-        </span>
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span
-        class="navbar-toggler-icon"></span></button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#about">
-            About
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#experience">
-            Experience
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#education">
-            Education
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#skills">
-            Skills
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#interests">
-            Interests
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#projects">
-            Home projects
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#awards">
-            Awards
-          </a>
-        </li>
+<!-- progress bar -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <a href="#top" class="logo">Krukovich <em>Alexey</em></a>
+
+    <nav class="top-nav">
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="header-actions">
+      <a class="icon-btn" href="https://github.com/Krukovich" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      <a class="icon-btn" href="https://www.linkedin.com/in/алексей-крукович-914698182" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      <button class="icon-btn" id="themeToggle" aria-label="Toggle theme"><i class="fas fa-moon"></i></button>
+      <button class="icon-btn menu-btn" id="menuToggle" aria-label="Menu"><i class="fas fa-bars"></i></button>
+    </div>
+  </div>
+
+  <nav class="mobile-nav" id="mobileNav">
+    <a href="#experience">Experience</a>
+    <a href="#skills">Skills</a>
+    <a href="#education">Education</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-text">
+        <p class="kicker">Minsk, Belarus · Hybrid</p>
+        <h1 class="hero-title">
+          Senior Front-end
+          <span class="and">&amp;</span>
+          Tech&nbsp;Lead
+        </h1>
+        <p class="hero-lede">
+          I design and ship scalable web products — micro-frontends, full-stack internal tools,
+          and design systems — for banking and enterprise clients. 10+ years in front-end,
+          3+ years leading teams.
+        </p>
+
+        <div class="hero-meta">
+          <div><span class="meta-num">10+</span><span class="meta-label">years in front-end</span></div>
+          <div><span class="meta-num">3+</span><span class="meta-label">years leading</span></div>
+          <div><span class="meta-num">500+</span><span class="meta-label">users served</span></div>
+        </div>
+
+        <div class="hero-links">
+          <a href="mailto:Shaht3r@gmail.com" class="link-arrow">Get in touch <span>→</span></a>
+          <a href="#experience" class="link-arrow">See experience <span>→</span></a>
+        </div>
+      </div>
+
+      <div class="hero-photo">
+        <div class="photo-frame">
+          <img src="assets/img/photo.jpg" alt="Krukovich Alexey" loading="eager" />
+          <span class="photo-glow"></span>
+        </div>
+        <span class="photo-caption">Alexey Krukovich · Minsk</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EXPERIENCE ============ -->
+  <section class="section" id="experience">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="section-num">01</span>
+        <h2 class="section-title">Experience</h2>
+      </div>
+
+      <!-- BNB -->
+      <article class="case current">
+        <div class="case-meta">
+          <span class="case-period">Jan 2025 — Present</span>
+          <span class="case-loc">Belarus · Hybrid</span>
+        </div>
+        <div class="case-body">
+          <h3 class="case-role">Team Lead Senior Software Engineer</h3>
+          <p class="case-company">Белорусский народный банк (БНБ-Банк)</p>
+
+          <div class="subcase">
+            <h4>Mobile Banking BackOffice — Frontend Tech Lead</h4>
+            <p class="subcase-what">
+              Architected micro-frontends with Webpack Module Federation so 3 teams could deploy
+              independently. Led 4 developers (design + QA), owned decomposition, code reviews and mentoring.
+              Built a reusable UI-Kit and set up CI/CD and the testing strategy.
+            </p>
+            <p class="subcase-impact"><span>Impact</span> Scalable admin panel replacing legacy systems for client verification and transaction monitoring.</p>
+            <div class="tech">
+              <div class="tech-row"><span class="tech-label">Frontend</span>
+                <span class="tech-chips"><span>React</span><span>TypeScript</span><span>Redux Toolkit</span><span>RTK Query</span><span>MUI</span><span>Styled Components</span></span>
+              </div>
+              <div class="tech-row"><span class="tech-label">Build &amp; tooling</span>
+                <span class="tech-chips"><span>Webpack Module Federation</span><span>ESLint</span><span>Prettier</span><span>CI/CD</span></span>
+              </div>
+              <div class="tech-row"><span class="tech-label">Testing</span>
+                <span class="tech-chips"><span>Jest</span><span>Vitest</span></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="subcase">
+            <h4>Corporate Booking System (OfficePlanner) — Full-Stack Tech Lead</h4>
+            <p class="subcase-what">
+              Full SDLC ownership for a booking platform used by 500+ hybrid employees.
+              SPA on React + RTK + TypeScript; API on Nest.js, TypeORM, PostgreSQL. CI/CD and full-stack testing.
+            </p>
+            <p class="subcase-impact"><span>Impact</span> Removed daily desk-coordination overhead and provided office-usage analytics.</p>
+            <div class="tech">
+              <div class="tech-row"><span class="tech-label">Frontend</span>
+                <span class="tech-chips"><span>React</span><span>Redux Toolkit</span><span>TypeScript</span></span>
+              </div>
+              <div class="tech-row"><span class="tech-label">Backend</span>
+                <span class="tech-chips"><span>Nest.js</span><span>TypeORM</span><span>REST API</span></span>
+              </div>
+              <div class="tech-row"><span class="tech-label">Database</span>
+                <span class="tech-chips"><span>PostgreSQL</span></span>
+              </div>
+              <div class="tech-row"><span class="tech-label">DevOps</span>
+                <span class="tech-chips"><span>GitHub Actions</span><span>Docker</span><span>Unit &amp; integration tests</span></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="subcase">
+            <h4>Tablet Remote Management (Bank Product Display) — Tech Lead</h4>
+            <p class="subcase-what">
+              Remote-control API (reboot / shutdown / status) and an admin dashboard for 10+ tablets.
+              Tablet app built on React + WebView for dynamic ad content and banking product promotion.
+            </p>
+            <p class="subcase-impact"><span>Impact</span> Centralized tablet monitoring; real-time campaign updates without physical access.</p>
+            <div class="tech">
+              <div class="tech-row"><span class="tech-label">Frontend</span>
+                <span class="tech-chips"><span>React</span><span>WebView</span><span>Axios</span></span>
+              </div>
+              <div class="tech-row"><span class="tech-label">API</span>
+                <span class="tech-chips"><span>REST API</span></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="subcase muted-block">
+            <h4>Senior Frontend Developer <span class="subdate">Jul 2023 — Mar 2025</span></h4>
+            <p class="subcase-what">
+              Built frontend features for banking systems, integrated REST APIs,
+              mentored 2 junior developers, conducted code reviews.
+            </p>
+            <div class="tech">
+              <div class="tech-row"><span class="tech-label">Frontend</span>
+                <span class="tech-chips"><span>React</span><span>Redux</span><span>TypeScript</span></span>
+              </div>
+              <div class="tech-row"><span class="tech-label">API</span>
+                <span class="tech-chips"><span>REST API</span><span>Axios</span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Syberry -->
+      <article class="case">
+        <div class="case-meta">
+          <span class="case-period">Jul 2022 — Jun 2023</span>
+          <span class="case-loc">Minsk · On-site</span>
+        </div>
+        <div class="case-body">
+          <h3 class="case-role">Senior Frontend Developer</h3>
+          <p class="case-company">Syberry</p>
+          <div class="subcase">
+            <h4>Car Auction Web App — real-time bidding</h4>
+            <p class="subcase-what">
+              Live bid updates via WebSockets; advanced multi-filter search (price, year, mileage, make/model);
+              REST API integration and optimization; code reviews and technical interviews (Young Specialists Lab).
+            </p>
+            <div class="tech">
+              <div class="tech-row"><span class="tech-label">Frontend</span>
+                <span class="tech-chips"><span>React</span><span>TypeScript</span><span>CSS Modules</span></span>
+              </div>
+              <div class="tech-row"><span class="tech-label">Real-time</span>
+                <span class="tech-chips"><span>WebSockets</span></span>
+              </div>
+              <div class="tech-row"><span class="tech-label">API</span>
+                <span class="tech-chips"><span>REST API</span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- iTechArt -->
+      <article class="case">
+        <div class="case-meta">
+          <span class="case-period">Nov 2021 — Jul 2022</span>
+          <span class="case-loc">Minsk</span>
+        </div>
+        <div class="case-body">
+          <h3 class="case-role">Software Engineer</h3>
+          <p class="case-company">iTechArt Group</p>
+          <div class="subcase">
+            <h4>Server-oriented applications on JS</h4>
+            <p class="subcase-what">
+              Full-cycle development of server-oriented JS apps; cloud integrations on Azure &amp; AWS;
+              testing with Jest and Enzyme.
+            </p>
+            <div class="tech">
+              <div class="tech-row"><span class="tech-label">Frontend</span>
+                <span class="tech-chips"><span>React</span><span>Redux Thunk</span><span>TypeScript</span><span>MUI</span><span>Ant Design</span></span>
+              </div>
+              <div class="tech-row"><span class="tech-label">Backend</span>
+                <span class="tech-chips"><span>Node.js</span><span>Nest.js</span><span>GraphQL</span><span>Apollo</span></span>
+              </div>
+              <div class="tech-row"><span class="tech-label">Testing</span>
+                <span class="tech-chips"><span>Jest</span><span>Enzyme</span></span>
+              </div>
+              <div class="tech-row"><span class="tech-label">Cloud</span>
+                <span class="tech-chips"><span>Microsoft Azure</span><span>AWS</span></span>
+              </div>
+              <div class="tech-row"><span class="tech-label">Database</span>
+                <span class="tech-chips"><span>PostgreSQL</span><span>MongoDB</span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- SmartApp -->
+      <article class="case">
+        <div class="case-meta">
+          <span class="case-period">Nov 2020 — Nov 2021</span>
+          <span class="case-loc">Minsk</span>
+        </div>
+        <div class="case-body">
+          <h3 class="case-role">Frontend Developer</h3>
+          <p class="case-company">SmartApp</p>
+          <div class="subcase">
+            <h4>PandaDoc for Word / Teams · RoundhouseOne</h4>
+            <p class="subcase-what">
+              Server-oriented JS applications; REST API integrations; Azure, Mapbox API, AWS S3 &amp; Redshift.
+            </p>
+            <div class="tech">
+              <div class="tech-row"><span class="tech-label">Frontend</span>
+                <span class="tech-chips"><span>React</span><span>TypeScript</span><span>JavaScript</span></span>
+              </div>
+              <div class="tech-row"><span class="tech-label">Backend</span>
+                <span class="tech-chips"><span>Node.js</span><span>REST API</span><span>Axios</span></span>
+              </div>
+              <div class="tech-row"><span class="tech-label">Cloud</span>
+                <span class="tech-chips"><span>Microsoft Azure</span><span>AWS S3</span><span>AWS Redshift</span><span>Mapbox API</span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- TouchInfo -->
+      <article class="case">
+        <div class="case-meta">
+          <span class="case-period">Jan 2020 — Dec 2020</span>
+          <span class="case-loc">Minsk</span>
+        </div>
+        <div class="case-body">
+          <h3 class="case-role">Frontend Developer</h3>
+          <p class="case-company">ТачИнфо</p>
+          <div class="subcase">
+            <h4>Gutenberg React modules for WordPress</h4>
+            <p class="subcase-what">
+              Team-lead of 3. Built Gutenberg React modules and template layouts for WP.
+            </p>
+            <div class="tech">
+              <div class="tech-row"><span class="tech-label">Frontend</span>
+                <span class="tech-chips"><span>React</span><span>JavaScript</span></span>
+              </div>
+              <div class="tech-row"><span class="tech-label">CMS</span>
+                <span class="tech-chips"><span>WordPress</span><span>Gutenberg</span></span>
+              </div>
+              <div class="tech-row"><span class="tech-label">Styling</span>
+                <span class="tech-chips"><span>Bootstrap</span><span>CSS3</span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- MrSoft -->
+      <article class="case">
+        <div class="case-meta">
+          <span class="case-period">Jun 2019 — Jan 2020</span>
+          <span class="case-loc">Belarus</span>
+        </div>
+        <div class="case-body">
+          <h3 class="case-role">Frontend Developer</h3>
+          <p class="case-company">ООО «Масштабные решения»</p>
+          <div class="subcase">
+            <h4>Project: TITUL</h4>
+            <p class="subcase-what">
+              New feature implementation and layout with legacy-browser support (IE).
+            </p>
+            <div class="tech">
+              <div class="tech-row"><span class="tech-label">Frontend</span>
+                <span class="tech-chips"><span>React</span><span>TypeScript</span><span>JavaScript</span></span>
+              </div>
+              <div class="tech-row"><span class="tech-label">Templating</span>
+                <span class="tech-chips"><span>JsRender</span><span>JsViews</span></span>
+              </div>
+              <div class="tech-row"><span class="tech-label">Build &amp; styling</span>
+                <span class="tech-chips"><span>Gulp</span><span>Less</span></span>
+              </div>
+              <div class="tech-row"><span class="tech-label">Tools</span>
+                <span class="tech-chips"><span>Figma</span><span>TFS</span><span>IIS</span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Freelance -->
+      <article class="case">
+        <div class="case-meta">
+          <span class="case-period">May 2015 — Jul 2019</span>
+          <span class="case-loc">Remote</span>
+        </div>
+        <div class="case-body">
+          <h3 class="case-role">JS / Frontend Developer</h3>
+          <p class="case-company">Freelance</p>
+          <div class="subcase">
+            <p class="subcase-what">
+              Frontend / JS applications, mobile-first responsive design, cross-browser compatibility,
+              W3C standards.
+            </p>
+            <div class="tech">
+              <div class="tech-row"><span class="tech-label">Languages</span>
+                <span class="tech-chips"><span>JavaScript ES5</span><span>ES6</span></span>
+              </div>
+              <div class="tech-row"><span class="tech-label">Styling</span>
+                <span class="tech-chips"><span>Bootstrap</span><span>Less</span><span>Sass</span></span>
+              </div>
+              <div class="tech-row"><span class="tech-label">Build</span>
+                <span class="tech-chips"><span>Gulp</span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ SKILLS ============ -->
+  <section class="section" id="skills">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="section-num">02</span>
+        <h2 class="section-title">Skills</h2>
+      </div>
+
+      <p class="skills-intro">
+        Everything below comes directly from the projects above — no unrelated filler.
+      </p>
+
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h4>Languages</h4>
+          <div class="chips">
+            <span>JavaScript</span><span>TypeScript</span><span>HTML</span><span>CSS</span><span>SQL</span><span>JSON</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <h4>Frontend</h4>
+          <div class="chips">
+            <span>React</span><span>Redux</span><span>Redux Toolkit</span><span>RTK Query</span><span>Redux Thunk</span>
+            <span>MUI</span><span>Ant Design</span><span>Styled Components</span><span>CSS Modules</span>
+            <span>Sass</span><span>Less</span><span>Bootstrap</span><span>WebView</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <h4>Backend</h4>
+          <div class="chips">
+            <span>Node.js</span><span>Nest.js</span><span>Express</span><span>GraphQL</span><span>Apollo</span><span>TypeORM</span><span>REST API</span><span>Axios</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <h4>Databases</h4>
+          <div class="chips">
+            <span>PostgreSQL</span><span>MySQL</span><span>MongoDB</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <h4>Cloud</h4>
+          <div class="chips">
+            <span>Microsoft Azure</span><span>AWS S3</span><span>AWS Redshift</span><span>Mapbox API</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <h4>Build &amp; tooling</h4>
+          <div class="chips">
+            <span>Webpack</span><span>Webpack Module Federation</span><span>Vite</span><span>Gulp</span>
+            <span>ESLint</span><span>Prettier</span><span>GitHub Actions</span><span>Docker</span><span>CI/CD</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <h4>Testing</h4>
+          <div class="chips">
+            <span>Jest</span><span>Enzyme</span><span>Vitest</span><span>Playwright</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <h4>Other</h4>
+          <div class="chips">
+            <span>WebSockets</span><span>WordPress</span><span>Gutenberg</span><span>JsRender</span><span>JsViews</span><span>Figma</span><span>Chrome DevTools</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="workflow">
+        <span>Mobile-first</span><span>Cross-browser</span><span>Cross-functional teams</span>
+        <span>Agile / Scrum</span><span>Team leadership &amp; mentoring</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EDUCATION ============ -->
+  <section class="section" id="education">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="section-num">03</span>
+        <h2 class="section-title">Education</h2>
+      </div>
+      <ul class="edu-list">
+        <li><span class="edu-year">2008 — 2014</span><div><h3>Minsk Innovation University</h3><p>Computer Science</p></div></li>
+        <li><span class="edu-year">2020</span><div><h3>The Rolling Scope School</h3><p>JavaScript / Front-end (Advance)</p></div></li>
+        <li><span class="edu-year">2019 — 2020</span><div><h3>Educational Center (Adukar)</h3><p>JavaScript (Advanced level)</p></div></li>
+        <li><span class="edu-year">2018 — 2019</span><div><h3>Educational Center (Adukar)</h3><p>Front-end Fundamentals</p></div></li>
       </ul>
     </div>
-  </nav>
+  </section>
 
-  <!-- Page Content-->
-  <main>
+  <!-- ============ PROJECTS ============ -->
+  <section class="section" id="projects">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="section-num">04</span>
+        <h2 class="section-title">Home projects</h2>
+      </div>
 
-    <div class="container-fluid p-0">
-
-      <!-- About-->
-      <section class="resume-section" id="about">
-        <div class="resume-section-content">
-          <h1 class="mb-0">
-            Krukovich
-            <span class="text-primary">
-              Alexey
-            </span>
-          </h1>
-          <div class="subheading mb-5">
-            Minsk ·
-            <a href="tel:+375292589913">(29) 258-99-13</a> ·
-            <a href="mailto:Shaht3r@gmail.com">Shaht3r@gmail.com</a>
+      <div class="projects-grid">
+        <a class="project-card" href="https://krukovich-weather.netlify.app" target="_blank" rel="noopener">
+          <div class="project-thumb">
+            <img src="assets/img/projects/fancy-weather.png" alt="Fancy Weather" loading="lazy" />
+            <span class="thumb-shine"></span>
           </div>
-          <p class="lead mb-5">
-            Front-end developer (React / Redux)
+          <div class="project-body">
+            <div class="project-top">
+              <span class="project-idx">01</span>
+              <span class="project-arrow">→</span>
+            </div>
+            <h3>Fancy Weather</h3>
+            <p class="project-desc">Weather app · JS / API</p>
+            <div class="project-tags"><span>JS</span><span>REST API</span></div>
+          </div>
+        </a>
+
+        <a class="project-card" href="https://krukovich-english-for-kids.netlify.app" target="_blank" rel="noopener">
+          <div class="project-thumb">
+            <img src="assets/img/projects/english-for-kids.png" alt="English for kids" loading="lazy" />
+            <span class="thumb-shine"></span>
+          </div>
+          <div class="project-body">
+            <div class="project-top">
+              <span class="project-idx">02</span>
+              <span class="project-arrow">→</span>
+            </div>
+            <h3>English for kids</h3>
+            <p class="project-desc">Learning app · SPA</p>
+            <div class="project-tags"><span>SPA</span><span>JS</span></div>
+          </div>
+        </a>
+
+        <a class="project-card" href="https://krukovich-songbird.netlify.app/" target="_blank" rel="noopener">
+          <div class="project-thumb">
+            <img src="assets/img/projects/songbird.png" alt="Songbird" loading="lazy" />
+            <span class="thumb-shine"></span>
+          </div>
+          <div class="project-body">
+            <div class="project-top">
+              <span class="project-idx">03</span>
+              <span class="project-arrow">→</span>
+            </div>
+            <h3>Songbird</h3>
+            <p class="project-desc">Quiz app · SPA</p>
+            <div class="project-tags"><span>SPA</span><span>JS</span></div>
+          </div>
+        </a>
+
+        <a class="project-card" href="https://krukovich-spekit.netlify.app/" target="_blank" rel="noopener">
+          <div class="project-thumb">
+            <img src="assets/img/projects/spekit.png" alt="Spekit" loading="lazy" />
+            <span class="thumb-shine"></span>
+          </div>
+          <div class="project-body">
+            <div class="project-top">
+              <span class="project-idx">04</span>
+              <span class="project-arrow">→</span>
+            </div>
+            <h3>Spekit</h3>
+            <p class="project-desc">Landing · UI</p>
+            <div class="project-tags"><span>HTML</span><span>CSS</span></div>
+          </div>
+        </a>
+
+        <div class="project-card disabled">
+          <div class="project-thumb">
+            <img src="assets/img/projects/search.png" alt="Search" loading="lazy" />
+          </div>
+          <div class="project-body">
+            <div class="project-top">
+              <span class="project-idx">05</span>
+              <span class="project-arrow">·</span>
+            </div>
+            <h3>Search</h3>
+            <p class="project-desc">Coming soon</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ INTERESTS + CONTACT ============ -->
+  <section class="section" id="contact">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="section-num">05</span>
+        <h2 class="section-title">Interests &amp; Contact</h2>
+      </div>
+
+      <div class="two-col">
+        <div>
+          <p class="text">
+            Away from the keyboard I enjoy the outdoors — mountain biking and ice skating with my family.
+            When the weather doesn't cooperate, I explore the latest front-end technology advancements.
           </p>
-          <div class="social-icons">
-            <a class="social-icon" href="https://www.linkedin.com/in/алексей-крукович-914698182">
-              <i class="fab fa-linkedin-in"></i>
-            </a>
-            <a class="social-icon" href="https://github.com/Krukovich">
-              <i class="fab fa-github"></i>
-            </a>
-            <a class="social-icon" href="skype:[Shaht3r]?call">
-              <i class="fab fa-skype"></i>
-            </a>
-            <a class="social-icon" href="tg://resolve?domain=Shaht3r">
-              <i class="fab fa-telegram-plane"></i>
-            </a>
-            <a class="social-icon" href="viber://add?number=+375292589913">
-              <i class="fab fa-viber"></i>
-            </a>
-            <a class="social-icon" href="mailto:Shaht3r@gmail.com">
-              <i class="fa fa-envelope" aria-hidden="true"></i>
-            </a>
-          </div>
+          <a class="award-link" href="https://app.rs.school/certificate/xpie874l" target="_blank" rel="noopener">
+            <i class="fas fa-certificate"></i> The Rolling Scopes School - JavaScript — Certificate →
+          </a>
+          <a class="award-link" href="https://app.rs.school/certificate/clariy9d" target="_blank" rel="noopener">
+            <i class="fas fa-certificate"></i> The Rolling Scopes School - Node.js — Certificate →
+          </a>
         </div>
-      </section>
-      <hr class="m-0" />
+        <div>
+          <h3 class="contact-title">Let's talk</h3>
+          <a class="contact-link" href="mailto:Shaht3r@gmail.com">Shaht3r@gmail.com</a>
+          <a class="contact-link" href="tel:+375292589913">+375(29) 258-99-13</a>
+          <a class="contact-link" href="tg://resolve?domain=Shaht3r">Telegram · @Shaht3r</a>
 
-      <!-- Experience-->
-      <section class="resume-section" id="experience">
-        <div class="resume-section-content">
-          <h2 class="mb-5">
-            Experience
-          </h2>
-          <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-            <div class="flex-grow-1">
-              <h3 class="mb-0">
-                Front-end, JS Developer
-              </h3>
-              <div class="subheading mb-3">
-                iTechArt Group
-              </div>
-              <p>
-                <strong>
-                  Project: Inspectorio
-                </strong>
-                <br />
-                The quality and compliance platform, powered by artificial intelligence. Discover how our comprehensive modules and workflows unlock collaboration, real-time data sharing, and predictive-recommended actions for retailers, brands, vendors and factories. Through the use of robotic automation and artificial intelligence Inspectorio is building an autonomous system that eliminates the need of manual, low-added value interventions, so quality and compliance personnel can focus on high value-added tasks as remediation and continuous improvement. Inspectorio's comprehensive modules and workflows allow for flexibility and unlock collaboration, real-time data sharing, and predictive-recommended actions for more than 2,500 companies, including some of the world’s largest retailers, brands, vendors and factories.
-                <br />
-                <br />
-                <strong>
-                  Technologies:
-                </strong>
-              <ul>
-                <li>
-                  React.js, Node.js, Apollo GraphQl, GraphQl
-                </li>
-                <li>
-                  Knex.js, SQL, PostgreSQL
-                </li>
-                <li>
-                  Jest, Enzyme
-                </li>
-              </ul>
-              </p>
-            </div>
-            <div class="flex-shrink-0">
-              <span class="text-primary">
-                Nov. 2021 – Present
-              </span>
-            </div>
+          <div class="contact-socials">
+            <a href="https://github.com/Krukovich" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
+            <a href="https://www.linkedin.com/in/алексей-крукович-914698182" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
           </div>
-          <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-            <div class="flex-grow-1">
-              <h3 class="mb-0">
-                Front-end, JS Developer
-              </h3>
-              <div class="subheading mb-3">
-                SmartApp
-              </div>
-              <p>
-                <strong>
-                  Project: PandaDoc
-                </strong>
-                <br />
-                Creation of server-oriented applications on JS (PandaDoc for Word and PandaDoc for Teams)
-                <ul>
-                  Results
-                  <li>
-                    <a href="https://appsource.microsoft.com/en-us/product/office/WA200002406">
-                      PandaDoc for Word
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://appsource.microsoft.com/en-us/product/office/WA200002927">
-                      PandaDoc for Teams
-                    </a>
-                  </li>
-                </ul>
-                <strong>
-                  Technologies:
-                </strong>
-                <ul>
-                  <li>
-                    React.js
-                  </li>
-                  <li>
-                    Node.js
-                  </li>
-                  <li>
-                    Javascript, TypeScript
-                  </li>
-                  <li>
-                    Microsoft Azure, CosmosDB
-                  </li>
-                </ul>
-              </p>
-              <p>
-                <strong>
-                  Project: RoundhouseOne
-                </strong>
-                <br />
-                Development of an application for monitoring indoor air quality.
-                <br />
-                <br />
-                <strong>
-                  Technologies:
-                </strong>
-                <ul>
-                  <li>
-                    React.js, Redux, Node.js, Javascript, HTML5, XML, CSS3, AJAX, JSON, etc.
-                  </li>
-                  <li>
-                    REST API, Mapbox API
-                  </li>
-                  <li>
-                    Amazone AWS, S3, Redshift
-                  </li>
-                </ul>
-              </p>
-            </div>
-            <div class="flex-shrink-0">
-              <span class="text-primary">
-                Aug. 2020 – Nov. 2021
-              </span>
-            </div>
-          </div>
-          <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-            <div class="flex-grow-1">
-              <h3 class="mb-0">
-                Front-end, JS Developer
-              </h3>
-              <div class="subheading mb-3">
-                TouchInfo
-              </div>
-              <p>
-                <strong>
-                  Project: Gutenberg
-                </strong>
-                <br />
-                  Team-lead in a team of 3 people. Development of Gutenberg React modules for WP.
-                  UI Template Layout development.
-                <br />
-                <br />
-                <strong>
-                  Technologies:
-                </strong>
-                <ul>
-                  <li>
-                    React.js
-                  </li>
-                  <li>
-                    Wordpress, 
-                  </li>
-                  <li>
-                    Javascript, HTML5, CSS3, etc.
-                  </li>
-                </ul>
-              </p>
-            </div>
-            <div class="flex-shrink-0">
-              <span class="text-primary">
-                Yan. 2020 – Aug. 2020
-              </span>
-            </div>
-          </div>
-          <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-            <div class="flex-grow-1">
-              <h3 class="mb-0">
-                Front-end, JS Developer
-              </h3>
-              <div class="subheading mb-3">
-                MrSoft
-              </div>
-              <p>
-                <strong>
-                  Project: TITUL
-                </strong>
-                <br />
-                  New feature implementation. Layout development with legacy browsers support (IE).
-                <br />
-                <br />
-                <strong>
-                  Technologies:
-                </strong>
-                <ul>
-                  <li>
-                    React.js
-                  </li>
-                  <li>
-                    TypeScript, JavaScript, jQuery,
-                  </li>
-                  <li>
-                    JsRender/JsViews
-                  </li>
-                </ul>
-              </p>
-            </div>
-            <div class="flex-shrink-0">
-              <span class="text-primary">
-                Jun. 2019 – Yan. 2020
-              </span>
-          </div>
-          </div>
-          <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-            <div class="flex-grow-1">
-                <h3 class="mb-0">
-                  Front-end, JS Developer
-                </h3>
-                <div class="subheading mb-3">
-                  Freelance
-                </div>
-                <p>
-                  <br />
-                    Development of frontend/js applications.
-                    Mobile-friendly and Responsive design using CSS 3 and Bootstrap 4.
-                    Cross-Browser/Platform compatibility.
-                    Experience in solving issues, following the W3C standards
-                  <br />
-                  <br />
-                  <strong>
-                    Technologies:
-                  </strong>
-                  <ul>
-                    <li>
-                      JavaScript ES5, ES6, jQuery
-                    </li>
-                    <li>
-                      Bootstrap 4
-                    </li>
-                    <li>
-                      Gulp, Less, Sass
-                    </li>
-                  </ul>
-                </p>
-              </div>
-              <div class="flex-shrink-0">
-                <span class="text-primary">
-                  2015 – Jul. 2019
-                </span>
-            </div>
-          </div>
-        </div>
-      </section>
-      <hr class="m-0" />
-
-      <!-- Education-->
-      <section class="resume-section" id="education">
-        <div class="resume-section-content">
-          <h2 class="mb-5">Education</h2>
-          <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-            <div class="flex-grow-1">
-              <h3 class="mb-0">
-                Minsk Innovation University
-              </h3>
-              <div>
-                Computer Science
-              </div>
-            </div>
-            <div class="flex-shrink-0">
-              <span class="text-primary">
-                2008 – 2014 
-              </span>
-            </div>
-          </div>
-          <div class="d-flex flex-column flex-md-row justify-content-between">
-            <div class="flex-grow-1">
-              <h3 class="mb-0">
-                The Rolling Scope  School
-              </h3>
-              <div class="subheading mb-3">
-                JavaScript / Front-end (Advance) 
-              </div>
-            </div>
-            <div class="flex-shrink-0">
-              <span class="text-primary">
-                2020 – 2020
-              </span>
-            </div>
-          </div>
-          <div class="d-flex flex-column flex-md-row justify-content-between">
-            <div class="flex-grow-1">
-              <h3 class="mb-0">
-                Educational Center (Adukar)
-              </h3>
-              <div class="subheading mb-3">
-                JavaScript (Advanced level). The knowledge about popular JavaScript technologies.
-              </div>
-            </div>
-            <div class="flex-shrink-0">
-              <span class="text-primary">
-                2019 – 2020
-              </span>
-            </div>
-          </div>
-          <div class="d-flex flex-column flex-md-row justify-content-between">
-            <div class="flex-grow-1">
-              <h3 class="mb-0">
-                Educational Center (Adukar)
-              </h3>
-              <div class="subheading mb-3">
-                Front-end Fundamentals The common knowledge about HTML, CSS, JavaScript technologies is received.
-              </div>
-            </div>
-            <div class="flex-shrink-0">
-              <span class="text-primary">
-                2018 – 2019                
-              </span>
-            </div>
-          </div>
-        </div>
-      </section>
-      <hr class="m-0" />
-
-      <!-- Skills-->
-      <section class="resume-section" id="skills">
-        <div class="resume-section-content">
-          <h2 class="mb-5">Skills</h2>
-          <div class="subheading mb-3">Programming Languages & Tools</div>
-          <ul class="list-inline dev-icons">
-            <li class="list-inline-item"><i class="fab fa-html5"></i></li>
-            <li class="list-inline-item"><i class="fab fa-css3-alt"></i></li>
-            <li class="list-inline-item"><i class="fab fa-js-square"></i></li>
-            <li class="list-inline-item"><i class="fab fa-react"></i></li>
-            <li class="list-inline-item"><i class="fab fa-git-square"></i></li>
-            <li class="list-inline-item"><i class="fab fa-sass"></i></li>
-            <li class="list-inline-item"><i class="fab fa-less"></i></li>
-            <li class="list-inline-item"><i class="fab fa-bootstrap"></i></li>
-            <li class="list-inline-item"><i class="fab fa-npm"></i></li>
-          </ul>
-          <ul class="skills">
-            <li>
-              <strong>
-                Programming Languages:
-              </strong>
-              JavaScript, HTML, CSS, JSON
-            </li>
-            <li>
-              <strong>
-                Frameworks and Libraries:
-              </strong>
-              React, Redux, TypeScript, Sass, Less, Bootstrap, jQuery
-            </li>
-            <li>
-              <strong>
-                Database:
-              </strong>
-              SQL, MongoDB
-            </li>
-            <li>
-              <strong>
-                Experience with external:
-              </strong>
-              REST API / OAuth
-            </li>
-            <li>
-              <strong>
-                Development Software:
-              </strong>
-              Git, WebStorm, Microsoft Visual Studio.
-            </li>
-            <li>
-              <strong>
-                  Competent in debugging, testing, and problem solving by using:
-              </strong>
-              Chrome DevTools
-            </li>
-            <li>
-              <strong>
-                Patterns:
-              </strong>
-              MVC, Single Page Application
-            </li>
-          </ul>
-          <div class="subheading mb-3">Workflow</div>
-          <ul class="fa-ul mb-0">
-            <li>
-              <span class="fa-li"><i class="fas fa-check"></i></span>
-              Mobile-First, Responsive Design
-            </li>
-            <li>
-              <span class="fa-li"><i class="fas fa-check"></i></span>
-              Cross Browser Testing & Debugging
-            </li>
-            <li>
-              <span class="fa-li"><i class="fas fa-check"></i></span>
-              Cross Functional Teams
-            </li>
-            <li>
-              <span class="fa-li"><i class="fas fa-check"></i></span>
-              Agile Development & Scrum
-            </li>
-          </ul>
-        </div>
-      </section>
-      <hr class="m-0" />
-
-      <!-- Interests-->
-      <section class="resume-section" id="interests">
-        <div class="resume-section-content">
-          <h2 class="mb-5">
-            Interests
-          </h2>
-          <p>
-            Apart from being a web developer, I enjoy my time being outdoors. I like mountain biking and ice skating with my family.
-          </p>
-          <p class="mb-0">
-            When weather doesn't support outdoor activities I spend large amount of my free time exploring the latest technology advancements
-            in the word of the front-end web development. 
-          </p>
-        </div>
-      </section>
-      <hr class="m-0" />
-
-      <!-- Projects -->
-      <section class="resume-section" id="projects">
-        <div class="container">
-          <h2 class="mb-5">
-            Home projects
-          </h2>
-          <div class="row">
-            <div class="col-12 col-lg-6 mt-5">
-              <div class="project">
-                <div class="row">
-                  <div class="col-sm-6">
-                    <div class="catalog-img">
-                      <a href="assets/img/projects/fancy-weather.png" data-fancybox="fancy-weather">
-                        <img class="img-fluid" src="assets/img/projects/fancy-weather.png" alt="fancy-weather">
-                      </a>
-                    </div>
-                  </div>
-                  <div class="col-sm-6">
-                    <div class="catalog-text">
-                      <div class="col-12">
-                        <span class="card-title">
-                          <h4>
-                            Fancy Weather
-                          </h4>
-                        </span>
-                      </div>
-                      <div class="col-12">
-                        <div class="row">
-                          <div class="col-6">
-                          </div>
-                          <div class="col-6">
-                            <a  
-                              class="btn btn-primary"
-                              href="https://krukovich-weather.netlify.app"
-                              role="button"
-                              target="_blank"
-                            >
-                              Demo
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-12 col-lg-6 mt-5">
-              <div class="project">
-                <div class="row">
-                  <div class="col-sm-6">
-                    <div class="catalog-img">
-                      <a href="assets/img/projects/english-for-kids.png" data-fancybox="english-for-kids">
-                        <img class="img-fluid" src="assets/img/projects/english-for-kids.png" alt="english-for-kids">
-                      </a>
-                    </div>
-                  </div>
-                  <div class="col-sm-6">
-                    <div class="catalog-text">
-                      <div class="col-12">
-                        <span class="card-title">
-                          <h4>
-                            English for kids
-                          </h4>
-                        </span>
-                      </div>
-                      <div class="col-12">
-                        <div class="row">
-                          <div class="col-6">
-                          </div>
-                          <div class="col-6">
-                            <a  
-                              class="btn btn-primary"
-                              href="https://krukovich-english-for-kids.netlify.app"
-                              role="button"
-                              target="_blank"
-                            >
-                              Demo
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-12 col-lg-6 mt-5">
-              <div class="project">
-                <div class="row">
-                  <div class="col-sm-6">
-                    <div class="catalog-img">
-                      <a href="assets/img/projects/songbird.png" data-fancybox="english-for-kids">
-                        <img class="img-fluid" src="assets/img/projects/songbird.png" alt="english-for-kids">
-                      </a>
-                    </div>
-                  </div>
-                  <div class="col-sm-6">
-                    <div class="catalog-text">
-                      <div class="col-12">
-                        <span class="card-title">
-                          <h4>
-                            Songbird
-                          </h4>
-                        </span>
-                      </div>
-                      <div class="col-12">
-                        <div class="row">
-                          <div class="col-6">
-                          </div>
-                          <div class="col-6">
-                            <a  
-                              class="btn btn-primary"
-                              href="https://krukovich-songbird.netlify.app/"
-                              role="button"
-                              target="_blank"
-                            >
-                              Demo
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-12 col-lg-6 mt-5">
-              <div class="project">
-                <div class="row">
-                  <div class="col-sm-6">
-                    <div class="catalog-img">
-                      <a href="assets/img/projects/spekit.png" data-fancybox="english-for-kids">
-                        <img class="img-fluid" src="assets/img/projects/spekit.png" alt="english-for-kids">
-                      </a>
-                    </div>
-                  </div>
-                  <div class="col-sm-6">
-                    <div class="catalog-text">
-                      <div class="col-12">
-                        <span class="card-title">
-                          <h4>
-                            Spekit
-                          </h4>
-                        </span>
-                      </div>
-                      <div class="col-12">
-                        <div class="row">
-                          <div class="col-6">
-                          </div>
-                          <div class="col-6">
-                            <a  
-                              class="btn btn-primary"
-                              href="https://krukovich-spekit.netlify.app/"
-                              role="button"
-                              target="_blank"
-                            >
-                              Demo
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-12 col-lg-6 mt-5">
-              <div class="project">
-                <div class="row">
-                  <div class="col-sm-6">
-                    <div class="catalog-img">
-                      <a href="assets/img/projects/search.png" data-fancybox="english-for-kids">
-                        <img class="img-fluid" src="assets/img/projects/search.png" alt="english-for-kids">
-                      </a>
-                    </div>
-                  </div>
-                  <div class="col-sm-6">
-                    <div class="catalog-text">
-                      <div class="col-12">
-                        <span class="card-title">
-                          <h4>
-                            Search
-                          </h4>
-                        </span>
-                      </div>
-                      <div class="col-12">
-                        <div class="row">
-                          <div class="col-6">
-                          </div>
-                          <div class="col-6">
-                            <a  
-                              class="btn btn-primary"
-                              href="#"
-                              role="button"
-                              target="_blank"
-                            >
-                              Demo
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Awards-->
-      <section class="resume-section" id="awards">
-        <div class="resume-section-content">
-          <h2 class="mb-5">Awards & Certifications</h2>
-          <ul class="fa-ul mb-0">
-            <li>
-              <a href="https://app.rs.school/certificate/xpie874l">
-                <i class="fas fa-certificate"></i>
-                THE ROLLING SCOPE SCHOOL
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-    </div>
-
-  </main>
-
-  <!-- Modals -->
-  <div class="modal fade" id="englishForKids" tabindex="-1" role="dialog"  aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">
-            English for kids
-          </h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          ...
-        </div>
-        <div class="modal-footer">
-          <button
-            type="button"
-            class="btn btn-secondary"
-            data-dismiss="modal"
-          >
-            Close
-          </button>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <div class="modal fade" id="songbird" tabindex="-1" role="dialog"  aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">
-            Songbird
-          </h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          ...
-        </div>
-        <div class="modal-footer">
-          <button
-            type="button"
-            class="btn btn-secondary"
-            data-dismiss="modal"
-          >
-            Close
-          </button>
-        </div>
-      </div>
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>© <span id="year"></span> Krukovich Alexey</span>
+      <span>Built with care · Minsk</span>
     </div>
-  </div>
+  </footer>
 
-  <div class="modal fade" id="spekit" tabindex="-1" role="dialog"  aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">
-            Spekit
-          </h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          ...
-        </div>
-        <div class="modal-footer">
-          <button
-            type="button"
-            class="btn btn-secondary"
-            data-dismiss="modal"
-          >
-            Close
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
+</main>
 
-  <div class="modal fade" id="search" tabindex="-1" role="dialog"  aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">
-            People Search
-          </h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          ...
-        </div>
-        <div class="modal-footer">
-          <button
-            type="button"
-            class="btn btn-secondary"
-            data-dismiss="modal"
-          >
-            Close
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
 
+  /* ---------- Theme ---------- */
+  const root = document.documentElement;
+  const tBtn = document.getElementById('themeToggle');
+  const savedTheme = localStorage.getItem('theme-b');
+  if (savedTheme) root.setAttribute('data-theme', savedTheme);
+  syncTheme();
+  tBtn.addEventListener('click', () => {
+    root.setAttribute('data-theme', root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+    localStorage.setItem('theme-b', root.getAttribute('data-theme'));
+    syncTheme();
+  });
+  function syncTheme() {
+    tBtn.innerHTML = root.getAttribute('data-theme') === 'dark'
+            ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+  }
 
-  <!-- Bootstrap core JS-->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
-  <!-- Third party plugin JS-->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-  <!-- Fancybox -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
-  <!-- Dark Mode -->
-  <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.6/lib/darkmode-js.min.js"></script>
-  <!-- Core theme JS-->
-  <script src="js/scripts.js"></script>
+  /* ---------- Mobile menu ---------- */
+  const menuBtn = document.getElementById('menuToggle');
+  const mobileNav = document.getElementById('mobileNav');
+  menuBtn.addEventListener('click', () => mobileNav.classList.toggle('open'));
+  mobileNav.querySelectorAll('a').forEach(a =>
+          a.addEventListener('click', () => mobileNav.classList.remove('open'))
+  );
 
+  /* ---------- Scroll progress ---------- */
+  const progress = document.getElementById('scrollProgress');
+  function onScroll() {
+    const h = document.documentElement;
+    const pct = (h.scrollTop) / (h.scrollHeight - h.clientHeight) * 100;
+    progress.style.width = pct + '%';
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  /* ---------- Active nav on scroll ---------- */
+  const navLinks = [...document.querySelectorAll('.top-nav a')];
+  const sections = navLinks.map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
+  const navObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        navLinks.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + e.target.id));
+      }
+    });
+  }, { rootMargin: '-40% 0px -50% 0px' });
+  sections.forEach(s => navObs.observe(s));
+
+  /* ---------- Header density ---------- */
+  const header = document.getElementById('siteHeader');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 20);
+  }, { passive: true });
+
+  /* ---------- Gentle parallax on hero photo (desktop only) ---------- */
+  const photo = document.querySelector('.photo-frame');
+  if (photo && window.matchMedia('(min-width: 900px) and (hover: hover)').matches) {
+    window.addEventListener('mousemove', (e) => {
+      const x = (e.clientX / window.innerWidth - 0.5) * 8;
+      const y = (e.clientY / window.innerHeight - 0.5) * 8;
+      photo.style.transform = `translate(${x}px, ${y}px)`;
+    }, { passive: true });
+  }
+</script>
 </body>
-
 </html>
